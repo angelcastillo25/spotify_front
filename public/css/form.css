@@ -1,0 +1,18 @@
+.form{
+    display: flex;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+}
+
+label{
+    display: block;
+}
+
+.form_section{
+    max-width: 100%;
+}
+
+input{
+    width: 100%;
+}
