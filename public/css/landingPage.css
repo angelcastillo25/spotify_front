@@ -1,0 +1,38 @@
+body {
+    background-image: url('../img/background_spotify_.jpg');
+    background-size: cover;
+    background-position: center; 
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    text-align: center;
+}
+.header {
+    margin-top: 10%;
+}
+
+#logo {
+    max-width: 150px;
+    height: auto;
+}
+
+.button {
+    font-family: 'rubik', sans-serif;
+    color: #ffffff;
+    padding: 5px 90px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+}
+.title {
+    margin-top: 20%;
+}
+.containerButton {
+    margin-top: 100%;
+    display: grid;
+    gap: 10px;
+}
