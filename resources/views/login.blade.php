@@ -18,17 +18,19 @@
     <main>
         <h2>Inicia sesión en Spotify</h2>
         <hr>
-        <div class="form">
-            <form action="POST">
-                <div class="form_section">
+        <form action="POST" class="form">
+            <div class="form_section">
                     <label for="">Correo Electronico</label>
                     <input type="email" placeholder="Correo Electronico">
-                </div>
-                <div>
-                    <label for="">Contrasena</label>
-                    <input type="password" placeholder="Ingrese su contrasena">
-                </div>
-            </form>
+            </div>
+            <div class="form_section">
+                <label for="">Contrasena</label>
+                <input type="password" placeholder="Ingrese su contrasena">
+            </div>
+            <button class="button">
+                
+            </button>
+        </form>
         </div>
     </main>
     <footer></footer>
