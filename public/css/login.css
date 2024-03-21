@@ -11,13 +11,6 @@
     align-items: center;
 }
 
-#noaccount_question_container{
-    margin: 10px 0;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 #noaccount_question_container p {
     color: #a2a7a7;
 }

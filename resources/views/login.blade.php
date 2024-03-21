@@ -34,7 +34,7 @@
                     Iniciar Sesion
                 </button>
             </form>
-            <div id="noaccount_question_container">
+            <div class="noaccount_question_container">
                 <p>¿No tienes una cuenta?</p>
                 <br>
                 <a href="">Registrate aqui</a>

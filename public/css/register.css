@@ -1,0 +1,57 @@
+#register_container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#register_form{
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
+
+.step{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.bars{
+    width: 100%;
+}
+
+.step_bar{
+    background-color: #727272;
+    height: 2px;
+    width: 100%;
+}
+
+#step_bar_green{
+    background-color: #1ed760;
+    height: 2px;
+    width: 33.33%;
+}
+
+.back_container{
+    width: 50%;
+    display: flex;
+    font-size: 0.7rem;
+}
+
+.back_container_text{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.label_name{
+    font-weight: 500;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.label_description{
+    font-size: 0.7rem;
+}
+
