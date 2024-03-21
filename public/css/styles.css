@@ -4,12 +4,13 @@ body {
     flex-direction: column;
     font-family: 'rubik', sans-serif;
     color: white;
+    overflow: hidden;
 }
 
 header{
     display: flex;
     background-color: #121212;
-    padding: 20px 10px;
+    padding: 20px 20px;
     height: 5%;
 }
 
@@ -42,4 +43,30 @@ footer{
 a{
     color: white;
     font-weight: 600;
+}
+
+.img_container{
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
+}
+
+.img_container img {
+    display: block;
+    width: 45px; 
+    height: auto; 
+    border-radius: 60%; 
+}
+
+.button_header {
+    margin-right: 10px;
+    background-color: #353333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 3px 15px;
+    border-radius: 20px;
+    
 }

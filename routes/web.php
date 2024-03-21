@@ -18,3 +18,6 @@ Route::get('/landingPage', function(){
     return view('landingPage');
 });
 
+Route::get('/home', function(){
+    return view('home');
+});
