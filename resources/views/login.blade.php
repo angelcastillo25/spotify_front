@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/login.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -16,21 +17,28 @@
         <img src="img/logo_spotify.png" alt="logo principal" id="logo">
     </header>
     <main>
-        <h2>Inicia sesión en Spotify</h2>
-        <hr>
-        <form action="POST" class="form">
-            <div class="form_section">
-                    <label for="">Correo Electronico</label>
-                    <input type="email" placeholder="Correo Electronico">
+        <div class="login_container">
+            <h2>Inicia sesión en Spotify</h2>
+            <img src="img/login_listen.png" alt="escuchando musica" id="login_illustration">
+            <hr>
+            <form action="POST" class="form">
+                <div class="form_section">
+                        <label for="">Correo Electronico</label>
+                        <input type="email" placeholder="Correo Electronico">
+                </div>
+                <div class="form_section">
+                    <label for="">Contrasena</label>
+                    <input type="password" placeholder="Ingrese su contrasena">
+                </div>
+                <button class="form_button">
+                    Iniciar Sesion
+                </button>
+            </form>
+            <div id="noaccount_question_container">
+                <p>¿No tienes una cuenta?</p>
+                <br>
+                <a href="">Registrate aqui</a>
             </div>
-            <div class="form_section">
-                <label for="">Contrasena</label>
-                <input type="password" placeholder="Ingrese su contrasena">
-            </div>
-            <button class="button">
-                
-            </button>
-        </form>
         </div>
     </main>
     <footer></footer>

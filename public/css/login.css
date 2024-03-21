@@ -1,0 +1,23 @@
+#login_illustration{
+    max-width: 250px;
+    height: auto;
+    margin: 20px 0;
+}
+
+.login_container{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#noaccount_question_container{
+    margin: 10px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#noaccount_question_container p {
+    color: #a2a7a7;
+}
