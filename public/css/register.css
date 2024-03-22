@@ -17,7 +17,7 @@
     width: 100%;
 }
 
-.bars{
+#bars{
     width: 100%;
 }
 
@@ -27,10 +27,11 @@
     width: 100%;
 }
 
-.step_bar_green{
+#step_bar_green{
     background-color: #1ed760;
     height: 2px;
-    width: 33.33%;
+    width: 0%;
+    transition: width 0.5s ease;
 }
 
 /*Seccion mas externa del boton de back*/

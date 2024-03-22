@@ -17,13 +17,17 @@
         <div id="register_container">
             <h1 class="title">Registrate para empezar a escuchar musica gratis</h1>
         <form action="POST" class="form" id="register_form">
+            <div id="bars">
+                <div class="step_bar"></div>
+                <div id="step_bar_green"></div>
+            </div>
             <!-- Paso 1 -->
             <div class="step" id="step1">
                 <div class="form_section">
                         <label for="">Correo Electronico</label>
                         <input type="email" placeholder="Correo Electronico">
                 </div>
-                <button class="form_button">
+                <button type="button" class="form_button" id="step1_button">
                     Siguiente
                 </button>
                 <div class="noaccount_question_container">
@@ -34,11 +38,7 @@
             </div>
             <!-- Paso 2 -->
             <div class="step" id="step2">
-                <div class="bars">
-                    <div class="step_bar"></div>
-                    <div class="step_bar_green"></div>
-                </div>
-                <div class="back_section">
+                <div class="back_section" id="back_section2">
                     <div class="back_container">
                         <img src="img/backarrow.png" alt="icono de flecha atras" class="icon">
                         <div class="back_container_text">
@@ -51,17 +51,13 @@
                         <label for="">Contraseña</label>
                         <input type="password" placeholder="Contraseña">
                 </div>
-                <button class="form_button">
+                <button type="button" class="form_button" id="step2_button">
                     Siguiente
                 </button>
             </div>
             <!-- Paso 3 -->
             <div class="step" id="step3">
-                <div class="bars">
-                    <div class="step_bar"></div>
-                    <div class="step_bar_green"></div>
-                </div>
-                <div class="back_section">
+                <div class="back_section" id="back_section3">
                     <div class="back_container">
                         <img src="img/backarrow.png" alt="icono de flecha atras" class="icon">
                         <div class="back_container_text">
@@ -101,14 +97,14 @@
                             <p class="label_name">Pais</p>
                             <p class="label_description">¿De donde eres?</p>
                         </label>
-                        <select name="genero" id="genero_select">
+                        <select name="genero" id="pais_select">
                             <option value="H">Honduras</option>
                             <option value="V">Venezuela</option>
                             <option value="CR">Costa Rica</option>
                         </select>
                     </div>
                 </div>
-                <button class="form_button">
+                <button type="button" class="form_button" id="step3_button">
                     Siguiente
                 </button>
             </div>
@@ -116,7 +112,7 @@
         </div>
     </main>
     <footer>
-
     </footer>
+    <script src="js/RegisterSteps.js"></script>
 </body>
 </html>
