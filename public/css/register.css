@@ -23,14 +23,20 @@
 
 .step_bar{
     background-color: #727272;
-    height: 2px;
+    height: 1px;
     width: 100%;
 }
 
-#step_bar_green{
+.step_bar_green{
     background-color: #1ed760;
     height: 2px;
     width: 33.33%;
+}
+
+/*Seccion mas externa del boton de back*/
+.back_section{
+    width: 100%;
+    margin: 20px 0;
 }
 
 .back_container{
@@ -45,6 +51,10 @@
     justify-content: space-evenly;
 }
 
+.back_container_text p:first-child{
+    margin-bottom: 5px;
+}
+
 .label_name{
     font-weight: 500;
     font-size: 0.9rem;
@@ -54,4 +64,3 @@
 .label_description{
     font-size: 0.7rem;
 }
-
