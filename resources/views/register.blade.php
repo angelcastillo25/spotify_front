@@ -108,6 +108,25 @@
                     Siguiente
                 </button>
             </div>
+            <!-- Paso 4 -->
+            <div class="step" id="step4">
+                 <select name="artists" id="artist_select"  hidden multiple>
+                    <option value="BadBunny">Bad Bunny</option>
+                    <option value="Cardellino">Cardellino</option>
+                 </select>
+                 <div id="artist_container">
+                    <div class="artist_item" data-artist="BadBunny">
+                        <img class="artist_img" src="img/badbunny.jpeg" alt="Bad Bunny">
+                        <p class="artist_name">Bad Bunny</p>
+                        <div class="artist_checked" hidden></div>
+                    </div>
+                    <div class="artist_item" data-artist="Cardellino">
+                        <img class="artist_img" src="img/cardellino.jpeg" alt="Bad Bunny">
+                        <p class="artist_name">Cardellino</p>
+                        <div class="artist_checked" hidden></div>
+                    </div>
+                 </div>
+            </div>
         </form>
         </div>
     </main>
