@@ -25,7 +25,7 @@
             <div class="step" id="step1">
                 <div class="form_section">
                         <label for="">Correo Electronico</label>
-                        <input type="email" placeholder="Correo Electronico">
+                        <input name="email" type="email" placeholder="Correo Electronico">
                 </div>
                 <button type="button" class="form_button" id="step1_button">
                     Siguiente
@@ -49,7 +49,7 @@
                 </div>
                 <div class="form_section">
                         <label for="">Contraseña</label>
-                        <input type="password" placeholder="Contraseña">
+                        <input name="password" type="password" placeholder="Contraseña">
                 </div>
                 <button type="button" class="form_button" id="step2_button">
                     Siguiente
@@ -71,14 +71,14 @@
                         <p class="label_name">Nombre</p>
                         <p class="label_description">Este nombre aparecerá en tu perfil</p>
                     </label>
-                    <input type="password" placeholder="Contrasena">
+                    <input name="username" type="password" placeholder="Nombre de usuario">
                 </div>
                 <div class="form_section">
                     <label for="">
                         <p class="label_name">Fecha de nacimiento</p>
                         <p class="label_description">Cuentanos que día naciste</p>
                     </label>
-                    <input type="date" class="date_input">
+                    <input name="date" type="date" class="date_input">
                 </div>
                 <div class="row_form_section">
                     <div class="form_section">
@@ -97,7 +97,7 @@
                             <p class="label_name">Pais</p>
                             <p class="label_description">¿De donde eres?</p>
                         </label>
-                        <select name="genero" id="pais_select">
+                        <select name="pais" id="pais_select">
                             <option value="H">Honduras</option>
                             <option value="V">Venezuela</option>
                             <option value="CR">Costa Rica</option>
@@ -110,21 +110,33 @@
             </div>
             <!-- Paso 4 -->
             <div class="step" id="step4">
+                 <div class="back_section" id="back_section4">
+                    <div class="back_container">
+                        <img src="img/backarrow.png" alt="icono de flecha atras" class="icon">
+                        <div class="back_container_text">
+                            <p>Paso 3 de 3</p>
+                            <p class="bold">Elige tus artistas favoritos</p>
+                        </div>
+                    </div>
+                </div>
                  <select name="artists" id="artist_select"  hidden multiple>
                     <option value="BadBunny">Bad Bunny</option>
                     <option value="Cardellino">Cardellino</option>
                  </select>
                  <div id="artist_container">
                     <div class="artist_item" data-artist="BadBunny">
-                        <img class="artist_img" src="img/badbunny.jpeg" alt="Bad Bunny">
+                        <img class="artist_img" src="img/cardellino.jpeg" alt="Bad Bunny">
                         <p class="artist_name">Bad Bunny</p>
-                        <div class="artist_checked" hidden></div>
+                        <div class="artist_checked" hidden><img class="check_icon" src="img/check.png" alt=""></div>
                     </div>
                     <div class="artist_item" data-artist="Cardellino">
                         <img class="artist_img" src="img/cardellino.jpeg" alt="Bad Bunny">
                         <p class="artist_name">Cardellino</p>
-                        <div class="artist_checked" hidden></div>
+                        <div class="artist_checked" src="img/check.png" class="check_icon" hidden><img class="check_icon" src="img/check.png" alt=""></div>
                     </div>
+                    <button class="form_button" id="step4_button">
+                    Registrarse
+                    </button>
                  </div>
             </div>
         </form>
