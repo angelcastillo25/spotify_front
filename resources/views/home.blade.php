@@ -18,34 +18,75 @@
         <div class="img_container">
             <img src="img/profil.jpg" alt="foto de perfil" id="profil">
         </div>
-        <button href="" class="button_header">Todas</button>
-        <button href="" class="button_header">Musica</button>
-        <button href="" class="button_header">Podcast</button>
+        <button onclick="seleccionarButton(this)" class="button_header" id="btn_todas">Todas</button>
+        <button onclick="seleccionarButton(this)" class="button_header" id="btn_musica">Musica</button>
+        <button onclick="seleccionarButton(this)" class="button_header" id="btn_podcasts">Podcast</button>
+    
     </header>
     <main>
-        <div class="list-albums">
-            <div class="album">
-                <img src="img/album.jpg" alt="" class="portada_album">
-                <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+            <h1 class="tittle-list">Escuchado Recientemente</h1>
+            <div class="list-albums">
+                <div class="album">
+                    <img src="img/album.jpg" alt="" class="portada_album">
+                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                </div>
+                <div class="album">
+                    <img src="img/album.jpg" alt="" class="portada_album">
+                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                </div>
+                <div class="album">
+                    <img src="img/album.jpg" alt="" class="portada_album">
+                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                </div>
+                <div class="album">
+                    <img src="img/album.jpg" alt="" class="portada_album">
+                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                </div>
             </div>
-            <div class="album">
-                <img src="img/album.jpg" alt="" class="portada_album">
-                <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+            <h1 class="tittle-list">Hemos Creado para ti</h1>
+            <div class="list-albums">
+                <div class="album">
+                    <img src="img/album.jpg" alt="" class="portada_album">
+                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                </div>
+                <div class="album">
+                    <img src="img/album.jpg" alt="" class="portada_album">
+                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                </div>
+                <div class="album">
+                    <img src="img/album.jpg" alt="" class="portada_album">
+                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                </div>
+                <div class="album">
+                    <img src="img/album.jpg" alt="" class="portada_album">
+                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                </div>
             </div>
-            <div class="album">
-                <img src="img/album.jpg" alt="" class="portada_album">
-                <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+            <h1 class="tittle-list">Tal vez te interese</h1>
+            <div class="list-albums">
+                <div class="album">
+                    <img src="img/album.jpg" alt="" class="portada_album">
+                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                </div>
+                <div class="album">
+                    <img src="img/album.jpg" alt="" class="portada_album">
+                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                </div>
+                <div class="album">
+                    <img src="img/album.jpg" alt="" class="portada_album">
+                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                </div>
+                <div class="album">
+                    <img src="img/album.jpg" alt="" class="portada_album">
+                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                </div>
             </div>
-            <div class="album">
-                <img src="img/album.jpg" alt="" class="portada_album">
-                <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-            </div>
-        </div>
+        
         
         
     </main>
     <footer></footer>
-    
+    <script src="js/home.js"></script>
 </body>
 
 

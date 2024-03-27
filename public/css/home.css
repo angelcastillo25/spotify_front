@@ -1,3 +1,18 @@
 main {
     align-items: flex-start;
+    padding-right: 0;
+}
+
+.tittle-list {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.button_selected {
+    background-color: #1ed760;
+    color: black;
+}
+
+header {
+    margin-top: 25px;
 }
