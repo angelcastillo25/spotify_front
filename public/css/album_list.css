@@ -23,4 +23,6 @@
     scroll-snap-type: x mandatory;
     scroll-behavior: smooth; 
     color: #c7c7c7;
+    margin-bottom: 45px;
 }
+

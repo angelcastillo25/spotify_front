@@ -1,3 +1,41 @@
 main {
     align-items: flex-start;
+    padding-right: 0;
+}
+
+.tittle-list {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.button_selected {
+    background-color: #1ed760;
+    color: black;
+}
+
+header {
+    margin-top: 25px;
+}
+
+svg path {
+    fill: white;
+}
+
+
+.buttons-bar {
+    background: transparent;
+    border: none;
+    color: white;
+    width: 66px;
+}
+
+.img-bar {
+    width: 40px;
+    height: 40px;
+}
+
+#bottom-bar {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
