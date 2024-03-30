@@ -21,3 +21,7 @@ Route::get('/landingPage', function(){
 Route::get('/home', function(){
     return view('home');
 });
+
+Route::get('/playlist', function(){
+    return view('playlist');
+});
