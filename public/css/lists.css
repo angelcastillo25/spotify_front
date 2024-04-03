@@ -177,3 +177,9 @@ main{
     background-color: #242424;
     opacity: 0%;
 }
+
+.list_name{
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 10px;
+}

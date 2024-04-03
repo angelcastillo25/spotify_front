@@ -74,10 +74,16 @@ function showListOptions(isList){
     }else{
         let optionSong = this;
         let parent = optionSong.parentNode;
+        let typeList = parent.parentNode.dataset.type;
 
         objectName = parent.querySelector("p.song_title").innerText;
         authorName = parent.querySelector("p.song_artist").innerText;
-        coverPath = parent.querySelector("img").src;
+
+        if(typeList==="album"){ //Si es una cancion de album toma el cover del album
+            coverPath = document.getElementById("list_cover").src;
+        }else{
+            coverPath = parent.querySelector("img.song_cover").src;
+        }
     }
 
     let objectTitle = document.getElementById("object_title");
@@ -87,6 +93,7 @@ function showListOptions(isList){
     objectTitle.innerText = objectName;
     objectAuthor.innerText = `por ${authorName}`;
     coverMini.src = coverPath;
+    
     showHideOptionsMenu();
 }
 

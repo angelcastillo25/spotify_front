@@ -1,0 +1,26 @@
+.info_album{
+    display: flex;
+    flex-direction: column;
+    margin: 10px 0;
+    padding: 0 20px;
+}
+
+.info_album p{
+    margin-bottom: 10px;
+}
+
+.artist_seal{
+    display: flex;
+}
+
+.artist_seal{
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+.artist_seal img{
+    width: 50px;
+    height: auto;
+    border-radius: 50%;
+    margin-right: 15px;
+}

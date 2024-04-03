@@ -25,3 +25,7 @@ Route::get('/home', function(){
 Route::get('/playlist', function(){
     return view('playlist');
 });
+
+Route::get('/album', function(){
+    return view('album');
+});
