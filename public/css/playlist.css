@@ -4,11 +4,19 @@ main{
     position: relative;
 }
 
-.playlist_header{
+.back_button{
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+.list_header{
     background: linear-gradient(0deg, rgba(18,18,18,1) 0%, rgba(59,61,51,1) 38%, rgba(110,115,92,1) 71%, rgba(156,164,133,1) 100%);
 }
 
-.playlist_header_panel{
+.list_header_panel{
     padding: 0 20px 20px;
     position: relative;
 }
@@ -22,7 +30,7 @@ main{
     width: 50px;
     background-color: #1ed760;
     border-radius: 50%;
-    top: 100px;
+    top: 80px;
     left: 325px;
 }
 
@@ -36,6 +44,7 @@ main{
     align-items: center;
     display: flex;
     width: 100%;
+    margin-bottom: 10px;
 }
 
 .cover_img{
@@ -47,13 +56,14 @@ main{
 
 .description_container{
     width: 100%;
-    color: #adadad;
+    color: #d9d9d9;
     margin-bottom: 10px;
+    font-size: 0.9rem;
 }
 
 .profile_image{
-    width: 30px;
-    height: 30px;
+    width: 25px;
+    height: 25px;
     border-radius: 50%;
     margin-right: 10px;
 }
@@ -63,6 +73,7 @@ main{
     width: 100%;
     align-items: center;
     margin-bottom: 10px;
+    font-size: 0.9rem;
 }
 
 .creator_container p{
@@ -76,10 +87,10 @@ main{
     align-items: center;
 }
 
-.playlist_button{
+.list_button{
     width: 25px;
     height: 25px;
-    margin-right: 10px;
+    margin-right: 20px;
 }
 
 .list_container{
@@ -111,10 +122,58 @@ main{
 }
 
 .song_title{
-    font-weight: 600;
+    font-weight: 400;
+}
+
+.song_artist{
+    font-size: 0.8rem;
+    color: #d9d9d9;
 }
 
 .options_icon{
     width: 22px;
     height: 22px;
+}
+
+.option_menu{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 534px;
+    display: flex;
+    flex-direction: column;
+    background-color: #242424;
+    padding: 20px;
+    border-radius: 20px 20px 0 0;
+    transition: all 0.2s ease;
+    opacity: 0%;
+}
+
+.option_item{
+    display: flex;
+    margin-bottom: 25px;
+    align-items: center;
+}
+
+.dragbar_container{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.dragbar_container div{
+    width: 40px;
+    height: 5px;
+    border-radius: 5px;
+    background-color: #d9d9d9;
+}
+
+.superposition_background{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #242424;
+    opacity: 0%;
 }
