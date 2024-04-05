@@ -8,7 +8,6 @@ body {
 
 header{
     display: flex;
-    background-color: #121212;
     padding: 20px 20px;
     height: 5%;
 }

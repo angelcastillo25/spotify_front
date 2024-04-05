@@ -13,7 +13,7 @@ main{
 }
 
 .list_header{
-    background: linear-gradient(0deg, rgba(18,18,18,1) 0%, rgba(59,61,51,1) 38%, rgba(110,115,92,1) 71%, rgba(156,164,133,1) 100%);
+    background-image: linear-gradient(to top,rgba(18,18,18,1), rgba(156,164,133,1) 100%);
 }
 
 .list_header_panel{
