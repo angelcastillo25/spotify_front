@@ -43,6 +43,21 @@
             <img src="img/next.png" alt="" class="player_icon">
             <img src="img/replay.png" alt="" class="player_icon">
         </div>
+        <div class="credits_container">
+            <p class="credits_title">Créditos</p>
+            <div class="credits_item">
+                <p>Cardellino</p>
+                <p class="credit_rol">Artista principal</p>
+            </div>
+            <div class="credits_item">
+                <p>Daniel Ochoa</p>
+                <p class="credit_rol">Productor</p>
+            </div>
+            <div class="credits_item">
+                <p>Angel Castillo</p>
+                <p class="credit_rol">Composicion</p>
+            </div>
+        </div>
     </main>
     <!--MENU DE OPCIONES!-->
     <div class="superposition_background" id="superposition_background"></div>
