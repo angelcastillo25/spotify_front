@@ -31,7 +31,7 @@
                 <div class="buttons_container">
                     <img class="list_button" src="img/descargar.svg" data-state="0" alt="" id="download_btn">
                     <img class="list_button" src="img/agregar.svg" data-state="0" alt="" id="add_btn">
-                    <img class="options_icon" src="img/option_points.svg" data-state="0" alt="" id="options_btn">
+                    <img class="options_icon" src="img/option_points.svg" alt="" id="options_btn">
                 </div>
             </div>
         </div>
@@ -89,6 +89,6 @@
         </div>
     </main>
     <footer></footer>
-    <script src="js/playlist.js"></script>
+    <script type="module" src="js/playlist.js"></script>
 </body>
 </html>

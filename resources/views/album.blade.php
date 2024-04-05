@@ -96,6 +96,6 @@
         </div>
     </main>
     <footer></footer>
-    <script src="js/playlist.js"></script>
+    <script type="module" src="js/album.js"></script>
 </body>
 </html>

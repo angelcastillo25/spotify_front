@@ -26,7 +26,7 @@
                 <p class="song_title">BAMBU</p>
                 <p>Cardellino</p>
             </div>
-            <img src="img/agregar.svg" alt="">
+            <img src="img/agregar.svg" alt="" id="save_btn" data-state="0">
         </div>
         <div class="bar_container">
             <input type="range" min="0" max="10" step="0.1" value="0" class="player_bar" id="player_bar">
@@ -38,10 +38,11 @@
         <div class="player_menu">
             <img src="img/shuffle.png" alt="" class="player_icon">
             <img src="img/previous.png" alt="" class="player_icon">
-            <img src="img/playbtn.svg" alt="" class="play_icon">
+            <img src="img/playbtn.svg" alt="" class="play_icon" id="play_btn" data-state="0">
             <img src="img/next.png" alt="" class="player_icon">
             <img src="img/replay.png" alt="" class="player_icon">
         </div>
     </main>
+    <script type="module" src="js/song.js"></script>
 </body>
 </html>

@@ -38,7 +38,7 @@ addBtn.addEventListener('click', changeIcon.bind(addBtn,{1:"agregar.svg", 0:"agr
 
 playBtn.addEventListener('click', changeIcon.bind(playBtn,{1:"play.png", 0:"pausa.png"}));
 
-optionsBtn.addEventListener('click', ()=>{showListOptions( getPlaylistInfo(), optionsMenu)});
+optionsBtn.addEventListener('click', ()=>{showListOptions( getAlbumInfo(), optionsMenu)});
 
 optionMenu.addEventListener('touchmove', (e)=>{slideOptionsMenu(e,positionMenu,optionMenu)});
 
@@ -58,7 +58,7 @@ for (const optionSong of listOptionSongs) {
  * @param {*} ids 
  * @returns 
  */
-function getPlaylistInfo(){
+function getAlbumInfo(){
     let coverPath = document.getElementById("list_cover").src;
     let playlistName = document.getElementById("list_name").innerText;
     let authorName = document.getElementById("list_name").innerText;
@@ -75,10 +75,9 @@ function getSongInfo(song){
     
     let parent = optionSong.parentNode;
     
-    let coverPath = parent.querySelector("img.song_cover").src;
+    let coverPath = document.getElementById("list_cover").src;
     let SongName = parent.querySelector("p.song_title").innerText;
     let authorName = parent.querySelector("p.song_artist").innerText;
-
+    
     return {'cover': coverPath, 'name': SongName, 'author':authorName}
 }
-
