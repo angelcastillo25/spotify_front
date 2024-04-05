@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/lists.css">
+    <link rel="stylesheet" href="css/options_menu.css">
 </head>
 <body>
     <main>
@@ -15,8 +16,9 @@
             <div class="cover_container">
                 <img src="img/cover.jpg" class="cover_img" alt="portada list" id="list_cover">
             </div>
-            <p hidden id="list_name">Exitos Latinos</p>
+            
             <div class="list_header_panel">
+            <p hidden id="list_name" class="list_name">Exitos Latinos</p>
                 <div class="play_button"><img class="play_icon" src="img/play.png" alt="boton pausa"  id="play_btn" data-state="0"></div>
                 <div class="description_container">
                     <p>Los exitos de *Artista*, en un solo lugar. Dale play ahora!</p>

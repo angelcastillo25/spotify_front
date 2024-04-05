@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/lists.css">
     <link rel="stylesheet" href="css/album.css">
+    <link rel="stylesheet" href="css/options_menu.css">
 </head>
 <body>
     <main>

@@ -81,4 +81,3 @@ function getSongInfo(song){
 
     return {'cover': coverPath, 'name': SongName, 'author':authorName}
 }
-
