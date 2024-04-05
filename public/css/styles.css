@@ -35,26 +35,7 @@ footer{
     
 }
 
-.footerMenu {
-    display: flex;
-    height: 15.6%;
-    position: fixed;
-    left: 0;
-    bottom: 0;
-    width: 101%;
-    background: linear-gradient(0deg, rgba(18, 18, 18, 0.96) 70%, 
-                            rgba(18, 18, 18, 1) 0%, 
-                            rgba(18, 18, 18, 0.008) 100%);
-    /* opacity: 0.95; */
-    color: white;
-    text-align: center;
-    padding-bottom: 10px;
-    color: white;
-    text-decoration: none;
-    align-items: flex-end;
-    justify-content: center;
-    padding-top: 16%;
-}
+
 
 #logo{
     max-width: 104px;
