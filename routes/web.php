@@ -29,3 +29,8 @@ Route::get('/playlist', function(){
 Route::get('/album', function(){
     return view('album');
 });
+
+
+Route::get('/song', function(){
+    return view('song');
+});
