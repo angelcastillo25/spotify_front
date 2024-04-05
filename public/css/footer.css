@@ -1,23 +1,50 @@
-main {
-    align-items: flex-start;
-    padding-right: 0;
-    margin-bottom: 25%;
+.footerMenu {
+    display: flex;
+    height: 15.6%;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 101%;
+    background: linear-gradient(0deg, rgba(18, 18, 18, 0.96) 70%, 
+                            rgba(18, 18, 18, 1) 0%, 
+                            rgba(18, 18, 18, 0.008) 100%);
+    /* opacity: 0.95; */
+    color: white;
+    text-align: center;
+    padding-bottom: 10px;
+    color: white;
+    text-decoration: none;
+    align-items: flex-end;
+    justify-content: center;
+    padding-top: 16%;
 }
 
-.tittle-list {
-    font-size: 24px;
-    margin-bottom: 16px;
+.img_container{
+    border-radius: 50%;
+    overflow: hidden;
+    margin-right: 10px;
 }
 
-.button_selected {
-    background-color: #1ed760;
-    color: black;
+.img_container img {
+    display: block;
+    width: 45px; 
+    height: auto; 
+    border-radius: 60%; 
 }
 
-header {
-    margin-top: 25px;
-    background-color: #121212;
+.button_header {
+    margin-right: 10px;
+    background-color: #353333;
+    border: none;
+    color: white;
+    cursor: pointer;
+    font-size: 15px;
+    font-weight: bold;
+    padding: 3px 15px;
+    border-radius: 20px;
+    
 }
+
 
 svg path {
     fill: white;

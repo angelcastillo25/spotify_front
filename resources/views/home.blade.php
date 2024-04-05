@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/form.css">
+    <link rel="stylesheet" href="css/footer.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/album_list.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -90,7 +91,19 @@
 
         <div class="footerMenu">
             <div class="songReproducer">
-                <img src="img/cardellino.jpeg" alt="">
+                <div class="artistPart">
+                    <img src="img/cardellino.jpeg" alt="" class="imgArtistRpr">
+                    <div class="titleSong">
+                        <p class="songName">Bambu</p>
+                        <p class="artistName">cardellino</p>
+                    </div>
+                </div>
+                
+                <div class="buttonsReproducer">
+                    <img src="img/agregar.svg" alt="" class="imgReproductor">
+                    <img src="img/playWhite.png" alt="" class="imgReproductor">
+                </div>
+                
             </div>
             <div id="bottom-bar">
                 <button class="buttons-bar" onclick="selectButton(this)" id="home">
