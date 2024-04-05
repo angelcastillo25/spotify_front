@@ -30,7 +30,10 @@ Route::get('/album', function(){
     return view('album');
 });
 
-
 Route::get('/song', function(){
     return view('song');
+});
+
+Route::get('/podcast', function(){
+    return view('podcast');
 });
