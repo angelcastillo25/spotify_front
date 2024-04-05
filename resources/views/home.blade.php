@@ -101,7 +101,9 @@
                 
                 <div class="buttonsReproducer">
                     <img src="img/agregar.svg" alt="" class="imgReproductor">
-                    <img src="img/playWhite.png" alt="" class="imgReproductor">
+                    <button class="buttons-bar" id="buttonPlay" onclick="changeImage()">
+                        <img src="img/playWhite.png" alt="" class="imgReproductor" id="buttonImage">
+                    </button>
                 </div>
                 
             </div>
@@ -140,6 +142,7 @@
 
     </footer>
     <script src="js/home.js"></script>
+    <script src="js/reproducer.js"></script>
 </body>
 
 
