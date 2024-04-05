@@ -36,6 +36,21 @@ svg path {
 
 #bottom-bar {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     align-items: center;
+    width: 77%;
+}
+
+.songReproducer {
+    display: flex;
+    position: fixed;
+    bottom: 9%;
+    margin: 0px 20px;
+    margin-bottom: 5px;
+    width: 93%;
+    height: 8.5%;
+    background-color: #15486d;
+    border-radius: 10px;
+    padding: 10px;
+    box-sizing: border-box;
 }
