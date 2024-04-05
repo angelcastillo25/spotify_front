@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/lists.css">
+    <link rel="stylesheet" href="css/options_menu.css">
 </head>
 <body>
     <main>
@@ -15,8 +16,9 @@
             <div class="cover_container">
                 <img src="img/cover.jpg" class="cover_img" alt="portada list" id="list_cover">
             </div>
-            <p hidden id="list_name">Exitos Latinos</p>
+            
             <div class="list_header_panel">
+            <p hidden id="list_name" class="list_name">Exitos Latinos</p>
                 <div class="play_button"><img class="play_icon" src="img/play.png" alt="boton pausa"  id="play_btn" data-state="0"></div>
                 <div class="description_container">
                     <p>Los exitos de *Artista*, en un solo lugar. Dale play ahora!</p>
@@ -31,7 +33,7 @@
                 <div class="buttons_container">
                     <img class="list_button" src="img/descargar.svg" data-state="0" alt="" id="download_btn">
                     <img class="list_button" src="img/agregar.svg" data-state="0" alt="" id="add_btn">
-                    <img class="options_icon" src="img/option_points.svg" data-state="0" alt="" id="options_btn">
+                    <img class="options_icon" src="img/option_points.svg" alt="" id="options_btn">
                 </div>
             </div>
         </div>
@@ -89,6 +91,6 @@
         </div>
     </main>
     <footer></footer>
-    <script src="js/playlist.js"></script>
+    <script type="module" src="js/playlist.js"></script>
 </body>
 </html>

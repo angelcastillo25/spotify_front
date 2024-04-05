@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/lists.css">
     <link rel="stylesheet" href="css/album.css">
+    <link rel="stylesheet" href="css/options_menu.css">
 </head>
 <body>
     <main>
@@ -96,6 +97,6 @@
         </div>
     </main>
     <footer></footer>
-    <script src="js/playlist.js"></script>
+    <script type="module" src="js/album.js"></script>
 </body>
 </html>
