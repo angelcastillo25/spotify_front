@@ -41,3 +41,7 @@ Route::get('/podcast', function(){
 Route::get('/profil', function(){
     return view('profil');
 });
+
+Route::get('/biblioteca', function(){
+    return view('biblioteca');
+});
