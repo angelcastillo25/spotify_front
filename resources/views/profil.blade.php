@@ -9,6 +9,8 @@
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/lists.css">
     <link rel="stylesheet" href="css/options_menu.css">
+    <link rel="stylesheet" href="css/profil.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Iniciar Sesion - Spotify</title>
