@@ -1,0 +1,20 @@
+.target {
+    padding: 15px;
+    background: #333331;
+    border-radius: 20px;
+    margin-top: 10px;
+}
+
+.input {
+    width: 94%;
+    margin-top: 15px;
+    height: 30px;
+    border: none;
+    background: #4d4d4d;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+input::placeholder {
+    color: #bfbfbf; /* Puedes cambiar este color por el que desees */
+}

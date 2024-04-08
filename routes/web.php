@@ -49,3 +49,7 @@ Route::get('/biblioteca', function(){
 Route::get('/historial', function(){
     return view('historial');
 });
+
+Route::get('/episodio', function(){
+    return view('episodio');
+});

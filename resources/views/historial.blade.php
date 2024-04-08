@@ -62,7 +62,7 @@
                         <img src="img/cardellino.jpeg" alt="" class="song_cover">
                         <div class="song_text_container" style="margin-left: 5px;">
                             <p class="song_title">Bambu</p>
-                            <p class="song_artist">Cardellio</p>
+                            <p class="song_artist">Cardellino</p>
                         </div>
                     </div>
                 </div>
