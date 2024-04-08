@@ -45,3 +45,7 @@ Route::get('/profil', function(){
 Route::get('/biblioteca', function(){
     return view('biblioteca');
 });
+
+Route::get('/historial', function(){
+    return view('historial');
+});

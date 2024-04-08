@@ -6,10 +6,10 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/lists.css">
     <link rel="stylesheet" href="css/options_menu.css">
     <link rel="stylesheet" href="css/profil.css">
+    <link rel="stylesheet" href="css/historial.css">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -17,87 +17,74 @@
 </head>
 <body>
     <main>
-        <div class="list_header">
-            <img class="back_button" src="img/backArrowMen.svg" alt="boton atras" id="back_btn">
-            <div class="cover_container">
-                <div class="cover-params">
-                    <img src="img/profil.jpg" class="cover_img" alt="portada list" id="list_cover">
-                    <div class="song_text_container">
-                        <p class="user-name">Angel Castillo</p>
-                        <p class="song_artist">11 seguidores • 23 siguiendo</p>
+        <div class="historial_header">
+            <h4>Escuchado recientemente</h4>
+        </div>
+        <img class="back_button" src="img/backArrowMen.svg" alt="boton atras" id="back_btn">
+
+        <section>
+            <div style="padding: 10px 20px;">
+                <h1 class="tittle_day">Hoy</h1>
+            </div>
+            <div class="list_container">
+                <div class="list_item">
+                    <div style="display:flex;">
+                        <img src="img/cardellino.jpeg" alt="" class="song_cover">
+                        <div class="song_text_container" style="margin-left: 5px;">
+                            <p class="song_title">Vegano</p>
+                            <p class="song_artist">Cardellino</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="list_item">
+                    <div style="display:flex;">
+                        <img src="img/clancy.jpg" alt="" class="song_cover">
+                        <div class="song_text_container" style="margin-left: 5px;">
+                            <p class="song_title">Next Semester</p>
+                            <p class="song_artist">twenty one pilots</p>
+                        </div>
                     </div>
                 </div>
             </div>
+            <div class="bottom-button">
 
-            <div class="options-menu">
-                <button class="button_header">Editar</button>
-                <img class="options_icon options_btn" src="img/option_points.svg" alt="Opciones">
+              <p>Ver las 10 canciones reproducidas</p>
+
             </div>
-            
+        </section>
+        <section>
             <div style="padding: 10px 20px;">
-
-                <h1 class="user-name" style="font-size: 20px;">Playlists</h1>
-
+                <h1 class="tittle_day">Ayer</h1>
             </div>
-
             <div class="list_container">
                 <div class="list_item">
-                        <div style="display:flex;">
-                            <img src="img/cardellino.jpeg" alt="" class="song_cover">
-                            <div class="song_text_container" style="margin-left: 5px;">
-                                <p class="song_title">Clasicos</p>
-                                <p class="song_artist">Se guardo 0 veces</p>
-                            </div>
+                    <div style="display:flex;">
+                        <img src="img/cardellino.jpeg" alt="" class="song_cover">
+                        <div class="song_text_container" style="margin-left: 5px;">
+                            <p class="song_title">Bambu</p>
+                            <p class="song_artist">Cardellio</p>
                         </div>
+                    </div>
                 </div>
                 <div class="list_item">
                     <div style="display:flex;">
                         <img src="img/badbunny.jpeg" alt="" class="song_cover">
                         <div class="song_text_container" style="margin-left: 5px;">
-                            <p class="song_title">2016</p>
-                            <p class="song_artist">Se guardo 0 veces</p>
+                            <p class="song_title">Yunigani</p>
+                            <p class="song_artist">Bad bunny</p>
                         </div>
                     </div>
                 </div>
             </div>
-
             <div class="bottom-button">
 
-                <button class="button_header" style="margin-right: 0;">Ver todas las playlist</button>
+                <p>Ver las 10 canciones reproducidas</p>
 
             </div>
+        </section>
+        
 
-        <div class="superposition_background" id="superposition_background"></div>
-            <div class="option_menu" id="option_menu">
-                    <div class="dragbar_container">
-            </div>
-            <div style="display:flex;">
-                <img src="img/cover.jpg" alt="" class="song_cover" id="cover_mini">
-                <div class="song_text_container">
-                    <p class="song_title" id="object_title">Playlist Name</p>
-                    <p class="song_artist" id="object_author">por Daniel Ochoa</p>
-                </div>
-            </div>
-            <hr style="background-color: #424242;">
-            <div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
-                <p>Agregar a favoritos</p>
-            </div>
-            <div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
-                <p>Agregar a favoritos</p>
-            </div><div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
-                <p>Agregar a favoritos</p>
-            </div><div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
-                <p>Agregar a favoritos</p>
-            </div><div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
-                <p>Agregar a favoritos</p>
-        </div>   
-
-
+        
     </main>
     <footer>
         <div class="footerMenu">

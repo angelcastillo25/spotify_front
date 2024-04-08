@@ -1,0 +1,13 @@
+.historial_header{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    color: #d9d9d9;
+}
+
+.tittle_day {
+    font-size: 25px; 
+    margin-top: 23px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
