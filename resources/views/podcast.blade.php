@@ -24,10 +24,42 @@
         </div>
         <div class="podcast_buttons">
             <a class="follow_btn" href="#">Siguiendo</a>
-            <img class="button_mini" src="img/notificationOff.png" alt="" id="">
+            <img class="button_mini" src="img/notificationOff.png" alt="" id="notification_btn" data-state="0">
             <img class="options_icon" src="img/option_points.svg" alt="" id="options_btn">
+        </div>
+        <div class="podcast_sections">
+            <div class="section_button">
+                <p>Episodios</p>
+                <div class="green_line" style="background-color: #1ed760;"></div>
+            </div>
+            <div class="section_button">
+                <p>Acerca de</p>
+                <div class="green_line"></div>
+            </div>
+            <div class="section_button">
+                <p>Más contenido similar</p>
+                <div class="green_line"></div>
+            </div>
+        </div>
+        <!-- Seccion de episodios !-->
+        <div class="episode_list">
+            <div class="episode_item">
+                <div class="title_container">
+                    <img src="img/cardellino.jpeg" alt="">
+                    <p>Albert Einstein, su Historia y su Ciencia Desconocida #11</p>
+                </div>
+                <p class="podcast_description">Albert Einstein fue un físico alemán de origen judío, nacionalizado después suizo, austriaco y estadounidense. Se le considera el científico más importante, conocido y popular del siglo XX.​​</p>
+                <p class="date_duration">9 nov 23 • 2h 13 min</p>
+                <div class="podcast_buttons">
+                    <img class="button_mini" src="img/descargar.svg" data-state="0" alt="" id="download_btn">
+                    <img class="button_mini" src="img/agregar.svg" data-state="0" alt="" id="add_btn">
+                    <img class="options_icon" src="img/option_points.svg" alt="" id="options_btn">
+                </div>
+                <div class="separator"></div>
+            </div>
         </div>
     </main>
     <footer></footer>
+    <script type="module" src="js/podcast.js"></script>
 </body>
 </html>
