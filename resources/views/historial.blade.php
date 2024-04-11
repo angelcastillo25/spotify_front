@@ -5,90 +5,88 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/form.css">
     <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/album_list.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="css/lists.css">
+    <link rel="stylesheet" href="css/options_menu.css">
+    <link rel="stylesheet" href="css/profil.css">
+    <link rel="stylesheet" href="css/historial.css">
+
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Iniciar Sesion - Spotify</title>
 </head>
 <body>
-    <header>
-        <div class="img_container">
-            <img src="img/profil.jpg" alt="foto de perfil" id="profil">
-        </div>
-        <button onclick="seleccionarButton(this)" class="button_header" id="btn_todas">Todas</button>
-        <button onclick="seleccionarButton(this)" class="button_header" id="btn_musica">Musica</button>
-        <button onclick="seleccionarButton(this)" class="button_header" id="btn_podcasts">Podcast</button>
-    
-    </header>
     <main>
-            <h1 class="tittle-list">Escuchado Recientemente</h1>
-            <div class="list-albums">
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+        <div class="historial_header">
+            <h4>Escuchado recientemente</h4>
+        </div>
+        <img class="back_button" src="img/backArrowMen.svg" alt="boton atras" id="back_btn">
+
+        <section>
+            <div style="padding: 10px 20px;">
+                <h1 class="tittle_day">Hoy</h1>
+            </div>
+            <div class="list_container">
+                <div class="list_item">
+                    <div style="display:flex;">
+                        <img src="img/cardellino.jpeg" alt="" class="song_cover">
+                        <div class="song_text_container" style="margin-left: 5px;">
+                            <p class="song_title">Vegano</p>
+                            <p class="song_artist">Cardellino</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                <div class="list_item">
+                    <div style="display:flex;">
+                        <img src="img/clancy.jpg" alt="" class="song_cover">
+                        <div class="song_text_container" style="margin-left: 5px;">
+                            <p class="song_title">Next Semester</p>
+                            <p class="song_artist">twenty one pilots</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <h1 class="tittle-list">Hemos Creado para ti</h1>
-            <div class="list-albums">
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+            <div class="bottom-button">
+
+              <p>Ver las 10 canciones reproducidas</p>
+
+            </div>
+        </section>
+        <section>
+            <div style="padding: 10px 20px;">
+                <h1 class="tittle_day">Ayer</h1>
+            </div>
+            <div class="list_container">
+                <div class="list_item">
+                    <div style="display:flex;">
+                        <img src="img/cardellino.jpeg" alt="" class="song_cover">
+                        <div class="song_text_container" style="margin-left: 5px;">
+                            <p class="song_title">Bambu</p>
+                            <p class="song_artist">Cardellino</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                <div class="list_item">
+                    <div style="display:flex;">
+                        <img src="img/badbunny.jpeg" alt="" class="song_cover">
+                        <div class="song_text_container" style="margin-left: 5px;">
+                            <p class="song_title">Yunigani</p>
+                            <p class="song_artist">Bad bunny</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-            <h1 class="tittle-list">Tal vez te interese</h1>
-            <div class="list-albums">
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
+            <div class="bottom-button">
+
+                <p>Ver las 10 canciones reproducidas</p>
+
             </div>
+        </section>
         
 
         
     </main>
     <footer>
-        
-
         <div class="footerMenu">
             <div class="songReproducer">
                 <div class="artistPart">
@@ -141,7 +139,6 @@
         
 
     </footer>
-    <script src="js/home.js"></script>
     <script src="js/reproducer.js"></script>
 </body>
 

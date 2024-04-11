@@ -37,3 +37,19 @@ Route::get('/song', function(){
 Route::get('/podcast', function(){
     return view('podcast');
 });
+
+Route::get('/profil', function(){
+    return view('profil');
+});
+
+Route::get('/biblioteca', function(){
+    return view('biblioteca');
+});
+
+Route::get('/historial', function(){
+    return view('historial');
+});
+
+Route::get('/episodio', function(){
+    return view('episodio');
+});
