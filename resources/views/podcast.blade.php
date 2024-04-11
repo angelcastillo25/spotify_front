@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/podcast.css">
+    <link rel="stylesheet" href="css/options_menu.css">
 </head>
 <body>
     <header></header>
@@ -19,10 +20,12 @@
             </div>
         </div>
         <div class="podcast_data">
-            
+            <p>★ 5.0(2k) • Historia • Entretenimiento • Ciencia</p>
         </div>
         <div class="podcast_buttons">
-                
+            <a class="follow_btn" href="#">Siguiendo</a>
+            <img class="button_mini" src="img/notificationOff.png" alt="" id="">
+            <img class="options_icon" src="img/option_points.svg" alt="" id="options_btn">
         </div>
     </main>
     <footer></footer>
