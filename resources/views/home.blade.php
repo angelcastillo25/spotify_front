@@ -138,8 +138,6 @@
             </div>
 
         </div>
-        
-
     </footer>
     <script src="js/home.js"></script>
     <script src="js/reproducer.js"></script>

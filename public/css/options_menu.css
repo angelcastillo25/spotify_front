@@ -73,3 +73,24 @@
     justify-content: space-evenly;
     height: 50px;
 }
+
+.option_cover {
+    width: 50px;
+    height: 50px;
+    margin-right: 10px;
+}
+
+.list_button {
+    width: 25px;
+    height: 25px;
+    margin-right: 20px;
+}
+
+.song_title {
+    font-weight: 400;
+}
+
+.song_artist {
+    font-size: 0.8rem;
+    color: #d9d9d9;
+}
