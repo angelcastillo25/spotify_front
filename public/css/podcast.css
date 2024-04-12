@@ -1,4 +1,15 @@
+header{
+    padding: 20px 20px 0 20px;
+}
 
+main{
+    padding-top: 10px;
+}
+
+.back_button{
+    width: 40px;
+    height: auto;
+}
 
 .podcast_header{
     display: flex;
@@ -67,7 +78,6 @@
 }
 
 .section_button>p{
-    font-weight: 500;
     margin-bottom: 20px;
 }
 
@@ -79,18 +89,23 @@
 
 .green_line{
     height: 2px;
-    width: 100%;
+    width: 0;
+    background-color: #1ed760;
+    transition: all 0.5s ease;
 }
 
 .episode_list{
     display: flex;
     width: 100%;
+    flex-direction: column;
+    transition: all 0.5s ease;
 }
 
 .episode_item{
     display: flex;
     width: 100%;
     flex-direction: column;
+    position: relative;
 }
 
 .title_container{
@@ -98,6 +113,14 @@
     align-items: center;
     width: 100%;
     margin: 20px 0;
+}
+
+.title_container>p{
+    line-height: 1.5;
+    display: -webkit-box; /* Establece el comportamiento de la caja */
+    -webkit-line-clamp: 2; /* Limita el texto a 2 líneas */
+    -webkit-box-orient: vertical; /* Orientación vertical de la caja */
+    overflow: hidden; /* Oculta el texto que excede el límite */
 }
 
 .title_container>img{
@@ -108,14 +131,19 @@
 }
 
 .podcast_description{
-    font-size: 0.8rem;
-    color: #c5c5c5;
+    font-size: 0.9rem;
+    color: #a5a5a5;
+    line-height: 1.5;
     margin-bottom: 10px;
+    display: -webkit-box; /* Establece el comportamiento de la caja */
+    -webkit-line-clamp: 2; /* Limita el texto a 2 líneas */
+    -webkit-box-orient: vertical; /* Orientación vertical de la caja */
+    overflow: hidden; /* Oculta el texto que excede el límite */
 }
 
 .date_duration{
     font-size: 0.9rem;
-    color: #c5c5c5;
+    color: #a5a5a5;
     margin-bottom: 20px;
 }
 
@@ -124,4 +152,112 @@
     height: 1.5px;
     background-color: #414141;
     margin-top: 10px;
+}
+
+.play_btn_container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: white;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+}
+
+.play_btn_container>img{
+    margin-left: 3px;
+    width: 20px;
+    height: 20px;
+}
+
+.about_container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    width: 100%;
+    transition: all 0.5s ease;
+}
+
+.about_btn_container{
+    display: flex;
+    overflow: scroll;
+    margin-bottom: 20px;
+}
+
+.about_btn_container::-webkit-scrollbar {
+    display: none; /* Oculta la barra de desplazamiento en navegadores webkit */
+}
+
+.about_btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: #313131;
+    margin-right: 10px;
+}
+
+.separator_point{
+    display: flex;
+    align-items: center;
+    margin-right: 10px; 
+}
+
+.about_text{
+    font-size: 0.9rem;
+    color: #a5a5a5;
+    line-height: 1.5;
+}
+
+.similar_container{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.similar_item{
+    display: flex;
+    margin-bottom: 15px;
+}
+
+.similar_img{
+    width: 110px;
+    height: 110px;
+    border-radius: 10px;
+    margin-right: 10px;
+}
+
+.similar_text{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.similar_text>p{
+    margin-bottom: 10px;
+}
+
+.similar_gender{
+    font-size: 0.7rem;
+    color: #1ed760;
+    font-weight: 500;
+}
+
+.similar_text{
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.similar_description{
+    font-size: 0.9rem;
+    color: #a5a5a5;
+    line-height: 1.5;
+    display: -webkit-box; /* Establece el comportamiento de la caja */
+    -webkit-line-clamp: 3; /* Limita el texto a 2 líneas */
+    -webkit-box-orient: vertical; /* Orientación vertical de la caja */
+    overflow: hidden; /* Oculta el texto que excede el límite */
 }
