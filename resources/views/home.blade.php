@@ -87,8 +87,6 @@
         
     </main>
     <footer>
-        
-
         <div class="footerMenu">
             <div class="songReproducer">
                 <div class="artistPart">

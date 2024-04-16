@@ -122,8 +122,9 @@
         
 
     </footer>
+    <script src="js/biblioteca.js"></script>
     <script src="js/reproducer.js"></script>
+    
 </body>
-
 
 </html>

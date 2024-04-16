@@ -12,3 +12,4 @@
     button.classList.add('button_selected');
 
 }
+
