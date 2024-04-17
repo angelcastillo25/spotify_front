@@ -57,3 +57,7 @@ Route::get('/episodio', function(){
 Route::get('/searching', function(){
     return view('searching');
 });
+
+Route::get('/search', function(){
+    return view('search');
+});
