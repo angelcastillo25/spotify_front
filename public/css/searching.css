@@ -1,0 +1,77 @@
+main{
+    align-items: normal;
+}
+
+.search_header{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    background-color: #282828;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.back_icon{
+    width: 20px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.search_input{
+    padding: 10px;
+    border: none;
+    width: 100%;
+    color: #a5a5a5;
+    background-color: #282828;
+    font-size: 1.1rem;
+    
+}
+
+.search_input:focus {
+    outline: none;
+  }
+
+.recent_title{
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.recent_list{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.recent_item{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.item{
+    display: flex;
+    align-items: center;
+}
+
+.cover_img{
+    width: 50px;
+    height: auto;
+    margin-right: 10px;
+}
+
+.item_texts > p:first-child{
+    margin-bottom: 10px;
+}
+
+.item_texts > p:nth-child(2){
+    font-size: 0.8rem;
+    color: #a5a5a5;
+}
+
+.delete_icon{
+    width: 20px;
+    height: auto;
+}

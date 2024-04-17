@@ -53,3 +53,7 @@ Route::get('/historial', function(){
 Route::get('/episodio', function(){
     return view('episodio');
 });
+
+Route::get('/searching', function(){
+    return view('searching');
+});
