@@ -1,0 +1,67 @@
+.songs-container {
+
+    padding: 20px;
+}
+
+.list_item {
+    margin-bottom: 15px;
+}
+
+.song-number{
+    margin-right: 20px;
+}
+
+.number {
+    display:flex; 
+    align-items: center;
+    color: #d4d4d4;
+}
+
+.song_covers {
+    height: 50px;
+    margin: 0, 30px, 0, 0;
+}
+
+.artist-cover {
+    width: 100%;
+    height: 400px;
+}
+
+
+.container-artist {
+    overflow: hidden;
+    height: 300px;
+}
+
+.principal_header {
+    padding: 0 20px;
+    background-image: linear-gradient(to top, rgba(18, 18, 18, 1), rgba(252, 38, 0, 0.5) 150%);
+}
+
+.artist-name {
+    position: absolute;
+    z-index: 2;
+    top: 30%;
+    font-size: 40px;
+    margin-left: 20px;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.001), rgb(23 0 0 / 80%));
+    z-index: 1;
+  }
+
+  .tittle-list {
+    margin-left: 20px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+.list-albums {
+    margin-left: 20px;
+}

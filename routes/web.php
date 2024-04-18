@@ -61,3 +61,7 @@ Route::get('/searching', function(){
 Route::get('/search', function(){
     return view('search');
 });
+
+Route::get('/artist', function(){
+    return view('artist');
+});
