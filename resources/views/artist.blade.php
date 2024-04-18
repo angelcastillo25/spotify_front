@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="css/podcast.css">
+    <link rel="stylesheet" href="css/profil.css">
     <link rel="stylesheet" href="css/options_menu.css">
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/album_list.css">
@@ -26,7 +27,7 @@
 
             
             <div class="podcast_data">
-                <p>★ 5.0(2k) • Historia • Entretenimiento • Ciencia</p>
+                <p>27 M oyentes mensuales</p>
             </div>
             <div class="podcast_buttons">
                 <div class="follow_btn" id="follow_btn" data-state="0">Seguir</div>
@@ -87,7 +88,10 @@
                             <p class="song_artist">1,727,529,578</p>
                         </div>
                     </div>
-                    <img class="options_icon options_btn" src="img/option_points.svg" alt="Opciones">
+                    <div>
+                        <img class="list_button" src="img/agregado.svg">
+                        <img class="options_icon options_btn" src="img/option_points.svg" alt="Opciones">
+                    </div>
                 </div>
                 <div class="list_item">
                     <div class="number">
@@ -101,7 +105,7 @@
                     <img class="options_icon options_btn" src="img/option_points.svg" alt="Opciones">
                 </div>
                 <div class="list_item">
-                    <div style="display:flex;">
+                    <div class="number">
                         <p class="song-number">5</p>
                         <img src="img/clancy.jpg" alt="" class="song_covers">
                         <div class="song_text_container">
@@ -111,6 +115,11 @@
                     </div>
                     <img class="options_icon options_btn" src="img/option_points.svg" alt="Opciones">
                 </div>
+            </div>
+            <div class="bottom-button">
+
+                <button class="button_header" style="margin-right: 0;">Ver discografia</button>
+
             </div>
             <!-- Seccion de lanzamientos !-->
             <div style="padding: 10px 20px; margin-bottom:20px">
@@ -141,23 +150,23 @@
 
             </div>
             <!-- Seccion de playlist !-->
-            <h1 class="tittle-list">Con Twenty one Pilots</h1>
+            <h1 class="tittle-list" style="margin-bottom: 25px;">Con Twenty one Pilots</h1>
             <div class="list-albums">
                 <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                    <img src="img/thisistop.jpeg" alt="" class="portada_album">
+                    <p>This Is Twenty One Pilots</p>
+                </div>
+                <div class="album">
+                    <img src="img/radiotop.jpeg" alt="" class="portada_album">
+                    <p>Radio de Twenty One Pilots</p>
                 </div>
                 <div class="album">
                     <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                    <p>This Is Twenty One Pilots</p>
                 </div>
                 <div class="album">
                     <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                    <p>This Is Twenty One Pilots</p>
                 </div>
             </div>
 

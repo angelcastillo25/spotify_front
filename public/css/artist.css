@@ -65,3 +65,19 @@
 .list-albums {
     margin-left: 20px;
 }
+
+.album p{
+    color: #ffffff;
+    text-align: center;
+    line-height: 1.5;
+}
+
+.bottom-button {
+    margin-bottom: 30px;
+    color: #ffffff;
+}
+
+.list_button {
+    margin-right: 5px;
+}
+
