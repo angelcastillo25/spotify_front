@@ -65,3 +65,11 @@ Route::get('/search', function(){
 Route::get('/artist', function(){
     return view('artist');
 });
+
+Route::get('/createPlaylist', function(){
+    return view('createPlaylist');
+});
+
+Route::get('/addSong', function(){
+    return view('addSong');
+});

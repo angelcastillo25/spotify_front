@@ -1,0 +1,41 @@
+.backbtn{
+    width: 20px;
+    height: auto;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    padding: 10px;
+}
+
+.header_title{
+    text-align: center;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.suggested_container{
+    background-color: #282828;
+    border-radius: 10px;
+    padding: 10px;
+    width: 95%;
+    height: 80vh;
+}
+
+.title{
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.description{
+    font-size: 0.8rem;
+    color: #a5a5a5;
+    margin-bottom: 20px;
+}
+
+.addbtn{
+    width: 20px;
+    height: auto;
+}
+
