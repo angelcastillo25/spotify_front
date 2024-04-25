@@ -4,24 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist Name</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/lists.css">
-    <link rel="stylesheet" href="css/album.css">
-    <link rel="stylesheet" href="css/options_menu.css">
+    <link rel="stylesheet" href="{{asset('css/reset.css')}}">
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('css/lists.css')}}">
+    <link rel="stylesheet" href="{{asset('css/album.css')}}">
+    <link rel="stylesheet" href="{{asset('css/options_menu.css')}}">
 </head>
 <body>
     <main>
         <div class="list_header">
-            <img class="back_button" src="img/backArrowMen.svg" alt="boton atras" id="back_btn">
+            <img class="back_button" src="{{ asset('img/backArrowMen.svg') }}" alt="boton atras" id="back_btn">
             <div class="cover_container">
-                <img src="img/cardellino.jpeg" class="cover_img" alt="portada list" id="list_cover">
+                <img src="{{$album->portadaAlbum}}" class="cover_img" alt="portada list" id="list_cover">
             </div>
             <div class="list_header_panel">
-                <p id="list_name" class="list_name">Love Dealer</p>
+                <p id="list_name" class="list_name">{{$album->nombreAlbum}}</p>
                 <div class="play_button"><img class="play_icon" src="img/play.png" alt="boton pausa"  id="play_btn" data-state="0"></div>
                 <div class="creator_container">
-                    <img src="img/cardellino.jpeg" alt="usuario" class="profile_image">
+                    <img src="https://storage.cloud.google.com/spt-project-bucket/{{$album->fotoArtista}}" alt="usuario" class="profile_image">
                     <p id="author_name">Cardellino</p>
                 </div>
                 <div class="description_container">

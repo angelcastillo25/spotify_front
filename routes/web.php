@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AlbumesController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,9 +27,7 @@ Route::get('/playlist', function(){
     return view('playlist');
 });
 
-Route::get('/album', function(){
-    return view('album');
-});
+Route::get('/album/{idUsuario}/{idAlbum}', [AlbumesController::class, 'getAlbum'])->name('album.obtener');
 
 Route::get('/song', function(){
     return view('song');
