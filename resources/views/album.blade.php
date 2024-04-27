@@ -4,65 +4,59 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist Name</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/lists.css">
-    <link rel="stylesheet" href="css/album.css">
-    <link rel="stylesheet" href="css/options_menu.css">
+    <link rel="stylesheet" href="{{asset('css/reset.css')}}">
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('css/lists.css')}}">
+    <link rel="stylesheet" href="{{asset('css/album.css')}}">
+    <link rel="stylesheet" href="{{asset('css/options_menu.css')}}">
 </head>
 <body>
     <main>
         <div class="list_header">
-            <img class="back_button" src="img/backArrowMen.svg" alt="boton atras" id="back_btn">
+            <img class="back_button" src="{{ asset('img/backArrowMen.svg') }}" alt="boton atras" id="back_btn">
             <div class="cover_container">
-                <img src="img/cardellino.jpeg" class="cover_img" alt="portada list" id="list_cover">
+                <img src="https://storage.cloud.google.com/spt-project-bucket/{{$album->portadaAlbum}}" class="cover_img" alt="portada list" id="list_cover">
             </div>
             <div class="list_header_panel">
-                <p id="list_name" class="list_name">Love Dealer</p>
-                <div class="play_button"><img class="play_icon" src="img/play.png" alt="boton pausa"  id="play_btn" data-state="0"></div>
+                <p id="list_name" class="list_name">{{$album->nombreAlbum}}</p>
+                <div class="play_button"><img class="play_icon" src="{{asset('img/play.png')}}" alt="boton pausa"  id="play_btn" data-state="0"></div>
                 <div class="creator_container">
-                    <img src="img/cardellino.jpeg" alt="usuario" class="profile_image">
-                    <p id="author_name">Cardellino</p>
+                    <img src="https://storage.cloud.google.com/spt-project-bucket/{{$album->fotoArtista}}" alt="usuario" class="profile_image">
+                    <p id="author_name">{{$album->nombreArtista}}</p>
                 </div>
                 <div class="description_container">
-                    <p>Album • 2022</p>
+                    <p>{{$album->tipoLanzamiento." • ".substr($album->fechaLanzamiento,-4)}}</p>
                 </div>
                 <div class="buttons_container">
-                    <img class="list_button" src="img/descargar.svg" data-state="0" alt="" id="download_btn">
-                    <img class="list_button" src="img/agregar.svg" data-state="0" alt="" id="add_btn">
-                    <img class="options_icon" src="img/option_points.svg" data-state="0" alt="" id="options_btn">
+                    <img class="list_button" src="{{asset('img/descargar.svg')}}" data-state="0" alt="" id="download_btn">
+                    <img class="list_button" src="{{asset('img/agregar.svg')}}" data-state="0" alt="" id="add_btn">
+                    <img class="options_icon" src="{{asset('img/option_points.svg')}}" data-state="0" alt="" id="options_btn">
                 </div>
             </div>
         </div>
         <div class="list_container" data-type="album">
-            <div class="list_item">
+            @foreach ($album->canciones as $cancion)
+            <div class="list_item" data-idCancion="{{$cancion->idCancion}}">
                 <div style="display:flex;">
                     <div class="song_text_container">
-                        <p class="song_title">BAMBÚ</p>
-                        <p class="song_artist">Cardellino</p>
+                        <p class="song_title">{{$cancion->nombreCancion}}</p>
+                        <p class="song_artist">{{$album->nombreArtista}}</p>
                     </div>
                 </div>
-                <img class="options_icon options_btn" src="img/option_points.svg" alt="Opciones">
+                <img class="options_icon options_btn" src="{{asset('img/option_points.svg')}}" alt="Opciones">
             </div>
-            <div class="list_item">
-                <div style="display:flex;">
-                    <div class="song_text_container">
-                        <p class="song_title">DAIQUIRI</p>
-                        <p class="song_artist">Bad Bunny</p>
-                    </div>
-                </div>
-                <img class="options_icon options_btn" src="img/option_points.svg" alt="Opciones">
-            </div>
+            @endforeach
         </div>
         <div class="info_album">
-            <p>mayo 21, 2022</p>
-            <p>2 canciones • 23 min 41s</p>
+            <p>{{$album->fechaLanzamiento}}</p>
+            <p>{{$album->cantidadCanciones." canciones • 23 min 41s"}}</p>
         </div>
 
         <div class="artist_seal">
-            <img src="img/cardellino.jpeg" alt="portada list">
-            <p>Cardellino</p>
+            <img src="https://storage.cloud.google.com/spt-project-bucket/{{$album->fotoArtista}}" alt="portada list">
+            <p>{{$album->nombreArtista}}</p>
         </div>
+        
         <!-- Menu de opciones !-->
         <div class="superposition_background" id="superposition_background"></div>
 
@@ -97,6 +91,6 @@
         </div>
     </main>
     <footer></footer>
-    <script type="module" src="js/album.js"></script>
+    <script type="module" src="{{asset('js/album.js')}}"></script>
 </body>
 </html>

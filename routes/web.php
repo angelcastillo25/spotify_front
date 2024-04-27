@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\PlaylistController;
+use App\Http\Controllers\AlbumesController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -26,6 +27,8 @@ Route::get('/home', function(){
 Route::get('/playlist', function(){
     return view('playlist');
 });
+
+Route::get('/album/{idUsuario}/{idAlbum}', [AlbumesController::class, 'getAlbum'])->name('album.obtener');
 
 Route::get('/album', function(){
     return view('album');
@@ -74,5 +77,7 @@ Route::get('/createPlaylist', function(){
 Route::get('/addSong', function(){
     return view('addSong');
 });
+
+Route::get('/playlist/{idPlaylist}', [PlaylistController::class, 'getPlaylist'])->name('playlist.obtener');
 
 Route::get('/playlist/{idPlaylist}', [PlaylistController::class, 'getPlaylist'])->name('playlist.obtener');
