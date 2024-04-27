@@ -1,10 +1,16 @@
 import { changeIcon, showListOptions, hideOptionsMenu, slideOptionsMenu, endOptionsMenu} from "./functions.js";
 
+//ids de Usuario y album cargado
+const idAlbum = document.querySelector("html").dataset.idalbum;
+const idUsuario = document.querySelector("html").dataset.idusuario;
+
 const backBtn = document.getElementById("back_btn");
 //TODO: Hacer accion hacia atras
 
 const downloadBtn = document.getElementById("download_btn");
-const addBtn = document.getElementById("add_btn");
+
+const followBtn = document.getElementById("add_btn");
+setFollowBtn();//Se establece el estado del boton de seguir
 
 const playBtn = document.getElementById("play_btn");
 
@@ -34,11 +40,11 @@ const listOptionSongs = document.getElementsByClassName("options_btn")
 
 downloadBtn.addEventListener('click', (e)=>{alert("Esta opción esta en desarrollo, pronto estará disponible")});
 
-addBtn.addEventListener('click', changeIcon.bind(addBtn,{1:"agregar.svg", 0:"agregado.svg"}));
+followBtn.addEventListener('click', ()=>{followAlbum()});
 
-playBtn.addEventListener('click', changeIcon.bind(playBtn,{1:"play.png", 0:"pausa.png"}));
+playBtn.addEventListener('click', ()=>{changeIcon(playBtn,{1:"play.png", 0:"pausa.png"})});
 
-optionsBtn.addEventListener('click', ()=>{showListOptions( getAlbumInfo(), optionsMenu)});
+optionsBtn.addEventListener('click', ()=>{showListOptions(getAlbumInfo(), optionsMenu)});
 
 optionMenu.addEventListener('touchmove', (e)=>{slideOptionsMenu(e,positionMenu,optionMenu)});
 
@@ -49,9 +55,20 @@ superBgrnd.addEventListener('click',()=>{hideOptionsMenu(optionsMenu)})
 for (const optionSong of listOptionSongs) {
     optionSong.addEventListener('click', ()=>{showListOptions(getSongInfo(optionSong),optionsMenu)})}
 
+
 /**
  * FUNCIONES
  */
+
+/**
+ * Establece el estado de los elementos al renderizar la vista
+ */
+function setFollowBtn(){
+    let state = parseInt(followBtn.dataset.state);
+    if(state == "1"){
+        followBtn.src = "http://127.0.0.1:8000/img/agregado.svg";
+    }
+}
 
 /**
  * Obtiene los datos necesarios para mostrar en opciones de una playlist
@@ -80,4 +97,15 @@ function getSongInfo(song){
     let authorName = parent.querySelector("p.song_artist").innerText;
     
     return {'cover': coverPath, 'name': SongName, 'author':authorName}
+}
+
+function followAlbum(){
+    let state = followBtn.dataset.state;
+    fetch(`/album/follow/${idUsuario}/${idAlbum}/${state}`)
+    .then(response=>{
+        if (response.ok) {
+            changeIcon(followBtn,{1:"agregar.svg", 0:"agregado.svg"})
+        }
+    })
+    .catch(error=>{console.error('Error en la peticion: ',error)});
 }

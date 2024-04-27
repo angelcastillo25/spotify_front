@@ -29,6 +29,8 @@ Route::get('/playlist', function(){
 
 Route::get('/album/{idUsuario}/{idAlbum}', [AlbumesController::class, 'getAlbum'])->name('album.obtener');
 
+Route::get('/album/follow/{idUsuario}/{idAlbum}/{state}', [AlbumesController::class, 'followAlbum'])->name('album.follow');
+
 Route::get('/song', function(){
     return view('song');
 });
