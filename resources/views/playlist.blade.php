@@ -14,33 +14,33 @@
         <div class="list_header">
             <img class="back_button" src="img/backArrowMen.svg" alt="boton atras" id="back_btn">
             <div class="cover_container">
-                <img src="img/cover.jpg" class="cover_img" alt="portada list" id="list_cover">
+                <img src="{{asset('img/cover.jpg')}}" class="cover_img" alt="portada list" id="list_cover">
             </div>
             
             <div class="list_header_panel">
-            <p hidden id="list_name" class="list_name">Exitos Latinos</p>
+            <p hidden id="list_name" class="list_name">{{$playlist->nombrePlaylist}}}}</p>
                 <div class="play_button"><img class="play_icon" src="img/play.png" alt="boton pausa"  id="play_btn" data-state="0"></div>
                 <div class="description_container">
-                    <p>Los exitos de *Artista*, en un solo lugar. Dale play ahora!</p>
+                    <p>{{$playlist->descripcion}}</p>
                 </div>
                 <div class="creator_container">
-                    <img src="img/profil.jpg" alt="usuario" class="profile_image">
-                    <p id="author_name">Daniel Ochoa</p>
+                    <img src="{{asset('img/profil.jpg')}}" alt="usuario" class="profile_image">
+                    <p id="author_name">{{$playlist->nombreUsuario}}</p>
                 </div>
                 <div class="description_container">
-                    <p>Se guardo 2,000 veces - 2h 34m</p>
+                    <p>Se guardo {{$playlist->guardados}} veces - 2h 34m</p>
                 </div>
                 <div class="buttons_container">
-                    <img class="list_button" src="img/descargar.svg" data-state="0" alt="" id="download_btn">
-                    <img class="list_button" src="img/agregar.svg" data-state="0" alt="" id="add_btn">
-                    <img class="options_icon" src="img/option_points.svg" alt="" id="options_btn">
+                    <img class="list_button" src="{{asset('img/descargar.svg')}}" data-state="0" alt="" id="download_btn">
+                    <img class="list_button" src="{{asset('img/agregar.svg')}}" data-state="0" alt="" id="add_btn">
+                    <img class="options_icon" src="{{asset('img/option_points.svg')}}" alt="" id="options_btn">
                 </div>
             </div>
         </div>
         <div class="list_container">
         <div class="list_item">
                 <div style="display:flex;">
-                    <img src="img/cardellino.jpeg" alt="" class="song_cover">
+                    <img src="https://storage.cloud.google.com/spt-project-bucket/{{$playlist->portadaPlaylist}}" alt="" class="song_cover">
                     <div class="song_text_container">
                         <p class="song_title">Bambu</p>
                         <p class="song_artist">Cardellino</p>

@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\PlaylistController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
@@ -73,3 +74,5 @@ Route::get('/createPlaylist', function(){
 Route::get('/addSong', function(){
     return view('addSong');
 });
+
+Route::get('/playlist/{idPlaylist}', [PlaylistController::class, 'getPlaylist'])->name('playlist.obtener');
