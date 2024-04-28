@@ -1,19 +1,19 @@
 <?php
 
 use App\Http\Controllers\AlbumesController;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\UsuarioController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/login', function(){
-    return view('login');
-});
+Route::get('/login', [UsuarioController::class, 'loginIndex'])->name('login.index');
 
-Route::get('/register', function(){
-    return view('register');
-});
+Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
+
+Route::post('/register/create', [RegisterController::class, 'create'])->name('register.create');
 
 Route::get('/landingPage', function(){
     return view('landingPage');

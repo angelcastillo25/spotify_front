@@ -80,6 +80,10 @@
 .artist_item{
     position: relative;
     margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.33%;
 }
 
 .artist_img{

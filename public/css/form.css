@@ -32,7 +32,8 @@ input{
     border-radius: 5px;
     border: 1px solid #727272;
     box-sizing: border-box;
-    color: #727272;
+    color: #acacac;
+    font-size: 0.9rem;
 }
 
 select{

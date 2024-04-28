@@ -15,8 +15,11 @@
     </header>
     <main>
         <div id="register_container">
+            
             <h1 class="title">Registrate para empezar a escuchar musica gratis</h1>
-        <form action="POST" class="form" id="register_form">
+        <form action={{route('register.create')}} method="POST" class="form" id="register_form">
+            @csrf
+            @method('POST')
             <div id="bars">
                 <div class="step_bar"></div>
                 <div id="step_bar_green"></div>
@@ -71,7 +74,7 @@
                         <p class="label_name">Nombre</p>
                         <p class="label_description">Este nombre aparecerá en tu perfil</p>
                     </label>
-                    <input name="username" type="password" placeholder="Nombre de usuario">
+                    <input name="username" type="text" placeholder="Nombre de usuario">
                 </div>
                 <div class="form_section">
                     <label for="">
@@ -84,12 +87,12 @@
                     <div class="form_section">
                         <label for="">
                             <p class="label_name">Genero</p>
-                            <p class="label_description">Nada mas por chismear</p>
+                            <p class="label_description">Cuentanos...</p>
                         </label>
                         <select name="genero" id="genero_select">
-                            <option value="M">Masculino</option>
-                            <option value="F">Femenino</option>
-                            <option value="O">Otro</option>
+                            @foreach($generos as $genero)
+                            <option value="{{$genero->idGenero}}">{{$genero->nombre_genero}}</option>
+                            @endforeach
                         </select>
                     </div>
                     <div class="form_section">
@@ -98,9 +101,9 @@
                             <p class="label_description">¿De donde eres?</p>
                         </label>
                         <select name="pais" id="pais_select">
-                            <option value="H">Honduras</option>
-                            <option value="V">Venezuela</option>
-                            <option value="CR">Costa Rica</option>
+                            @foreach($paises as $pais)
+                            <option value="{{$pais->idPais}}">{{$pais->nombre_pais}}</option>
+                            @endforeach
                         </select>
                     </div>
                 </div>
@@ -119,25 +122,23 @@
                         </div>
                     </div>
                 </div>
-                 <select name="artists" id="artist_select"  hidden multiple>
-                    <option value="BadBunny">Bad Bunny</option>
-                    <option value="Cardellino">Cardellino</option>
-                 </select>
-                 <div id="artist_container">
-                    <div class="artist_item" data-artist="BadBunny">
-                        <img class="artist_img" src="img/cardellino.jpeg" alt="Bad Bunny">
-                        <p class="artist_name">Bad Bunny</p>
+                <select name="artists[]" id="artist_select" hidden multiple>
+                    @foreach($artistas as $artista)
+                    <option value="{{ $artista->idArtista }}">{{ $artista->nombreArtista }}</option>
+                    @endforeach
+                </select>
+                <div id="artist_container">
+                    @foreach($artistas as $artista)
+                    <div class="artist_item" data-artist="{{ $artista->idArtista }}">
+                        <img class="artist_img" src="https://storage.cloud.google.com/spt-project-bucket/{{$artista->fotoArtista}}" alt="Bad Bunny">
+                        <p class="artist_name">{{ $artista->nombreArtista }}</p>
                         <div class="artist_checked" hidden><img class="check_icon" src="img/check.png" alt=""></div>
                     </div>
-                    <div class="artist_item" data-artist="Cardellino">
-                        <img class="artist_img" src="img/cardellino.jpeg" alt="Bad Bunny">
-                        <p class="artist_name">Cardellino</p>
-                        <div class="artist_checked" src="img/check.png" class="check_icon" hidden><img class="check_icon" src="img/check.png" alt=""></div>
-                    </div>
+                    @endforeach
                     <button class="form_button" id="step4_button">
                     Registrarse
                     </button>
-                 </div>
+                </div>
             </div>
         </form>
         </div>
