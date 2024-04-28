@@ -36,7 +36,7 @@
                 <div class="noaccount_question_container">
                     <p>¿Ya tienes una cuenta?</p>
                     <br>
-                    <a href="">Inicia sesion aqui</a>
+                    <a href={{route('login.index')}}>Inicia sesion aqui</a>
                 </div>
             </div>
             <!-- Paso 2 -->

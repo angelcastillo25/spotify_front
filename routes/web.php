@@ -11,6 +11,8 @@ Route::get('/', function () {
 
 Route::get('/login', [UsuarioController::class, 'loginIndex'])->name('login.index');
 
+Route::post('/login/validate', [UsuarioController::class, 'validate'])->name('login.validate');
+
 Route::get('/register', [RegisterController::class, 'index'])->name('register.index');
 
 Route::post('/register/create', [RegisterController::class, 'create'])->name('register.create');

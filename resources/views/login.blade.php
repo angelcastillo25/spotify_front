@@ -21,14 +21,16 @@
             <h2>Inicia sesión en Spotify</h2>
             <img src="img/login_listen.png" alt="escuchando musica" id="login_illustration">
             <hr>
-            <form action="POST" class="form">
+            <form action={{route('login.validate')}} method="POST" class="form">
+                @csrf
+                @method('POST')
                 <div class="form_section">
                         <label for="">Correo Electronico</label>
-                        <input type="email" placeholder="Correo Electronico">
+                        <input name="email" type="email" placeholder="Correo Electronico">
                 </div>
                 <div class="form_section">
                     <label for="">Contrasena</label>
-                    <input type="password" placeholder="Ingrese su contrasena">
+                    <input name="password" type="password" placeholder="Ingrese su contrasena">
                 </div>
                 <button class="form_button">
                     Iniciar Sesion
@@ -37,7 +39,7 @@
             <div class="noaccount_question_container">
                 <p>¿No tienes una cuenta?</p>
                 <br>
-                <a href="">Registrate aqui</a>
+                <a href={{route('register.index')}}>Registrate aqui</a>
             </div>
         </div>
     </main>
