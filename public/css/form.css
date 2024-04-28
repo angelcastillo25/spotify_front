@@ -6,6 +6,11 @@
     flex-direction: column;
 }
 
+a{
+    color: white;
+    font-weight: 600;
+}
+
 label{
     display: block;
     margin-bottom: 10px;

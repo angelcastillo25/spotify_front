@@ -4,7 +4,7 @@ import { changeIcon, showListOptions, hideOptionsMenu, slideOptionsMenu, endOpti
 
 const notificationBtn = document.getElementById("notification_btn");
 
-notificationBtn.addEventListener('click', changeIcon.bind(notificationBtn,{1:"notificationOff.png", 0:"notificationOn.png"}))
+notificationBtn.addEventListener('click', ()=>{changeIcon(notificationBtn,{1:"notificationOff.png", 0:"notificationOn.png"})});
 
 const followBtn = document.getElementById("follow_btn");
 
@@ -16,13 +16,13 @@ followBtn.addEventListener('click', changeFollow.bind(followBtn))
 const episodesAddBtn = document.getElementsByClassName("add_btn");
 
 for (const addBtn of episodesAddBtn) {
-    addBtn.addEventListener('click', changeIcon.bind(addBtn,{1:"agregar.svg", 0:"agregado.svg"}));
+    addBtn.addEventListener('click',  ()=>{changeIcon(addBtn,{1:"agregar.svg", 0:"agregado.svg"})});
 }
 
 const episodesPlayBtn = document.getElementsByClassName("play_btn");
 
 for (const playBtn of episodesPlayBtn) {
-    playBtn.addEventListener('click', changeIcon.bind(playBtn,{1:"play.png", 0:"pausa.png"}));
+    playBtn.addEventListener('click', ()=>{changeIcon(playBtn,{1:"play.png", 0:"pausa.png"})});
 }
 
 /*Se inicializan los elementos del menu desplazable*/
@@ -140,8 +140,8 @@ function initItems(){
     episodesBtn.querySelector("p").style.color="white";
     episodesBtn.querySelector("div.green_line").style = "width:100%";
 
-    aboutSection.style = "position:fixed; right:-390px; top:360px; opacity:0"
-    similarSection.style = "position:fixed; right:-390px; top:360px; opacity:0"
+    aboutSection.style = "position:fixed; right:-390px; top:360px; opacity:0;"
+    similarSection.style = "position:fixed; right:-390px; top:360px; opacity:0;"
 }
 
 function changeSection(currentElement){

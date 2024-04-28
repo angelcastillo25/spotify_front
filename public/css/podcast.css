@@ -15,8 +15,7 @@ main{
 .principal_header{
     display: flex;
     flex-direction: column;
-    width: 100%;
-    padding: 20px;
+    padding: 20px 20px 0 20px;
     background-image: linear-gradient(to top,rgba(18,18,18,1), rgba(68, 115, 255,0.5) 100%);
 }
 
@@ -84,7 +83,7 @@ main{
 .podcast_sections{
     display: flex;
     width: 100%;
-    margin: 20px 0;
+    margin-top: 20px;
 }
 
 .section_button>p{

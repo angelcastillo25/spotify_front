@@ -80,7 +80,7 @@
         </div>
     </main>
     <footer>
-    <div class="footerMenu">
+        <div class="footerMenu">
             <div class="songReproducer">
                 <div class="artistPart">
                     <img src="http://127.0.0.1:8000/img/cardellino.jpeg" alt="" class="imgArtistRpr">
@@ -127,7 +127,6 @@
                     <p>Bibloteca</p>
                 </button>
             </div>
-
         </div>
     </footer>
     <script type="module" src="{{asset('js/album.js')}}"></script>
