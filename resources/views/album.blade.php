@@ -16,13 +16,13 @@
         <div class="list_header">
             <img class="back_button" src="{{ asset('img/backArrowMen.svg') }}" alt="boton atras" id="back_btn">
             <div class="cover_container">
-                <img src="https://storage.cloud.google.com/spt-project-bucket/{{$album->portadaAlbum}}" class="cover_img" alt="portada list" id="list_cover">
+                <img src="https://storage.googleapis.com/spt-project-bucket/{{$album->portadaAlbum}}" class="cover_img" alt="portada list" id="list_cover">
             </div>
             <div class="list_header_panel">
                 <p id="list_name" class="list_name">{{$album->nombreAlbum}}</p>
                 <div class="play_button"><img class="play_icon" src="{{asset('img/play.png')}}" alt="boton pausa"  id="play_btn" data-state="0"></div>
                 <div class="creator_container">
-                    <img src="https://storage.cloud.google.com/spt-project-bucket/{{$album->fotoArtista}}" alt="usuario" class="profile_image">
+                    <img src="https://storage.googleapis.com/spt-project-bucket/{{$album->fotoArtista}}" alt="usuario" class="profile_image">
                     <p id="author_name">{{$album->nombreArtista}}</p>
                 </div>
                 <div class="description_container">
@@ -54,7 +54,7 @@
         </div>
 
         <div class="artist_seal">
-            <img src="https://storage.cloud.google.com/spt-project-bucket/{{$album->fotoArtista}}" alt="portada list">
+            <img src="https://storage.googleapis.com/spt-project-bucket/{{$album->fotoArtista}}" alt="portada list">
             <p>{{$album->nombreArtista}}</p>
         </div>
         

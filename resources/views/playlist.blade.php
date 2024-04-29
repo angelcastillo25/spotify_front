@@ -14,7 +14,7 @@
         <div class="list_header">
             <img class="back_button" src="{{asset('img/backArrowMen.svg')}}" alt="boton atras" id="back_btn">
             <div class="cover_container">
-                <img src="{{asset('img/cover.jpg')}}" class="cover_img" alt="portada list" id="list_cover">
+                <img src="https://storage.googleapis.com/spt-project-bucket/{{$playlist->portadaPlaylist}}" class="cover_img" alt="portada list" id="list_cover">
             </div>
             
             <div class="list_header_panel">

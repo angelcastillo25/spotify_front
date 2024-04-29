@@ -13,7 +13,7 @@
     <div class="principal_header">
         <img class="back_button" src="{{asset('img/backArrowMen.svg')}}" alt="boton atras" id="back_btn">
         <div class="podcast_header">
-            <img src="https://storage.cloud.google.com/spt-project-bucket/{{$podcast->portada}}" alt="cover de podcast" class="podcast_cover" id="podcast_cover">
+            <img src="https://storage.googleapis.com/spt-project-bucket/{{$podcast->portada}}" alt="cover de podcast" class="podcast_cover" id="podcast_cover">
             <div class="podcast_info">
                 <p class="podcast_title" id="podcast_title">{{$podcast->nombrePodcast}}</p>
                 <p class="podcast_author" id="podcast_author">{{$podcast->autor}}</p>
@@ -48,7 +48,7 @@
             @foreach($podcast->episodios as $episodio)
             <a class="episode_item" href={{ route('episodio.obtener', ['idEpisodio'=>$episodio->id]) }}>
                 <div class="title_container">
-                    <img src="https://storage.cloud.google.com/spt-project-bucket/{{$podcast->portada}}" alt="">
+                    <img src="https://storage.googleapis.com/spt-project-bucket/{{$podcast->portada}}" alt="">
                     <p>{{$episodio->nombre}}</p>
                 </div>
                 <p class="podcast_description">{{$episodio->descripcion}}</p>
@@ -78,7 +78,7 @@
         <div class="similar_container" id="similar_section">
             @foreach ($podcast->sugerenciasPodcasts as $sugerencia)
                 <div class="similar_item">
-                    <img src="https://storage.cloud.google.com/spt-project-bucket/{{$sugerencia->portada}}" alt="" class="similar_img">
+                    <img src="https://storage.googleapis.com/spt-project-bucket/{{$sugerencia->portada}}" alt="" class="similar_img">
                     <div class="similar_text">
                         <p class="similar_gender">Ciencia • Politica • Educacion</p>
                         <p class="similar_text">{{$sugerencia->nombrePodcast}}</p>
