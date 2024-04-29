@@ -1,5 +1,22 @@
 let playButton = document.querySelector('#buttonPlay');
 
+document.addEventListener("DOMContentLoaded", function() {
+    // Obtener la información del almacenamiento local
+    let songName = localStorage.getItem('nombreCancion');
+    let artistName = localStorage.getItem('nombreArtista');
+    let coverSong = localStorage.getItem('portadaCancion');
+
+    // Seleccionar los elementos del footer
+    let songPlayName = document.querySelector('#songPlayName');
+    let songPlayArtist = document.querySelector('#songPlayArtist');
+    let songPlayCover = document.querySelector('#songPlayCover');
+
+    // Asignar la información a los elementos del footer
+    songPlayName.textContent = songName;
+    songPlayArtist.textContent = artistName;
+    songPlayCover.src = 'https://storage.googleapis.com/spt-project-bucket/' + coverSong;
+});
+
 function changeImage() {
     let image = document.getElementById('buttonImage');
     let currentSrc = image.src;
