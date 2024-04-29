@@ -1,4 +1,4 @@
-function changeColor(container, songName, artistName, coverSong) {
+function changeColor(container, songid, songName, artistName, coverSong) {
     // Restablecer el color de todos los títulos de canciones
     var songTitles = document.querySelectorAll('.song_title');
     songTitles.forEach(function(title) {
@@ -8,9 +8,10 @@ function changeColor(container, songName, artistName, coverSong) {
     // Obtener el título de la canción dentro del div clicado
     var songTitle = container.querySelector('.song_title');
     
-    // Cambiar el color solo del título de la canción dentro del div clicado
-    songTitle.style.color = '#12f965'; // Cambia 'red' al color que desees
+    
+    songTitle.style.color = '#12f965';
 
+    localStorage.setItem('idCancion', songid);
     localStorage.setItem('nombreCancion', songName);
     localStorage.setItem('nombreArtista', artistName);
     localStorage.setItem('portadaCancion', coverSong);

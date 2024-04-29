@@ -40,7 +40,7 @@
         </div>
         <div class="songsContainer" style="margin-bottom: 200px;">
             @foreach ($playlist->canciones as $cancion)
-            <div class="list_container" onclick="changeColor(this, '{{$cancion->nombreCancion}}', '{{$cancion->artistaCancion}}', '{{$cancion->portadaCancion}}')">
+            <div class="list_container" onclick="changeColor(this, '{{$cancion->id_cancion}}', '{{$cancion->nombreCancion}}', '{{$cancion->artistaCancion}}', '{{$cancion->portadaCancion}}')">
                 <div class="list_item">
                     <div style="display:flex;">
                         <img src="https://storage.googleapis.com/spt-project-bucket/{{$cancion->portadaCancion}}" alt="" class="song_cover">
