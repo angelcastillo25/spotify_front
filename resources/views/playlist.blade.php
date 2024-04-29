@@ -4,22 +4,22 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Playlist Name</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/lists.css">
-    <link rel="stylesheet" href="css/options_menu.css">
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/lists.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/options_menu.css') }}">
 </head>
 <body>
     <main>
         <div class="list_header">
-            <img class="back_button" src="img/backArrowMen.svg" alt="boton atras" id="back_btn">
+            <img class="back_button" src="{{asset('img/backArrowMen.svg')}}" alt="boton atras" id="back_btn">
             <div class="cover_container">
                 <img src="{{asset('img/cover.jpg')}}" class="cover_img" alt="portada list" id="list_cover">
             </div>
             
             <div class="list_header_panel">
             <p hidden id="list_name" class="list_name">{{$playlist->nombrePlaylist}}}}</p>
-                <div class="play_button"><img class="play_icon" src="img/play.png" alt="boton pausa"  id="play_btn" data-state="0"></div>
+                <div class="play_button"><img class="play_icon" src="{{asset('img/play.png')}}" alt="boton pausa"  id="play_btn" data-state="0"></div>
                 <div class="description_container">
                     <p>{{$playlist->descripcion}}</p>
                 </div>
@@ -38,25 +38,15 @@
             </div>
         </div>
         <div class="list_container">
-        <div class="list_item">
-                <div style="display:flex;">
-                    <img src="https://storage.cloud.google.com/spt-project-bucket/{{$playlist->portadaPlaylist}}" alt="" class="song_cover">
-                    <div class="song_text_container">
-                        <p class="song_title">Bambu</p>
-                        <p class="song_artist">Cardellino</p>
-                    </div>
-                </div>
-                <img class="options_icon options_btn" src="img/option_points.svg" alt="Opciones">
-            </div>
             <div class="list_item">
                 <div style="display:flex;">
-                    <img src="img/badbunny.jpeg" alt="" class="song_cover">
+                    <img src="https://storage.cloud.google.com/spt-project-bucket/{{$playlist->portadaPlaylist}}" alt="" class="song_cover">
                     <div class="song_text_container">
                         <p class="song_title">Yonaguni</p>
                         <p class="song_artist">Bad Bunny</p>
                     </div>
                 </div>
-                <img class="options_icon options_btn" src="img/option_points.svg" alt="Opciones">
+                <img class="options_icon options_btn" src="{{asset('img/option_points.svg')}}" alt="Opciones">
             </div>
         </div>
         <div class="superposition_background" id="superposition_background"></div>
@@ -65,7 +55,7 @@
                 <div></div>
             </div>
             <div style="display:flex;">
-                <img src="img/cover.jpg" alt="" class="song_cover" id="cover_mini">
+                <img src="{{asset('img/cover.jpg')}}" alt="" class="song_cover" id="cover_mini">
                 <div class="song_text_container">
                     <p class="song_title" id="object_title">Playlist Name</p>
                     <p class="song_artist" id="object_author">por Daniel Ochoa</p>
@@ -73,20 +63,20 @@
             </div>
             <hr style="background-color: #424242;">
             <div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
+                <img class="list_button" src="{{asset('img/agregar.svg')}}" alt="agregar">
                 <p>Agregar a favoritos</p>
             </div>
             <div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
+                <img class="list_button" src="{{asset('img/agregar.svg')}}" alt="agregar">
                 <p>Agregar a favoritos</p>
             </div><div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
+                <img class="list_button" src="{{asset('img/agregar.svg')}}" alt="agregar">
                 <p>Agregar a favoritos</p>
             </div><div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
+                <img class="list_button" src="{{asset('img/agregar.svg')}}" alt="agregar">
                 <p>Agregar a favoritos</p>
             </div><div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
+                <img class="list_button" src="{{asset('img/agregar.svg')}}" alt="agregar">
                 <p>Agregar a favoritos</p>
         </div>
     </main>

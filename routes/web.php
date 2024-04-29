@@ -79,5 +79,5 @@ Route::get('/addSong', function(){
 });
 
 Route::get('/playlist/{idPlaylist}', [PlaylistController::class, 'getPlaylist'])->name('playlist.obtener');
-
+ 
 Route::get('/playlist/{idPlaylist}', [PlaylistController::class, 'getPlaylist'])->name('playlist.obtener');
