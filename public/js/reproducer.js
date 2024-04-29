@@ -4,8 +4,8 @@ function changeImage() {
     let image = document.getElementById('buttonImage');
     let currentSrc = image.src;
 
-    let image1 = 'img/playWhite.png';
-    let image2 = 'img/pause.png';
+    let image1 = 'http://127.0.0.1:8000/img/playWhite.png';
+    let image2 = 'http://127.0.0.1:8000/img/pause.png';
     
     if (currentSrc.endsWith(image1)) {
         image.src = image2;
@@ -39,12 +39,12 @@ function selectButton(button) {
         <p>Inicio</p>
     `;
     button_search.innerHTML = `
-        <img src="img/search.png" alt="" class="img-bar">
+        <img src="http://127.0.0.1:8000/img/search.png" alt="" class="img-bar">
         <p>Buscar</p>
     `;
 
     button_library.innerHTML = `
-        <img src="img/library.png" alt="" class="img-bar">
+        <img src="http://127.0.0.1:8000/img/library.png" alt="" class="img-bar">
         <p>Bibloteca</p>
     `;
 
@@ -78,13 +78,13 @@ function selectButton(button) {
             break;
         case 'search':
             button.innerHTML = `
-                <img src="img/searchSelected.png" alt="" class="img-bar">
+                <img src="http://127.0.0.1:8000/img/searchSelected.png" alt="" class="img-bar">
                 <p>Buscar</p>
             `;
             break;
         case 'library':
             button.innerHTML = `
-                <img src="img/librarySelected.png" alt="" class="img-bar">
+                <img src="http://127.0.0.1:8000/img/librarySelected.png" alt="" class="img-bar">
                 <p>Bibloteca</p>
             `;
             break;

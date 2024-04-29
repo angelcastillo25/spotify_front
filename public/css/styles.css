@@ -51,8 +51,8 @@ footer{
 }
 
 a{
-    color: white;
-    font-weight: 600;
+    text-decoration: none;
+    color: #fff;
 }
 
 .img_container{

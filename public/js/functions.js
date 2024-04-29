@@ -4,10 +4,10 @@
  */
 
 
-function changeIcon(paths){
-    let btn = this;
+function changeIcon(element,paths){
+    let btn = element;
     let state = parseInt(btn.dataset.state);
-    let source = `img/${paths[state]}`
+    let source = `http://127.0.0.1:8000/img/${paths[state]}`
     btn.src = source;
     btn.dataset.state = state === 0 ? 1 : 0; //Si es cero se cambia a 1 sino a cero
 }
@@ -97,6 +97,7 @@ function endOptionsMenu(positionMenu, optionsMenu){
         hideOptionsMenu(optionsMenu);
         positionMenu.current=340;
     }
+
 }
 
 

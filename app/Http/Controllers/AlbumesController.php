@@ -15,8 +15,22 @@ class AlbumesController extends Controller
 
         $album = json_decode($response->getBody());
 
-        return view('album', compact('album'));
+        return view('album', compact('album', 'idUsuario', 'idAlbum'));
     }
 
+    public function followAlbum($idUsuario, $idAlbum,$state){
+        $client = new Client();
+        $state = boolval($state);
+
+        $action= 'followAlbum';
+
+        if ($state) {
+            $action = 'unfollowAlbum';
+        }
+
+        $response = $client->post('localhost:8080/albumes/'.$action.'?idAlbum='.$idAlbum.'&idUsuario='.$idUsuario);
+
+        return $success = $response->getBody();
+    }
 
 }
