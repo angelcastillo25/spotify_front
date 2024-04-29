@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class PodcastController extends Controller
 {
-    public function getPodcast($idUsuario, $idPodcast)
+    public function getPodcast($idPodcast,$idUsuario)
     {
         $client = new Client();
 

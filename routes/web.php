@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\AlbumesController;
+use App\Http\Controllers\CancionController;
 use App\Http\Controllers\PodcastController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UsuarioController;
@@ -43,9 +44,11 @@ Route::get('/song', function(){
     return view('song');
 });
 
+Route::get('/cancion/{idCancion}/{idUsuario}', [CancionController::class, 'getSong'])->name('cancion.obtener');
+
 Route::get('/podcast/episodio/{idEpisodio}', [PodcastController::class, 'getEpisode'])->name('episodio.obtener');
 
-Route::get('/podcast/{idUsuario}/{idPodcast}', [PodcastController::class, 'getPodcast'])->name('podcast.obtener');
+Route::get('/podcast/{idPodcast}/{idUsuario}', [PodcastController::class, 'getPodcast'])->name('podcast.obtener');
 
 Route::get('/profil', function(){
     return view('profil');
