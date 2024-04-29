@@ -5,16 +5,20 @@ document.addEventListener("DOMContentLoaded", function() {
     let songName = localStorage.getItem('nombreCancion');
     let artistName = localStorage.getItem('nombreArtista');
     let coverSong = localStorage.getItem('portadaCancion');
+    let colorSong = localStorage.getItem('colorCancion');
 
     // Seleccionar los elementos del footer
     let songPlayName = document.querySelector('#songPlayName');
     let songPlayArtist = document.querySelector('#songPlayArtist');
     let songPlayCover = document.querySelector('#songPlayCover');
+    let songReproducer = document.querySelector('#songReproducer');
 
     // Asignar la información a los elementos del footer
     songPlayName.textContent = songName;
     songPlayArtist.textContent = artistName;
     songPlayCover.src = 'https://storage.googleapis.com/spt-project-bucket/' + coverSong;
+    songReproducer.style.backgroundColor = colorSong;
+
 });
 
 function changeImage() {
