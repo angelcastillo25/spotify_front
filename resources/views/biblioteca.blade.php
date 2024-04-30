@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/biblioteca.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/biblioteca.css') }}">
+    <link rel="preconnect" href="{{ asset('https://fonts.googleapis.com') }}">
+    <link rel="preconnect" href="{{ asset('https://fonts.gstatic.com') }}" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Iniciar Sesion - Spotify</title>
 </head>
@@ -19,13 +19,13 @@
 
                 <div class="TitleHeader">
                     <div class="img_container">
-                        <img src="img/profil.jpg" alt="foto de perfil" id="profil">
+                        <img src="https://storage.googleapis.com/spt-project-bucket/{{ $library->fotoUsuario }}" alt="foto de perfil" id="profil">
                     </div>
                     <h1>Tu Biblioteca</h1>
                 </div>
                 <div class="thingsHeader">
                     <div class="img_container">
-                        <img src="img/plus.png" alt="foto de perfil" id="profil">
+                        <img src="{{ asset('img/plus.png') }}" alt="foto de perfil" id="profil">
                     </div>
                 </div>
                 
@@ -45,27 +45,26 @@
     </header>
     <main>
            
+        @foreach ($library->playlists as $playlist)
+        <a href="{{ route('playlist.obtener', ['idPlaylist' => $playlist->id_Playlist]) }}" class="playList">
+                <img src="https://storage.googleapis.com/spt-project-bucket/{{ $playlist->portadaPlaylist }}" alt="" class="song_cover">
+                <div class="song_text_container">
+                    <p class="song_title">{{$playlist->nombrePlaylist}}</p>
+                    <p class="song_artist">{{$playlist->cantidadCanciones}} canciones</p>
+                </div>
+        </a>
+        @endforeach
+        @foreach ($library->podcasts as $podcast)
         <div class="playList">
-            <img src="img/liked.png" alt="" class="song_cover">
+            
+            <img src="https://storage.googleapis.com/spt-project-bucket/{{ $podcast->portadaPlaylist }}" alt="" class="song_cover">
             <div class="song_text_container">
-                <p class="song_title">Tus me gusta</p>
-                <p class="song_artist">260 canciones</p>
+                <p class="song_title">{{$podcast->nombrePlaylist}}</p>
+                <p class="song_artist">Podcast • {{$podcast->descripcion}}</p>
             </div>
+            
         </div>
-        <div class="playList">
-            <img src="img/badbunny.jpeg" alt="" class="song_cover">
-            <div class="song_text_container">
-                <p class="song_title">Jpop</p>
-                <p class="song_artist">260 canciones</p>
-            </div>
-        </div>
-        <div class="playList">
-            <img src="img/badbunny.jpeg" alt="" class="song_cover">
-            <div class="song_text_container">
-                <p class="song_title">Clasicos</p>
-                <p class="song_artist">260 canciones</p>
-            </div>
-        </div>
+        @endforeach
         
     </main>
     <footer>
@@ -73,7 +72,7 @@
         <div class="footerMenu">
             <div class="songReproducer">
                 <div class="artistPart">
-                    <img src="img/cardellino.jpeg" alt="" class="imgArtistRpr">
+                    <img src="{{ asset('img/cardellino.jpeg') }}" alt="" class="imgArtistRpr">
                     <div class="titleSong">
                         <p class="songName">Bambu</p>
                         <p class="artistName">cardellino</p>
@@ -81,9 +80,9 @@
                 </div>
                 
                 <div class="buttonsReproducer">
-                    <img src="img/agregar.svg" alt="" class="imgReproductor">
+                    <img src="{{ asset('img/agregar.svg') }}" alt="" class="imgReproductor">
                     <button class="buttons-bar" id="buttonPlay" onclick="changeImage()">
-                        <img src="img/playWhite.png" alt="" class="imgReproductor" id="buttonImage">
+                        <img src="{{ asset('img/playWhite.png') }}" alt="" class="imgReproductor" id="buttonImage">
                     </button>
                 </div>
                 
@@ -109,11 +108,11 @@
                     <p>Inicio</p>
                 </button>
                 <button class="buttons-bar" onclick="selectButton(this)" id="search">
-                    <img src="img/search.png" alt="" class="img-bar">
+                    <img src="{{ asset('img/search.png') }}" alt="" class="img-bar">
                     <p>Buscar</p>
                 </button>
                 <button class="buttons-bar" onclick="selectButton(this)" id="library">
-                    <img src="img/library.png" alt="" class="img-bar">
+                    <img src="{{ asset('img/library.png') }}" alt="" class="img-bar">
                     <p>Bibloteca</p>
                 </button>
             </div>
@@ -122,8 +121,9 @@
         
 
     </footer>
-    <script src="js/biblioteca.js"></script>
-    <script src="js/reproducer.js"></script>
+    <script src="{{ asset('js/biblioteca.js') }}"></script>
+    <script src="{{ asset('js/reproducer.js') }}"></script>
+    <script src="{{ asset('js/reproducirCanciones.js') }}"></script>
     
 </body>
 

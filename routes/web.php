@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\AlbumesController;
+use App\Http\Controllers\BibliotecaController;
 use App\Http\Controllers\CancionController;
 use App\Http\Controllers\HistorialController;
 use App\Http\Controllers\PerfilController;
@@ -82,3 +83,4 @@ Route::get('/playlist/create/{idUsuario}', [PlaylistController::class, 'createPl
 
 Route::get('/playlist/{idPlaylist}', [PlaylistController::class, 'getPlaylist'])->name('playlist.obtener');
  
+Route::get('/biblioteca/{idUser}', [BibliotecaController::class, 'getLibrary'])->name('library.obtener');

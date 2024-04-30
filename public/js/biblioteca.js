@@ -28,6 +28,6 @@ button_home.innerHTML = `
         <p>Inicio</p>
     `;
     button_library.innerHTML = `
-    <img src="img/librarySelected.png" alt="" class="img-bar">
+    <img src="http://localhost/spotify_front/public/img/librarySelected.png" alt="" class="img-bar">
     <p>Bibloteca</p>
     `;

@@ -57,3 +57,8 @@ header {
 .song_text_container {
     margin-left: 20px;
 }
+
+.playlist-link {
+    text-decoration: none; /* Elimina el subrayado predeterminado */
+    color: inherit; /* Hereda el color del texto de su contenedor */
+}
