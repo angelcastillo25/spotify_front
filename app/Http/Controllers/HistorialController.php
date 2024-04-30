@@ -13,8 +13,8 @@ class HistorialController extends Controller
 
         $response = $client->get("localhost:8080/historialCanciones/buscar?idUsuario=".$idUsuario);
 
-        $historial = json_decode($response->getBody());
+        $historiales = json_decode($response->getBody());
 
-        return view('historial', compact('historial'));
+        return view('historial', compact('historiales', 'idUsuario'));
     }
 }
