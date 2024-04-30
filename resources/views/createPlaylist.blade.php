@@ -4,20 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create Playlist</title>
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/create_playlist.css">
+    <link rel="stylesheet" href="{{asset('css/reset.css')}}">
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('css/create_playlist.css')}}">
 </head>
 <body>
     <main>
-    <div class="create_container">
+    <form action={{route('playlist.add')}} method="POST" class="create_container">
+        @csrf
+        @method('POST')
         <p class="create_text">Ponle nombre a tu playlist</p>
-        <input type="text" class="create_input" placeholder="Mi Playlist #xx" value="Mi Playlist">
+        <input type="text" name="nombre" class="create_input" placeholder="Mi Playlist #xx" value="Mi Playlist">
+        <input type="text" name="usuario"  value="{{$idUsuario}}" hidden>
         <div class="buttons_container">
             <a href="" class="btn_cancel">Cancelar</a>
-            <a href="" class="btn_create">Crear</a>
+            <button type="submit" class="btn_create">Crear</button>
         </div>
-    </div>
+    </form>
     </main>
 </body>
 </html>

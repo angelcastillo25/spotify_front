@@ -3,13 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/lists.css">
-    <link rel="stylesheet" href="css/options_menu.css">
-    <link rel="stylesheet" href="css/profil.css">
+    <link rel="stylesheet" href="{{asset('css/reset.css')}}">
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
+    <link rel="stylesheet" href="{{asset('css/lists.css')}}">
+    <link rel="stylesheet" href="{{asset('css/options_menu.css')}}">
+    <link rel="stylesheet" href="{{asset('css/profil.css')}}">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -18,92 +18,82 @@
 <body>
     <main>
         <div class="list_header">
-            <img class="back_button" src="img/backArrowMen.svg" alt="boton atras" id="back_btn">
+            <img class="back_button" src="{{asset('img/backArrowMen.svg')}}" alt="boton atras" id="back_btn">
             <div class="cover_container">
                 <div class="cover-params">
-                    <img src="img/profil.jpg" class="cover_img" alt="portada list" id="list_cover">
+                    <img src="https://storage.googleapis.com/spt-project-bucket/{{$perfil->url_foto_perfil}}" class="cover_img" alt="portada list" id="list_cover">
                     <div class="song_text_container">
-                        <p class="user-name">Angel Castillo</p>
-                        <p class="song_artist">11 seguidores • 23 siguiendo</p>
+                        <p class="user-name">{{$perfil->nombre}}</p>
+                        <p class="song_artist">{{$perfil->cantidadSeguidores}} seguidores • {{$perfil->cantidadSeguidos}} siguiendo</p>
                     </div>
                 </div>
             </div>
 
             <div class="options-menu">
                 <button class="button_header">Editar</button>
-                <img class="options_icon options_btn" src="img/option_points.svg" alt="Opciones">
+                <img class="options_icon options_btn" src="{{asset('img/option_points.svg')}}" alt="Opciones">
             </div>
             
             <div style="padding: 10px 20px;">
-
                 <h1 class="user-name" style="font-size: 20px;">Playlists</h1>
-
             </div>
 
             <div class="list_container">
-                <div class="list_item">
-                        <div style="display:flex;">
-                            <img src="img/cardellino.jpeg" alt="" class="song_cover">
-                            <div class="song_text_container" style="margin-left: 5px;">
-                                <p class="song_title">Clasicos</p>
-                                <p class="song_artist">Se guardo 0 veces</p>
-                            </div>
-                        </div>
-                </div>
+                @foreach ($perfil->playlistCreadas as $playlist)
                 <div class="list_item">
                     <div style="display:flex;">
-                        <img src="img/badbunny.jpeg" alt="" class="song_cover">
+                        <img src="https://storage.googleapis.com/spt-project-bucket/{{$playlist->portadaLista}}" alt="" class="song_cover">
                         <div class="song_text_container" style="margin-left: 5px;">
-                            <p class="song_title">2016</p>
+                            <p class="song_title">{{$playlist->nombreLista}}</p>
                             <p class="song_artist">Se guardo 0 veces</p>
                         </div>
                     </div>
                 </div>
+                @endforeach
             </div>
 
             <div class="bottom-button">
-
                 <button class="button_header" style="margin-right: 0;">Ver todas las playlist</button>
-
             </div>
 
         <div class="superposition_background" id="superposition_background"></div>
             <div class="option_menu" id="option_menu">
-                    <div class="dragbar_container">
-            </div>
-            <div style="display:flex;">
-                <img src="img/cover.jpg" alt="" class="song_cover" id="cover_mini">
-                <div class="song_text_container">
-                    <p class="song_title" id="object_title">Playlist Name</p>
-                    <p class="song_artist" id="object_author">por Daniel Ochoa</p>
+                <div class="dragbar_container"></div>
+                <div style="display:flex;">
+                    <img src="{{asset('img/cover.jpg')}}" alt="" class="song_cover" id="cover_mini">
+                    <div class="song_text_container">
+                        <p class="song_title" id="object_title">Playlist Name</p>
+                        <p class="song_artist" id="object_author">por Daniel Ochoa</p>
+                    </div>
+                </div>
+                <hr style="background-color: #424242;">
+                <div class="option_item">
+                    <img class="list_button" src="{{asset('img/agregar.svg')}}" alt="agregar">
+                    <p>Agregar a favoritos</p>
+                </div>
+                <div class="option_item">
+                    <img class="list_button" src="{{asset('img/agregar.svg')}}" alt="agregar">
+                    <p>Agregar a favoritos</p>
+                </div>
+                <div class="option_item">
+                    <img class="list_button" src="{{asset('img/agregar.svg')}}" alt="agregar">
+                    <p>Agregar a favoritos</p>
+                </div>
+                <div class="option_item">
+                    <img class="list_button" src="{{asset('img/agregar.svg')}}" alt="agregar">
+                    <p>Agregar a favoritos</p>
+                </div>
+                <div class="option_item">
+                    <img class="list_button" src="{{asset('img/agregar.svg')}}" alt="agregar">
+                    <p>Agregar a favoritos</p>
                 </div>
             </div>
-            <hr style="background-color: #424242;">
-            <div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
-                <p>Agregar a favoritos</p>
-            </div>
-            <div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
-                <p>Agregar a favoritos</p>
-            </div><div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
-                <p>Agregar a favoritos</p>
-            </div><div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
-                <p>Agregar a favoritos</p>
-            </div><div class="option_item">
-                <img class="list_button" src="img/agregar.svg" alt="agregar">
-                <p>Agregar a favoritos</p>
-        </div>   
-
-
     </main>
     <footer>
         <div class="footerMenu">
             <div class="songReproducer">
                 <div class="artistPart">
-                    <img src="img/cardellino.jpeg" alt="" class="imgArtistRpr">
+                    <img src="{{asset('img/cardellino.jpeg')}}" alt="" class="imgArtistRpr">
                     <div class="titleSong">
                         <p class="songName">Bambu</p>
                         <p class="artistName">cardellino</p>
@@ -111,9 +101,9 @@
                 </div>
                 
                 <div class="buttonsReproducer">
-                    <img src="img/agregar.svg" alt="" class="imgReproductor">
+                    <img src="{{asset('img/agregar.svg')}}" alt="" class="imgReproductor">
                     <button class="buttons-bar" id="buttonPlay" onclick="changeImage()">
-                        <img src="img/playWhite.png" alt="" class="imgReproductor" id="buttonImage">
+                        <img src="{{asset('img/playWhite.png')}}" alt="" class="imgReproductor" id="buttonImage">
                     </button>
                 </div>
                 
@@ -139,21 +129,16 @@
                     <p>Inicio</p>
                 </button>
                 <button class="buttons-bar" onclick="selectButton(this)" id="search">
-                    <img src="img/search.png" alt="" class="img-bar">
+                    <img src="{{asset('img/search.png')}}" alt="" class="img-bar">
                     <p>Buscar</p>
                 </button>
                 <button class="buttons-bar" onclick="selectButton(this)" id="library">
-                    <img src="img/library.png" alt="" class="img-bar">
+                    <img src="{{asset('img/library.png')}}" alt="" class="img-bar">
                     <p>Bibloteca</p>
                 </button>
             </div>
-
         </div>
-        
-
     </footer>
-    <script src="js/reproducer.js"></script>
+    <script src="{{asset('js/reproducer.js')}}"></script>
 </body>
-
-
 </html>

@@ -2,9 +2,14 @@ import { changeIcon, showListOptions, hideOptionsMenu, slideOptionsMenu, endOpti
 
 const playBtn = document.getElementById("play_btn");
 const saveBtn = document.getElementById("save_btn");
+const playerBar = document.getElementById("player_bar");
 
-playBtn.addEventListener("click", changeIcon.bind(playBtn, {1:"playbtn.svg", 0:"pausebtn.svg"}));
-saveBtn.addEventListener("click", changeIcon.bind(saveBtn, {1:"agregar.svg", 0:"agregado.svg"}));
+var timeSong; //Tiempo de la cancion
+
+//Eventos de los botones 
+
+playBtn.addEventListener("click", ()=>{playSong()});
+saveBtn.addEventListener("click", ()=>changeIcon(saveBtn, {1:"agregar.svg", 0:"agregado.svg"}));
 
 const optionsBtn = document.getElementById("options_btn");
 
@@ -40,4 +45,34 @@ function getSongInfo(){
     let authorName = document.getElementById("author_name").innerText;
 
     return {'cover': coverPath, 'name': SongName, 'author':authorName}
+}
+
+function increaseTime(){
+    let currentValue = parseFloat(playerBar.value);
+    let songDuration = parseFloat(playerBar.max);
+    let timelapsed = document.getElementById("time_lapsed");
+
+    if (currentValue<songDuration) {
+        playerBar.value = (currentValue + 0.01).toFixed(2);
+        console.log(Math.floor(playerBar.value%60))
+        let min = playerBar.value.substring(0,1);
+        let sec = playerBar.value.substring(2);
+        timelapsed.textContent = `${min}:${sec.length == 1 ? sec + "0" : sec}`;
+    }else{
+        clearInterval(timeSong);
+        changeIcon(playBtn, {1:"playbtn.svg", 0:"pausebtn.svg"})
+    }
+    
+}
+
+function playSong(){
+    let state = parseInt(playBtn.dataset.state);
+    if(state){
+        clearInterval(timeSong);
+        changeIcon(playBtn, {1:"playbtn.svg", 0:"pausebtn.svg"})
+    }else{
+        timeSong = setInterval(increaseTime, 1000);
+        console.log("llegado aqui")
+        changeIcon(playBtn, {1:"playbtn.svg", 0:"pausebtn.svg"})
+    }
 }

@@ -2,6 +2,9 @@
 
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\AlbumesController;
+use App\Http\Controllers\CancionController;
+use App\Http\Controllers\HistorialController;
+use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\PodcastController;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\UsuarioController;
@@ -35,21 +38,17 @@ Route::get('/album/{idUsuario}/{idAlbum}', [AlbumesController::class, 'getAlbum'
 
 Route::get('/album/follow/{idUsuario}/{idAlbum}/{state}', [AlbumesController::class, 'followAlbum'])->name('album.follow');
 
-Route::get('/album', function(){
-    return view('album');
-});
-
-Route::get('/song', function(){
-    return view('song');
-});
+Route::get('/cancion/{idCancion}/{idUsuario}', [CancionController::class, 'getSong'])->name('cancion.obtener');
 
 Route::get('/podcast/episodio/{idEpisodio}', [PodcastController::class, 'getEpisode'])->name('episodio.obtener');
 
-Route::get('/podcast/{idUsuario}/{idPodcast}', [PodcastController::class, 'getPodcast'])->name('podcast.obtener');
+Route::get('/podcast/{idPodcast}/{idUsuario}', [PodcastController::class, 'getPodcast'])->name('podcast.obtener');
 
 Route::get('/profil', function(){
     return view('profil');
 });
+
+Route::get('/perfil/{idUsuario}', [PerfilController::class, 'getProfile'])->name('historial.obtener');
 
 Route::get('/biblioteca', function(){
     return view('biblioteca');
@@ -58,6 +57,8 @@ Route::get('/biblioteca', function(){
 Route::get('/historial', function(){
     return view('historial');
 });
+
+Route::get('/historial/{idUsuario}', [HistorialController::class, 'getHistory'])->name('historial.obtener');
 
 Route::get('/buscando', function(){
     return view('searching');
@@ -71,14 +72,13 @@ Route::get('/artist', function(){
     return view('artist');
 });
 
-Route::get('/createPlaylist', function(){
-    return view('createPlaylist');
-});
-
 Route::get('/addSong', function(){
     return view('addSong');
 });
 
+Route::post('/playlist/add', [PlaylistController::class, 'createPlaylist'])->name('playlist.add');
+
+Route::get('/playlist/create/{idUsuario}', [PlaylistController::class, 'createPlaylistView'])->name('playlist.create');
+
 Route::get('/playlist/{idPlaylist}', [PlaylistController::class, 'getPlaylist'])->name('playlist.obtener');
  
-Route::get('/playlist/{idPlaylist}', [PlaylistController::class, 'getPlaylist'])->name('playlist.obtener');
