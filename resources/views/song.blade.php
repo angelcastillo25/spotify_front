@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="{{asset('css/options_menu.css')}}">
     <title>Cancion</title>
 </head>
-<body>
+<body style="background-image: linear-gradient(to top,rgba(18,18,18,1), {{$cancion->color}} 100%);">
     <header>
         <div class="song_header">
             <img src="{{asset('img/down.png')}}" alt="salir">

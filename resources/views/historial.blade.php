@@ -3,24 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/lists.css">
-    <link rel="stylesheet" href="css/options_menu.css">
-    <link rel="stylesheet" href="css/profil.css">
-    <link rel="stylesheet" href="css/historial.css">
+    <link rel="stylesheet" href="{{asset('css/reset.css')}}">
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+    <link rel="stylesheet" href="{{asset('css/lists.css')}}">
+    <link rel="stylesheet" href="{{asset('css/options_menu.css')}}">
+    <link rel="stylesheet" href="{{asset('css/profil.css')}}">
+    <link rel="stylesheet" href="{{asset('css/historial.css')}}">
 
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <title>Iniciar Sesion - Spotify</title>
+    <title>Historial - Spotify</title>
 </head>
 <body>
     <main>
         <div class="historial_header">
             <h4>Escuchado recientemente</h4>
         </div>
-        <img class="back_button" src="img/backArrowMen.svg" alt="boton atras" id="back_btn">
+        <img class="back_button" src="{{asset('img/backArrowMen.svg')}}" alt="boton atras" id="back_btn">
 
         <section>
             <div style="padding: 10px 20px;">
@@ -29,7 +29,7 @@
             <div class="list_container">
                 <div class="list_item">
                     <div style="display:flex;">
-                        <img src="img/cardellino.jpeg" alt="" class="song_cover">
+                        <img src="{{asset('img/cardellino.jpeg')}}" alt="" class="song_cover">
                         <div class="song_text_container" style="margin-left: 5px;">
                             <p class="song_title">Vegano</p>
                             <p class="song_artist">Cardellino</p>
@@ -38,7 +38,7 @@
                 </div>
                 <div class="list_item">
                     <div style="display:flex;">
-                        <img src="img/clancy.jpg" alt="" class="song_cover">
+                        <img src="{{asset('img/clancy.jpg')}}" alt="" class="song_cover">
                         <div class="song_text_container" style="margin-left: 5px;">
                             <p class="song_title">Next Semester</p>
                             <p class="song_artist">twenty one pilots</p>
@@ -47,9 +47,7 @@
                 </div>
             </div>
             <div class="bottom-button">
-
-              <p>Ver las 10 canciones reproducidas</p>
-
+                <p>Ver las 10 canciones reproducidas</p>
             </div>
         </section>
         <section>
@@ -59,7 +57,7 @@
             <div class="list_container">
                 <div class="list_item">
                     <div style="display:flex;">
-                        <img src="img/cardellino.jpeg" alt="" class="song_cover">
+                        <img src="{{asset('img/cardellino.jpeg')}}" alt="" class="song_cover">
                         <div class="song_text_container" style="margin-left: 5px;">
                             <p class="song_title">Bambu</p>
                             <p class="song_artist">Cardellino</p>
@@ -68,7 +66,7 @@
                 </div>
                 <div class="list_item">
                     <div style="display:flex;">
-                        <img src="img/badbunny.jpeg" alt="" class="song_cover">
+                        <img src="{{asset('img/badbunny.jpeg')}}" alt="" class="song_cover">
                         <div class="song_text_container" style="margin-left: 5px;">
                             <p class="song_title">Yunigani</p>
                             <p class="song_artist">Bad bunny</p>
@@ -77,20 +75,15 @@
                 </div>
             </div>
             <div class="bottom-button">
-
                 <p>Ver las 10 canciones reproducidas</p>
-
             </div>
         </section>
-        
-
-        
     </main>
     <footer>
         <div class="footerMenu">
             <div class="songReproducer">
                 <div class="artistPart">
-                    <img src="img/cardellino.jpeg" alt="" class="imgArtistRpr">
+                    <img src="{{asset('img/cardellino.jpeg')}}" alt="" class="imgArtistRpr">
                     <div class="titleSong">
                         <p class="songName">Bambu</p>
                         <p class="artistName">cardellino</p>
@@ -98,9 +91,9 @@
                 </div>
                 
                 <div class="buttonsReproducer">
-                    <img src="img/agregar.svg" alt="" class="imgReproductor">
+                    <img src="{{asset('img/agregar.svg')}}" alt="" class="imgReproductor">
                     <button class="buttons-bar" id="buttonPlay" onclick="changeImage()">
-                        <img src="img/playWhite.png" alt="" class="imgReproductor" id="buttonImage">
+                        <img src="{{asset('img/playWhite.png')}}" alt="" class="imgReproductor" id="buttonImage">
                     </button>
                 </div>
                 
@@ -126,21 +119,17 @@
                     <p>Inicio</p>
                 </button>
                 <button class="buttons-bar" onclick="selectButton(this)" id="search">
-                    <img src="img/search.png" alt="" class="img-bar">
+                    <img src="{{asset('img/search.png')}}" alt="" class="img-bar">
                     <p>Buscar</p>
                 </button>
                 <button class="buttons-bar" onclick="selectButton(this)" id="library">
-                    <img src="img/library.png" alt="" class="img-bar">
+                    <img src="{{asset('img/library.png')}}" alt="" class="img-bar">
                     <p>Bibloteca</p>
                 </button>
             </div>
 
         </div>
-        
-
     </footer>
-    <script src="js/reproducer.js"></script>
+    <script src="{{asset('js/reproducer.js')}}"></script>
 </body>
-
-
 </html>

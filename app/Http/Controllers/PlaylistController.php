@@ -17,4 +17,24 @@ class PlaylistController extends Controller
 
         return view('playlist', compact('playlist'));
     }
+
+    public function createPlaylistView($idUsuario){
+        return view('createPlaylist', compact('idUsuario'));
+    }
+    
+    public function createPlaylist(Request $request){
+        $client = new Client();
+
+        $response = $client->post('localhost:8080/usuarioEstandar/crearLista?nombre='
+        .$request->input('nombre').'&portada=Playlist/playlistdefault.jpeg&idUsuario='
+        .$request->input('usuario').'&idTipoLista=4&descripcion=');
+
+        $idPlaylist = json_decode($response->getBody());
+
+        if ($idPlaylist != 0) {
+            return redirect()->route('playlist.obtener', ['idPlaylist' => $idPlaylist]);
+        }
+        return "Ocurrio un error, vuelva atras e intentelo de nuevo";
+    }
+    
 }
