@@ -21,63 +21,29 @@
             <h4>Escuchado recientemente</h4>
         </div>
         <img class="back_button" src="{{asset('img/backArrowMen.svg')}}" alt="boton atras" id="back_btn">
-
+        @foreach ($historiales as $historial)
         <section>
             <div style="padding: 10px 20px;">
-                <h1 class="tittle_day">Hoy</h1>
+                <h1 class="tittle_day">{{$historial->fechaEscuchada}}</h1>
             </div>
             <div class="list_container">
-                <div class="list_item">
+                @foreach ($historial->canciones as $cancion)
+                <a class="list_item" href={{ route('cancion.obtener', ['idCancion'=>$cancion->idCancion,'idUsuario'=>$idUsuario]) }}>
                     <div style="display:flex;">
-                        <img src="{{asset('img/cardellino.jpeg')}}" alt="" class="song_cover">
+                        <img src="https://storage.googleapis.com/spt-project-bucket/{{$cancion->portada}}" alt="" class="song_cover">
                         <div class="song_text_container" style="margin-left: 5px;">
-                            <p class="song_title">Vegano</p>
-                            <p class="song_artist">Cardellino</p>
+                            <p class="song_title">{{$cancion->nombreCancion}}</p>
+                            <p class="song_artist">{{$cancion->artistaCancion}}</p>
                         </div>
                     </div>
-                </div>
-                <div class="list_item">
-                    <div style="display:flex;">
-                        <img src="{{asset('img/clancy.jpg')}}" alt="" class="song_cover">
-                        <div class="song_text_container" style="margin-left: 5px;">
-                            <p class="song_title">Next Semester</p>
-                            <p class="song_artist">twenty one pilots</p>
-                        </div>
-                    </div>
-                </div>
+                </a>
+                @endforeach
             </div>
-            <div class="bottom-button">
+            <!--<div class="bottom-button" >
                 <p>Ver las 10 canciones reproducidas</p>
-            </div>
+            </div>!-->
         </section>
-        <section>
-            <div style="padding: 10px 20px;">
-                <h1 class="tittle_day">Ayer</h1>
-            </div>
-            <div class="list_container">
-                <div class="list_item">
-                    <div style="display:flex;">
-                        <img src="{{asset('img/cardellino.jpeg')}}" alt="" class="song_cover">
-                        <div class="song_text_container" style="margin-left: 5px;">
-                            <p class="song_title">Bambu</p>
-                            <p class="song_artist">Cardellino</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="list_item">
-                    <div style="display:flex;">
-                        <img src="{{asset('img/badbunny.jpeg')}}" alt="" class="song_cover">
-                        <div class="song_text_container" style="margin-left: 5px;">
-                            <p class="song_title">Yunigani</p>
-                            <p class="song_artist">Bad bunny</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="bottom-button">
-                <p>Ver las 10 canciones reproducidas</p>
-            </div>
-        </section>
+        @endforeach
     </main>
     <footer>
         <div class="footerMenu">
