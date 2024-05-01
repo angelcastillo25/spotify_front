@@ -77,6 +77,8 @@ Route::get('/addSong', function(){
     return view('addSong');
 });
 
+Route::get('/playlist/addSongs/{idPlaylist}', [PlaylistController::class, 'addSongsView'])->name('playlist.addSongs');
+
 Route::post('/playlist/add', [PlaylistController::class, 'createPlaylist'])->name('playlist.add');
 
 Route::get('/playlist/create/{idUsuario}', [PlaylistController::class, 'createPlaylistView'])->name('playlist.create');
