@@ -179,5 +179,6 @@
         </div>
     </footer>
     <script type="module" src="{{asset('js/podcast.js')}}"></script>
+    <script src="{{asset('js/backButton.js')}}"></script>
 </body>
 </html>

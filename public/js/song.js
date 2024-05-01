@@ -1,4 +1,4 @@
-import { changeIcon, showListOptions, hideOptionsMenu, slideOptionsMenu, endOptionsMenu } from "./functions.js";
+import { changeIcon, showListOptions, hideOptionsMenu, slideOptionsMenu, endOptionsMenu} from "./functions.js";
 
 const playBtn = document.getElementById("play_btn");
 const saveBtn = document.getElementById("save_btn");

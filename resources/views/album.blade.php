@@ -131,5 +131,6 @@
     </footer>
     <script type="module" src="{{asset('js/album.js')}}"></script>
     <script src="{{asset('js/reproducer.js')}}"></script>
+    <script src="{{asset('js/backButton.js')}}"></script>
 </body>
 </html>
