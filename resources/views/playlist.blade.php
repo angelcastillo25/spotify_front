@@ -140,5 +140,6 @@
     <script type="module" src="{{ asset('js/playlist.js') }}"></script>
     <script src="{{ asset('js/reproducirCanciones.js') }}"></script>
     <script src="{{ asset('js/reproducer.js') }}"></script>
+    <script src="{{asset('js/backButton.js')}}"></script>
 </body>
 </html>

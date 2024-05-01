@@ -1,4 +1,4 @@
-<html lang="en">
+<html lang="en" data-idusuario={{$idUsuario}} data-idpodcast={{$idPodcast}}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -49,11 +49,11 @@
         <!-- Seccion de episodios !-->
         <div class="episode_list" id="episode_section">
             @foreach($podcast->episodios as $episodio)
-            <a class="episode_item" href={{ route('episodio.obtener', ['idEpisodio'=>$episodio->id]) }}>
-                <div class="title_container">
+            <div class="episode_item">
+                <a class="title_container" href={{ route('episodio.obtener', ['idEpisodio'=>$episodio->id]) }}>
                     <img src="https://storage.googleapis.com/spt-project-bucket/{{$podcast->portada}}" alt="">
                     <p>{{$episodio->nombre}}</p>
-                </div>
+                </a>
                 <p class="podcast_description">{{$episodio->descripcion}}</p>
                 <p class="date_duration">{{$episodio->fecha_publicacion}} • {{$episodio->duracion}}</p>
                 <div class="podcast_buttons">
@@ -63,7 +63,7 @@
                 </div>
                 <div class="play_btn_container"><img src="{{asset('img/play.png')}}" alt="" data-state="0" class="play_btn"></div>
                 <div class="separator"></div>
-            </a>
+            </div>
             @endforeach
         </div>
         <!-- Seccion acerca de !-->
@@ -179,5 +179,6 @@
         </div>
     </footer>
     <script type="module" src="{{asset('js/podcast.js')}}"></script>
+    <script src="{{asset('js/backButton.js')}}"></script>
 </body>
 </html>

@@ -10,7 +10,7 @@
 </head>
 <body>
     <div class="search_header">
-        <img src="img/backArrowMenu.svg" alt="" class="back_icon">
+        <img src="img/backArrowMenu.svg" alt="" class="back_icon" id="back_btn" onclick="">
         <input type="text" placeholder="¿Que quieres escuchar?" class="search_input" id="search_input">
     </div>
     <main>
@@ -30,6 +30,7 @@
             </div>
         </div>
     </main>
-    <script src="js/searching.js"></script>
+    <script type="module" src="{{asset('js/searching.js')}}"></script>
+    <script src="{{asset('js/backButton.js')}}"></script>
 </body>
 </html>

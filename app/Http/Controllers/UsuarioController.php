@@ -21,6 +21,10 @@ class UsuarioController extends Controller
 
         $data = json_decode($response->getBody());
 
+        if ($data->success!=0) {
+            return redirect()->route('home.obtener', ['idUser' => $data->success]);
+        }
+
         return $data;
     }
 }

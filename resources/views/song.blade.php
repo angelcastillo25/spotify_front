@@ -12,7 +12,7 @@
 <body style="background-image: linear-gradient(to top,rgba(18,18,18,1), {{$cancion->color}} 100%);">
     <header>
         <div class="song_header">
-            <img src="{{asset('img/down.png')}}" alt="salir">
+            <img src="{{asset('img/down.png')}}" alt="salir" id="back_btn" onclick="goBack()">
             <div class="song_from">
                 <p>REPRODUCIENDO DESDE PLAYLIST</p>
                 <p class="bold">Mix diario 4</p>
@@ -99,5 +99,6 @@
         </div>
     </div>
     <script type="module" src="{{asset('js/song.js')}}"></script>
+    <script src="{{asset('js/backButton.js')}}"></script>
 </body>
 </html>

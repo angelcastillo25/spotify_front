@@ -12,7 +12,7 @@
 <body>
     <header>
         <p class="header_title">Agregar a esta Playlist</p>
-        <img class="backbtn" src="{{asset('img/backArrowMenu.svg')}}" alt="Add">
+        <img class="backbtn" src="{{asset('img/backArrowMenu.svg')}}" alt="Add" id="back_btn">
     </header>
     <main>
         <div class="suggested_container">
@@ -34,5 +34,6 @@
             </div>
         </div>
     </main>
+    <script src="{{asset('js/backButton.js')}}"></script>
 </body>
 </html>

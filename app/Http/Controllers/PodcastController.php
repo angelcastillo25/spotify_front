@@ -15,7 +15,7 @@ class PodcastController extends Controller
 
         $podcast = json_decode($response->getBody());
 
-        return view('podcast', compact('podcast'));
+        return view('podcast', compact('podcast', 'idPodcast', 'idUsuario'));
     }
 
     public function getEpisode($idEpisodio)
@@ -27,5 +27,20 @@ class PodcastController extends Controller
         $episodio = json_decode($response->getBody());
 
         return view('episodio', compact('episodio'));
+    }
+
+    public function followPodcast($idUsuario, $idPodcast, $state){
+        $client = new Client();
+        $state = boolval($state);
+
+        $action= 'follow';
+
+        if ($state) {
+            $action = 'unfollow';
+        }
+
+        $response = $client->post('localhost:8080/podcast/'.$action.'?idPodcast='.$idPodcast.'&idUsuario='.$idUsuario);
+
+        return $success = $response->getBody();
     }
 }
