@@ -7,7 +7,7 @@ use Illuminate\Http\Request;
 
 class homeController extends Controller
 {
-    public function getLibrary($idUser){
+    public function getHome($idUser){
         $client = new Client();
 
         $response = $client->get('localhost:8080/home/inicio?id='.$idUser);

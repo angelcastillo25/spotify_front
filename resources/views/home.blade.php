@@ -3,12 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/form.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/album_list.css">
+    <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/form.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/home.css') }}">
+    <link rel="stylesheet" href="{{ asset('css/album_list.css') }}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
@@ -17,7 +17,7 @@
 <body>
     <header>
         <div class="img_container">
-            <img src="img/profil.jpg" alt="foto de perfil" id="profil">
+            <img src="https://storage.googleapis.com/spt-project-bucket/{{$home->fotoPerfil}}" alt="foto de perfil" id="profil">
         </div>
         <button onclick="seleccionarButton(this)" class="button_header" id="btn_todas">Todas</button>
         <button onclick="seleccionarButton(this)" class="button_header" id="btn_musica">Musica</button>
@@ -27,70 +27,50 @@
     <main>
             <h1 class="tittle-list">Escuchado Recientemente</h1>
             <div class="list-albums">
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
+                @foreach ($home->cancionesRecientes as $cancion)
+                    <div class="album_canciones">
+                        <img src="https://storage.googleapis.com/spt-project-bucket/{{$cancion->portadaPlaylist}}" alt="" class="portada_album">
+                        <p style="color: white;">{{$cancion->nombrePlaylist}}</p>
+                    </div>
+                @endforeach
             </div>
-            <h1 class="tittle-list">Hemos Creado para ti</h1>
+            <h1 class="tittle-list">Tus mixs favoritos</h1>
             <div class="list-albums">
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
+                @foreach ($home->mixSeguidos as $playlist)
+                    <a href="{{ route('playlist.obtener', ['idPlaylist' => $playlist->id_Playlist]) }}" class="album">
+                        <img src="https://storage.googleapis.com/spt-project-bucket/{{$playlist->portadaPlaylist}}" alt="" class="portada_album">
+                        <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                    </a>
+                @endforeach
             </div>
             <h1 class="tittle-list">Tal vez te interese</h1>
             <div class="list-albums">
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
-                <div class="album">
-                    <img src="img/album.jpg" alt="" class="portada_album">
-                    <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
-                </div>
+                @foreach ($home->tops as $playlist)
+                    <a href="{{ route('playlist.obtener', ['idPlaylist' => $playlist->id_Playlist]) }}" class="album">
+                        <img src="https://storage.googleapis.com/spt-project-bucket/{{$playlist->portadaPlaylist}}" alt="" class="portada_album">
+                        <p style="color: white;">{{$playlist->nombrePlaylist}}</p>
+                    </a>
+                @endforeach
+            </div>
+            <h1 class="tittle-list">Tus Programas</h1>
+            <div class="list-albums">
+                @foreach ($home->podcasts as $playlist)
+                    <div class="album">
+                        <img src="https://storage.googleapis.com/spt-project-bucket/{{$playlist->portadaPlaylist}}" alt="" class="portada_album">
+                        <p style="color: white;">Podcast • {{$playlist->nombrePlaylist}}</p>
+                    </div>
+                @endforeach
             </div>
         
 
         
     </main>
     <footer>
+        
         <div class="footerMenu">
             <div class="songReproducer">
                 <div class="artistPart">
-                    <img src="img/cardellino.jpeg" alt="" class="imgArtistRpr">
+                    <img src="{{ asset('img/cardellino.jpeg') }}" alt="" class="imgArtistRpr">
                     <div class="titleSong">
                         <p class="songName">Bambu</p>
                         <p class="artistName">cardellino</p>
@@ -98,9 +78,9 @@
                 </div>
                 
                 <div class="buttonsReproducer">
-                    <img src="img/agregar.svg" alt="" class="imgReproductor">
+                    <img src="{{ asset('img/agregar.svg') }}" alt="" class="imgReproductor">
                     <button class="buttons-bar" id="buttonPlay" onclick="changeImage()">
-                        <img src="img/playWhite.png" alt="" class="imgReproductor" id="buttonImage">
+                        <img src="{{ asset('img/playWhite.png') }}" alt="" class="imgReproductor" id="buttonImage">
                     </button>
                 </div>
                 
@@ -126,19 +106,22 @@
                     <p>Inicio</p>
                 </button>
                 <button class="buttons-bar" onclick="selectButton(this)" id="search">
-                    <img src="img/search.png" alt="" class="img-bar">
+                    <img src="{{ asset('img/search.png') }}" alt="" class="img-bar">
                     <p>Buscar</p>
                 </button>
                 <button class="buttons-bar" onclick="selectButton(this)" id="library">
-                    <img src="img/library.png" alt="" class="img-bar">
+                    <img src="{{ asset('img/library.png') }}" alt="" class="img-bar">
                     <p>Bibloteca</p>
                 </button>
             </div>
 
         </div>
+        
+
     </footer>
-    <script src="js/home.js"></script>
-    <script src="js/reproducer.js"></script>
+    <script src="{{ asset('js/home.js') }}"></script>
+    <script src="{{ asset('js/reproducer.js') }}"></script>
+    <script src="{{ asset('js/reproducirCanciones.js') }}"></script>
 </body>
 
 
