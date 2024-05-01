@@ -1,5 +1,8 @@
 import { changeIcon, showListOptions, hideOptionsMenu, slideOptionsMenu, endOptionsMenu} from "./functions.js";
 
+const idPodcast = document.querySelector("html").dataset.idpodcast;
+const idUsuario = document.querySelector("html").dataset.idusuario;
+
 /**Comportamientos de botones del podcast */
 
 const notificationBtn = document.getElementById("notification_btn");
@@ -8,7 +11,9 @@ notificationBtn.addEventListener('click', ()=>{changeIcon(notificationBtn,{1:"no
 
 const followBtn = document.getElementById("follow_btn");
 
-followBtn.addEventListener('click', changeFollow.bind(followBtn))
+setFollowBtn();
+
+followBtn.addEventListener('click', followPodcast)
 
 
 /**Comportamientos de botones de los episodios */
@@ -115,21 +120,45 @@ function getEpisodeInfo(episodeBtn){
     return {'cover': coverPath, 'name': episodeName, 'author':authorName}
 }
 
-/**
- * Funcion que cambia de seguir a seguido
- */
-function changeFollow(){
-    let btn = this;
-    let state = parseInt(btn.dataset.state);
+//Cambia el estado inicial del boton seguir
+function setFollowBtn(){
+    let state = parseInt(followBtn.dataset.state);
     if(state){
-        btn.innerText = "Seguir"
-        btn.removeAttribute("style");
-    }else{
-        btn.innerText = "Siguiendo"
-        btn.style.borderColor= "#1ed760";
-        btn.style.color= "#1ed760";
+        followBtn.innerText = "Siguiendo"
+        followBtn.style.borderColor= "#1ed760";
+        followBtn.style.color= "#1ed760";
     }
-    btn.dataset.state = state === 0 ? 1 : 0; //Si es cero se cambia a 1 sino a cero
+}
+
+//Peticion asincrona que manda a seguir al podcast
+function followPodcast(){
+    let state = followBtn.dataset.state;
+    fetch(`/podcast/follow/${idUsuario}/${idPodcast}/${state}`)
+    .then(response=>{
+        if (response.ok) {
+            changeFollow(followBtn);
+        }else{
+            console.log(response)
+        }
+    })
+    .catch(error=>{console.error('Error en la peticion: ',error)});
+}
+
+
+/**
+ * Funcion que cambia el estilo y estado del boton de seguir a seguido o al inverso
+ */
+function changeFollow(button){
+    let state = parseInt(button.dataset.state);
+    if(state){
+        button.innerText = "Seguir"
+        button.removeAttribute("style");
+    }else{
+        button.innerText = "Siguiendo"
+        button.style.borderColor= "#1ed760";
+        button.style.color= "#1ed760";
+    }
+    button.dataset.state = state === 0 ? 1 : 0; //Si es cero se cambia a 1 sino a cero
 }
 
 /**

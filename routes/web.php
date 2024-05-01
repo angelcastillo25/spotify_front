@@ -47,6 +47,8 @@ Route::get('/podcast/episodio/{idEpisodio}', [PodcastController::class, 'getEpis
 
 Route::get('/podcast/{idPodcast}/{idUsuario}', [PodcastController::class, 'getPodcast'])->name('podcast.obtener');
 
+Route::get('/podcast/follow/{idUsuario}/{idAlbum}/{state}', [PodcastController::class, 'followPodcast'])->name('podcast.follow');
+
 Route::get('/profil', function(){
     return view('profil');
 });

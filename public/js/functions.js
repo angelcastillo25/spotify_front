@@ -101,4 +101,4 @@ function endOptionsMenu(positionMenu, optionsMenu){
 }
 
 
-export {changeIcon, showListOptions, hideOptionsMenu, slideOptionsMenu, endOptionsMenu, goBack}
+export {changeIcon, showListOptions, hideOptionsMenu, slideOptionsMenu, endOptionsMenu}
