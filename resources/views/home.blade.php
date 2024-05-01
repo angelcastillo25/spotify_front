@@ -5,7 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="{{ asset('css/reset.css') }}">
     <link rel="stylesheet" href="{{ asset('css/styles.css') }}">
-    <link rel="stylesheet" href="{{ asset('css/form.css') }}">
     <link rel="stylesheet" href="{{ asset('css/footer.css') }}">
     <link rel="stylesheet" href="{{ asset('css/home.css') }}">
     <link rel="stylesheet" href="{{ asset('css/album_list.css') }}">
@@ -39,7 +38,7 @@
                 @foreach ($home->mixSeguidos as $playlist)
                     <a href="{{ route('playlist.obtener', ['idPlaylist' => $playlist->id_Playlist]) }}" class="album">
                         <img src="https://storage.googleapis.com/spt-project-bucket/{{$playlist->portadaPlaylist}}" alt="" class="portada_album">
-                        <p>Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
+                        <p style="color: #afafaf; font-weight: 300;">Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
                     </a>
                 @endforeach
             </div>
@@ -48,7 +47,7 @@
                 @foreach ($home->tops as $playlist)
                     <a href="{{ route('playlist.obtener', ['idPlaylist' => $playlist->id_Playlist]) }}" class="album">
                         <img src="https://storage.googleapis.com/spt-project-bucket/{{$playlist->portadaPlaylist}}" alt="" class="portada_album">
-                        <p style="color: white;">{{$playlist->nombrePlaylist}}</p>
+                        <p style="color: white; font: inherit;">{{$playlist->nombrePlaylist}}</p>
                     </a>
                 @endforeach
             </div>
