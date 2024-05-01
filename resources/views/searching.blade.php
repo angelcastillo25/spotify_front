@@ -14,9 +14,9 @@
         <input type="text" placeholder="¿Que quieres escuchar?" class="search_input" id="search_input">
     </div>
     <main>
-        <div class="search_result">
-            <p class="recent_title">Busquedas recientes</p>
-            <div class="recent_list">
+        <div class="search_result" id="search_result">
+            <p class="recent_title" id="recent_title">Busquedas recientes</p>
+            <div class="recent_list" id="result_list">
                 <div class="recent_item">
                     <div class="item">
                         <img src="img/badbunny.jpeg" alt="" class="cover_img">

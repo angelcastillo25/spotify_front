@@ -17,6 +17,5 @@ class BusquedaController extends Controller
         $response = $client->get('localhost:8080/buscador/buscar?query='.$query);
         
         return $resultados = json_decode($response->getBody());
-
     }
 }
