@@ -26,3 +26,11 @@
     margin-bottom: 45px;
 }
 
+.album_canciones {
+    display: block;
+    width: 150px; 
+    height: auto;
+    margin-right: 15px;
+    flex-shrink: 0; 
+    scroll-snap-align: start;
+}

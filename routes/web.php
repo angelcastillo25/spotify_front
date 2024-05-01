@@ -6,6 +6,7 @@ use App\Http\Controllers\BibliotecaController;
 use App\Http\Controllers\BusquedaController;
 use App\Http\Controllers\CancionController;
 use App\Http\Controllers\HistorialController;
+use App\Http\Controllers\homeController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\PodcastController;
 use App\Http\Controllers\RegisterController;
@@ -87,3 +88,5 @@ Route::get('/playlist/create/{idUsuario}', [PlaylistController::class, 'createPl
 Route::get('/playlist/{idPlaylist}', [PlaylistController::class, 'getPlaylist'])->name('playlist.obtener');
  
 Route::get('/biblioteca/{idUser}', [BibliotecaController::class, 'getLibrary'])->name('library.obtener');
+
+Route::get('/home/{idUser}', [homeController::class, 'getHome'])->name('home.obtener');
