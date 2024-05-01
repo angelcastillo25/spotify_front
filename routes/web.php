@@ -37,21 +37,27 @@ Route::get('/playlist', function(){
     return view('playlist');
 });
 
+//Rutas de album
+
 Route::get('/album/{idUsuario}/{idAlbum}', [AlbumesController::class, 'getAlbum'])->name('album.obtener');
 
 Route::get('/album/follow/{idUsuario}/{idAlbum}/{state}', [AlbumesController::class, 'followAlbum'])->name('album.follow');
 
+//Rutas de cancion
+
 Route::get('/cancion/{idCancion}/{idUsuario}', [CancionController::class, 'getSong'])->name('cancion.obtener');
+
+Route::get('/cancion/follow/{idUsuario}/{idCancion}/{state}', [CancionController::class, 'followCancion'])->name('cancion.follow');
+
+//Rutas de podcasts y episodios
 
 Route::get('/podcast/episodio/{idEpisodio}', [PodcastController::class, 'getEpisode'])->name('episodio.obtener');
 
 Route::get('/podcast/{idPodcast}/{idUsuario}', [PodcastController::class, 'getPodcast'])->name('podcast.obtener');
 
-Route::get('/podcast/follow/{idUsuario}/{idAlbum}/{state}', [PodcastController::class, 'followPodcast'])->name('podcast.follow');
+Route::get('/podcast/follow/{idUsuario}/{idPodcast}/{state}', [PodcastController::class, 'followPodcast'])->name('podcast.follow');
 
-Route::get('/profil', function(){
-    return view('profil');
-});
+//Rutas de perfil
 
 Route::get('/perfil/{idUsuario}', [PerfilController::class, 'getProfile'])->name('historial.obtener');
 

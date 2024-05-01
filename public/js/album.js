@@ -61,7 +61,8 @@ for (const optionSong of listOptionSongs) {
  */
 
 /**
- * Establece el estado de los elementos al renderizar la vista
+ * Establece el estado del boton follow al renderizar la vista
+ * Si el usuario sigue el artista se pone icono verde, sino se deja por defecto
  */
 function setFollowBtn(){
     let state = parseInt(followBtn.dataset.state);

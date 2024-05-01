@@ -15,6 +15,21 @@ class CancionController extends Controller
 
         $cancion = json_decode($response->getBody());
 
-        return view('song', compact('cancion'));
+        return view('song', compact('cancion','idCancion','idUsuario'));
+    }
+
+    public function followCancion($idUsuario, $idCancion ,$state){
+        $client = new Client();
+        $state = boolval($state);
+
+        $action= 'follow';
+
+        if ($state) {
+            $action = 'unfollow';
+        }
+
+        $response = $client->post('localhost:8080/canciones/'.$action.'?idCancion='.$idCancion.'&idUsuario='.$idUsuario);
+
+        return $success = $response->getBody();
     }
 }

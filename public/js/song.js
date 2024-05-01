@@ -1,15 +1,19 @@
 import { changeIcon, showListOptions, hideOptionsMenu, slideOptionsMenu, endOptionsMenu} from "./functions.js";
 
 const playBtn = document.getElementById("play_btn");
-const saveBtn = document.getElementById("save_btn");
+const followBtn = document.getElementById("save_btn");
+setFollowBtn();
 const playerBar = document.getElementById("player_bar");
 
-var timeSong; //Tiempo de la cancion
+var timeSong; //Tiempo de la reproduccion
+
+const idCancion = document.querySelector("html").dataset.idcancion;
+const idUsuario = document.querySelector("html").dataset.idusuario;
 
 //Eventos de los botones 
 
 playBtn.addEventListener("click", ()=>{playSong()});
-saveBtn.addEventListener("click", ()=>changeIcon(saveBtn, {1:"agregar.svg", 0:"agregado.svg"}));
+followBtn.addEventListener("click", followSong);
 
 const optionsBtn = document.getElementById("options_btn");
 
@@ -74,5 +78,23 @@ function playSong(){
         timeSong = setInterval(increaseTime, 1000);
         console.log("llegado aqui")
         changeIcon(playBtn, {1:"playbtn.svg", 0:"pausebtn.svg"})
+    }
+}
+
+function followSong(){
+    let state = followBtn.dataset.state;
+    fetch(`/cancion/follow/${idUsuario}/${idCancion}/${state}`)
+    .then(response=>{
+        if (response.ok) {
+            changeIcon(followBtn,{1:"agregar.svg", 0:"agregado.svg"})
+        }
+    })
+    .catch(error=>{console.error('Error en la peticion: ',error)});
+}
+
+function setFollowBtn(){
+    let state = parseInt(followBtn.dataset.state);
+    if(state == "1"){
+        followBtn.src = "http://127.0.0.1:8000/img/agregado.svg";
     }
 }
