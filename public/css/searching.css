@@ -11,6 +11,10 @@ main{
     box-sizing: border-box;
 }
 
+.search_result{
+    
+}
+
 .back_icon{
     width: 20px;
     height: auto;

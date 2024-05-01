@@ -3,6 +3,7 @@
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\AlbumesController;
 use App\Http\Controllers\BibliotecaController;
+use App\Http\Controllers\BusquedaController;
 use App\Http\Controllers\CancionController;
 use App\Http\Controllers\HistorialController;
 use App\Http\Controllers\PerfilController;
@@ -61,9 +62,9 @@ Route::get('/historial', function(){
 
 Route::get('/historial/{idUsuario}', [HistorialController::class, 'getHistory'])->name('historial.obtener');
 
-Route::get('/buscando', function(){
-    return view('searching');
-});
+Route::get('/buscando', [BusquedaController::class, 'buscandoView'])->name('busqueda.buscando');
+
+Route::get('/buscar/{query}', [BusquedaController::class, 'buscar'])->name('busqueda.buscar');
 
 Route::get('/buscar', function(){
     return view('search');
