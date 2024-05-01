@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="{{asset('css/options_menu.css')}}">
 </head>
 <body>
-    <div class="principal_header">
+    <div class="principal_header" style="background-image: linear-gradient(to top, rgba(18, 18, 18, 1), {{$podcast->color}} 100%);">
         <img class="back_button" src="{{asset('img/backArrowMen.svg')}}" alt="boton atras" id="back_btn">
         <div class="podcast_header">
             <img src="https://storage.googleapis.com/spt-project-bucket/{{$podcast->portada}}" alt="cover de podcast" class="podcast_cover" id="podcast_cover">
@@ -20,7 +20,10 @@
             </div>
         </div>
         <div class="podcast_data">
-            <p>★ 5.0(2k) • {{$podcast->generos[0]->nombreGenero}} • {{$podcast->generos[1]->nombreGenero}} • {{$podcast->generos[2]->nombreGenero}}</p>
+            <span>★ 5.0(2k) •</span>
+            @foreach ($podcast->generos as $genero)
+            <span>{{$genero->nombreGenero}} •</span>
+            @endforeach
         </div>
         <div class="podcast_buttons">
             <div class="follow_btn" id="follow_btn" data-state="{{$podcast->seguido}}">Seguir</div>
