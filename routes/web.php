@@ -93,8 +93,10 @@ Route::post('/playlist/add', [PlaylistController::class, 'createPlaylist'])->nam
 
 Route::get('/playlist/create/{idUsuario}', [PlaylistController::class, 'createPlaylistView'])->name('playlist.create');
 
-Route::get('/playlist/{idPlaylist}', [PlaylistController::class, 'getPlaylist'])->name('playlist.obtener');
+Route::get('/playlist/{idPlaylist}/{idUsuario}', [PlaylistController::class, 'getPlaylist'])->name('playlist.obtener');
  
 Route::get('/biblioteca/{idUser}', [BibliotecaController::class, 'getLibrary'])->name('library.obtener');
 
 Route::get('/home/{idUser}', [homeController::class, 'getHome'])->name('home.obtener');
+
+Route::post('/cancion/play/{idUsuario}/{idMedia}', [CancionController::class, 'playSong'])->name('cancion.play');

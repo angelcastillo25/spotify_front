@@ -8,14 +8,14 @@ use Illuminate\Http\Request;
 class PlaylistController extends Controller
 {
 
-    public function getPlaylist($idPlaylist){
+    public function getPlaylist($idPlaylist, $idUsuario){
         $client = new Client();
 
-        $response = $client->get('localhost:8080/listas/playlistsByid?id='.$idPlaylist);
+        $response = $client->get('localhost:8080/listas/playlistsByid?id='.$idPlaylist.'&idUsuario='.$idUsuario);
 
         $playlist = json_decode($response->getBody());
 
-        return view('playlist', compact('playlist'));
+        return view('playlist', compact('playlist', 'idPlaylist', 'idUsuario'));
     }
 
     public function createPlaylistView($idUsuario){

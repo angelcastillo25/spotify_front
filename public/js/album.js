@@ -110,3 +110,4 @@ function followAlbum(){
     })
     .catch(error=>{console.error('Error en la peticion: ',error)});
 }
+ 

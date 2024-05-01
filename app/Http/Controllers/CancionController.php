@@ -32,4 +32,14 @@ class CancionController extends Controller
 
         return $success = $response->getBody();
     }
+
+    public function playSong($idUsuario, $idMedia){
+        $client = new Client();
+ 
+        $response = $client->post('localhost:8080/canciones/play?idMedia='.$idMedia.'&idUsuario='.$idUsuario);
+
+        return $success = $response->getBody();
+    }
+ 
+    
 }
