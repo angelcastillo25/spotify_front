@@ -13,7 +13,7 @@
 </head>
 <body>
     <main>
-        <div class="list_header">
+        <div class="list_header" style="background-image: linear-gradient(to top, rgba(18, 18, 18, 1), {{$album->color}} 100%);">
             <img class="back_button" src="{{ asset('img/backArrowMen.svg') }}" alt="boton atras" id="back_btn">
             <div class="cover_container">
                 <img src="https://storage.googleapis.com/spt-project-bucket/{{$album->portadaAlbum}}" class="cover_img" alt="portada list" id="list_cover">
@@ -37,10 +37,10 @@
         </div>
         <div class="list_container" data-type="album">
             @foreach ($album->canciones as $cancion)
-            <div class="list_item" data-idCancion="{{$cancion->idCancion}}">
+            <div class="list_item" data-idCancion="{{$cancion->id}}">
                 <div style="display:flex;">
                     <div class="song_text_container">
-                        <p class="song_title">{{$cancion->nombreCancion}}</p>
+                        <p class="song_title">{{$cancion->nombre}}</p>
                         <p class="song_artist">{{$album->nombreArtista}}</p>
                     </div>
                 </div>
