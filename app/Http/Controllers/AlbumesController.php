@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use GuzzleHttp\Client;
 use Illuminate\Http\Request;
-
+ 
 class AlbumesController extends Controller
 {
 
@@ -27,7 +27,7 @@ class AlbumesController extends Controller
         if ($state) {
             $action = 'unfollowAlbum';
         }
-
+ 
         $response = $client->post('localhost:8080/albumes/'.$action.'?idAlbum='.$idAlbum.'&idUsuario='.$idUsuario);
 
         return $success = $response->getBody();

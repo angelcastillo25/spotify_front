@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-idusuario="{{$idUsuario}}" data-idplaylist={{$idPlaylist}}>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -137,7 +137,7 @@
 
         </div>
     </footer>
-    <script src="{{ asset('js/playlist.js') }}"></script>
+    <script type="module" src="{{ asset('js/playlist.js') }}"></script>
     <script src="{{ asset('js/reproducirCanciones.js') }}"></script>
     <script src="{{ asset('js/reproducer.js') }}"></script>
 </body>
