@@ -1,4 +1,5 @@
 const idUsuario = document.querySelector("html").dataset.idusuario;
+
 function changeColor(container, songid, songName, artistName, coverSong, colorSong) {
     // Restablecer el color de todos los títulos de canciones
     var songTitles = document.querySelectorAll('.song_title');
@@ -28,8 +29,7 @@ function changeColor(container, songid, songName, artistName, coverSong, colorSo
     songPlayCover.src = 'https://storage.googleapis.com/spt-project-bucket/' + coverSong;
     songReproducer.style.backgroundColor = colorSong;
 
-    fetch(`/cancion/play/${songid}/${idUsuario}`, {
-        method: 'POST' })
+    fetch(`/cancion/play/${idUsuario}/${songid}`)
     .then(data => console.log(data)) // Manejar la respuesta
     .catch(error => console.error('Error en la petición: ', error));
 

@@ -99,4 +99,4 @@ Route::get('/biblioteca/{idUser}', [BibliotecaController::class, 'getLibrary'])-
 
 Route::get('/home/{idUser}', [homeController::class, 'getHome'])->name('home.obtener');
 
-Route::post('/cancion/play/{idUsuario}/{idMedia}', [CancionController::class, 'playSong'])->name('cancion.play');
+Route::get('/cancion/play/{idUsuario}/{idMedia}', [CancionController::class, 'playSong'])->name('cancion.play');
