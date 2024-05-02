@@ -8,9 +8,7 @@
     background: linear-gradient(0deg, rgba(18, 18, 18, 0.96) 70%, 
                             rgba(18, 18, 18, 1) 0%, 
                             rgba(18, 18, 18, 0.008) 100%);
-    /* opacity: 0.95; */
     color: white;
-    text-align: center;
     padding-bottom: 10px;
     color: white;
     text-decoration: none;
@@ -118,6 +116,10 @@ svg path {
     font-weight: 500;
     margin-bottom: 5px;
     font-size: 16px;
+    display: -webkit-box; /* Establece el comportamiento de la caja */
+    -webkit-line-clamp: 2; /* Limita el texto a 2 líneas */
+    -webkit-box-orient: vertical; /* Orientación vertical de la caja */
+    overflow: hidden; /* Oculta el texto que excede el límite */
 }
 
 .artistName{

@@ -3,16 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/footer.css">
-    <link rel="stylesheet" href="css/home.css">
-    <link rel="stylesheet" href="css/biblioteca.css">
-    <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="{{asset('css/reset.css')}}">
+    <link rel="stylesheet" href="{{asset('css/styles.css')}}">
+    <link rel="stylesheet" href="{{asset('css/footer.css')}}">
+    <link rel="stylesheet" href="{{asset('css/home.css')}}">
+    <link rel="stylesheet" href="{{asset('css/biblioteca.css')}}">
+    <link rel="stylesheet" href="{{asset('css/search.css')}}">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
-    <title>Iniciar Sesion - Spotify</title>
+    <title>Buscar - Spotify</title>
 </head>
 <body>
     <header>
@@ -20,93 +20,92 @@
 
                 <div class="TitleHeader">
                     <div class="img_container">
-                        <img src="img/profil.jpg" alt="foto de perfil" id="profil">
+                        <img src="{{asset('img/profil.jpg')}}" alt="foto de perfil" id="profil">
                     </div>
                     <h1>Buscar</h1>
                 </div>
                 <div class="thingsHeader">
                     <div class="img_container">
-                        <img src="img/search.png" alt="foto de perfil" id="profil">
+                        <img src="{{asset('img/search.png')}}" alt="foto de perfil" id="profil">
                     </div>
                 </div>
                 
             </div>
-            <button class="search-button">
-            <img src="img/searchblack.png" alt="Buscar">
+            <a class="search-button" href={{ route('busqueda.buscandovw', ['idUsuario'=>$idUsuario]) }} style="color: #212121;">
+            <img src="{{asset('img/searchblack.png')}}" alt="Buscar">
             ¿Que quieres escuchar?
-            </button>
+            </a>
         
     </header>
     <main>
            
         <div class="categories-container">
             <div class="category">
-                <img src="img/musica.jpeg" class="img-category">
+                <img src="{{asset('img/musica.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/podcasts.jpeg" class="img-category">
+                <img src="{{asset('img/podcasts.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/eventos.jpeg" class="img-category">
+                <img src="{{asset('img/eventos.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/parati.jpeg" class="img-category">
+                <img src="{{asset('img/parati.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/merch.jpeg" class="img-category">
+                <img src="{{asset('img/merch.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/nuevos.jpeg" class="img-category">
+                <img src="{{asset('img/nuevos.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/latina.jpeg" class="img-category">
+                <img src="{{asset('img/latina.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/mexicana.jpeg" class="img-category">
+                <img src="{{asset('img/mexicana.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/pop.jpeg" class="img-category">
+                <img src="{{asset('img/pop.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/hiphop.jpeg" class="img-category">
+                <img src="{{asset('img/hiphop.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/rankinpodcast.jpeg" class="img-category">
+                <img src="{{asset('img/rankinpodcast.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/educacion.jpeg" class="img-category">
+                <img src="{{asset('img/educacion.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/documentales.jpeg" class="img-category">
+                <img src="{{asset('img/documentales.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/comedia.jpeg" class="img-category">
+                <img src="{{asset('img/comedia.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/rankings.jpeg" class="img-category">
+                <img src="{{asset('img/rankings.jpeg')}}" class="img-category">
             </div>
             <div class="category">
-                <img src="img/salsa.jpeg" class="img-category">
+                <img src="{{asset('img/salsa.jpeg')}}" class="img-category">
             </div>
         </div>
         
     </main>
     <footer>
-        
         <div class="footerMenu">
-            <div class="songReproducer">
+            <div class="songReproducer" id="songReproducer">
                 <div class="artistPart">
-                    <img src="img/cardellino.jpeg" alt="" class="imgArtistRpr">
+                    <img id="songPlayCover" src="" alt="" class="imgArtistRpr">
                     <div class="titleSong">
-                        <p class="songName">Bambu</p>
-                        <p class="artistName">cardellino</p>
+                        <p class="songName" id="songPlayName"></p>
+                        <p class="artistName" id="songPlayArtist"></p>
                     </div>
                 </div>
                 
                 <div class="buttonsReproducer">
-                    <img src="img/agregar.svg" alt="" class="imgReproductor">
+                    <img src="{{ asset('img/agregar.svg') }}" alt="" class="imgReproductor">
                     <button class="buttons-bar" id="buttonPlay" onclick="changeImage()">
-                        <img src="img/playWhite.png" alt="" class="imgReproductor" id="buttonImage">
+                        <img src="{{ asset('img/playWhite.png') }}" alt="" class="imgReproductor" id="buttonImage">
                     </button>
                 </div>
                 
@@ -132,22 +131,19 @@
                     <p>Inicio</p>
                 </button>
                 <button class="buttons-bar" onclick="selectButton(this)" id="search">
-                    <img src="img/search.png" alt="" class="img-bar">
+                    <img src="{{ asset('img/search.png') }}" alt="" class="img-bar">
                     <p>Buscar</p>
                 </button>
                 <button class="buttons-bar" onclick="selectButton(this)" id="library">
-                    <img src="img/library.png" alt="" class="img-bar">
+                    <img src="{{ asset('img/library.png') }}" alt="" class="img-bar">
                     <p>Bibloteca</p>
                 </button>
             </div>
 
         </div>
-        
-
     </footer>
-    <script src="js/biblioteca.js"></script>
-    <script src="js/reproducer.js"></script>
-    
+    <script src="{{asset('js/biblioteca.js')}}"></script>
+    <script src="{{asset('js/reproducer.js')}}"></script>
 </body>
 
 </html>

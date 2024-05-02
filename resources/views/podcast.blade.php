@@ -52,7 +52,7 @@
             <div class="episode_item">
                 <a class="title_container" href={{ route('episodio.obtener', ['idEpisodio'=>$episodio->id]) }}>
                     <img src="https://storage.googleapis.com/spt-project-bucket/{{$podcast->portada}}" alt="">
-                    <p>{{$episodio->nombre}}</p>
+                    <p class="episode_title">{{$episodio->nombre}}</p>
                 </a>
                 <p class="podcast_description">{{$episodio->descripcion}}</p>
                 <p class="date_duration">{{$episodio->fecha_publicacion}} • {{$episodio->duracion}}</p>
@@ -61,7 +61,8 @@
                     <img class="add_btn button_mini" src="{{asset('img/agregar.svg')}}" data-state="0" alt="" >
                     <img class="options_icon" src="{{asset('img/option_points.svg')}}" alt="">
                 </div>
-                <div class="play_btn_container"><img src="{{asset('img/play.png')}}" alt="" data-state="0" class="play_btn"></div>
+                <div class="play_btn_container"><img src="{{asset('img/play.png')}}" alt="" data-state="0" class="play_btn" 
+                    onclick="changeEpisodeColor(this, '{{$episodio->id}}', '{{$episodio->nombre}}', '{{$podcast->autor}}', '{{$podcast->portada}}', '{{$podcast->color}}')"></div>
                 <div class="separator"></div>
             </div>
             @endforeach
@@ -130,19 +131,19 @@
     </main>
     <footer>
         <div class="footerMenu">
-            <div class="songReproducer">
+            <div class="songReproducer" id="songReproducer">
                 <div class="artistPart">
-                    <img src="http://127.0.0.1:8000/img/cardellino.jpeg" alt="" class="imgArtistRpr">
+                    <img id="songPlayCover" src="" alt="" class="imgArtistRpr">
                     <div class="titleSong">
-                        <p class="songName">Bambu</p>
-                        <p class="artistName">cardellino</p>
+                        <p class="songName" id="songPlayName"></p>
+                        <p class="artistName" id="songPlayArtist"></p>
                     </div>
                 </div>
                 
                 <div class="buttonsReproducer">
-                    <img src="http://127.0.0.1:8000/img/agregar.svg" alt="" class="imgReproductor">
+                    <img src="{{ asset('img/agregar.svg') }}" alt="" class="imgReproductor">
                     <button class="buttons-bar" id="buttonPlay" onclick="changeImage()">
-                        <img src="http://127.0.0.1:8000/img/playWhite.png" alt="" class="imgReproductor" id="buttonImage">
+                        <img src="{{ asset('img/playWhite.png') }}" alt="" class="imgReproductor" id="buttonImage">
                     </button>
                 </div>
                 
@@ -168,17 +169,19 @@
                     <p>Inicio</p>
                 </button>
                 <button class="buttons-bar" onclick="selectButton(this)" id="search">
-                    <img src="http://127.0.0.1:8000/img/search.png" alt="" class="img-bar">
+                    <img src="{{ asset('img/search.png') }}" alt="" class="img-bar">
                     <p>Buscar</p>
                 </button>
                 <button class="buttons-bar" onclick="selectButton(this)" id="library">
-                    <img src="http://127.0.0.1:8000/img/library.png" alt="" class="img-bar">
+                    <img src="{{ asset('img/library.png') }}" alt="" class="img-bar">
                     <p>Bibloteca</p>
                 </button>
             </div>
         </div>
     </footer>
     <script type="module" src="{{asset('js/podcast.js')}}"></script>
+    <script src="{{ asset('js/reproducirCanciones.js') }}"></script>
+    <script src="{{ asset('js/reproducer.js') }}"></script>
     <script src="{{asset('js/backButton.js')}}"></script>
 </body>
 </html>
