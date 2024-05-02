@@ -1,4 +1,5 @@
 const searchInput = document.getElementById("search_input");
+const idUsuario = document.querySelector("html").dataset.idusuario;
 let timeoutId;
 
 searchInput.addEventListener('input', searchDelay);
@@ -28,7 +29,7 @@ function addElements(elements){
         switch (element.tipoObjeto) {
             case 1:
                 resultList.innerHTML = `
-                <div class="recent_item">
+                <a class="recent_item" href="/album/${idUsuario}/${element.id}">
                     <div class="item">
                         <img src="https://storage.googleapis.com/spt-project-bucket/${element.portada}" alt="" class="cover_img">
                         <div class="item_texts">
@@ -36,21 +37,22 @@ function addElements(elements){
                             <p>Álbum • ${element.artistaCancion}</p>
                         </div>
                     </div>
-                </div>
+                </a>
                 `
                 break;
             case 2:
                 resultList.innerHTML = `
-                <div class="recent_item">
+                <div class="recent_item" onclick="changeColor(this, '${element.id}', '${element.nombre}', '${element.artistaCancion}', '${element.portada}', '#617d92')">
                     <div class="item">
                         <img src="https://storage.googleapis.com/spt-project-bucket/${element.portada}" alt="" class="cover_img">
                         <div class="item_texts">
-                            <p>${element.nombre}</p>
+                            <p class="song_title">${element.nombre}</p>
                             <p>Canción • ${element.artistaCancion}</p>
                         </div>
                     </div>
                 </div>
                 `
+                let recentItem = document.getElementById(`item${element.id}`)
                 break;
             case 3:
                 resultList.innerHTML = `

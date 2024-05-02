@@ -27,16 +27,29 @@
                 <h1 class="tittle_day">{{$historial->fechaEscuchada}}</h1>
             </div>
             <div class="list_container">
-                @foreach ($historial->canciones as $cancion)
-                <a class="list_item" href={{ route('cancion.obtener', ['idCancion'=>$cancion->idCancion,'idUsuario'=>$idUsuario]) }}>
+                @foreach ($historial->media as $media)
+                @if ($media->tipoObjeto == 1)
+                <a class="list_item" href={{ route('cancion.obtener', ['idCancion'=>$media->id,'idUsuario'=>$idUsuario]) }}>
                     <div style="display:flex;">
-                        <img src="https://storage.googleapis.com/spt-project-bucket/{{$cancion->portada}}" alt="" class="song_cover">
+                        <img src="https://storage.googleapis.com/spt-project-bucket/{{$media->portada}}" alt="" class="song_cover">
                         <div class="song_text_container" style="margin-left: 5px;">
-                            <p class="song_title">{{$cancion->nombreCancion}}</p>
-                            <p class="song_artist">{{$cancion->artistaCancion}}</p>
+                            <p class="song_title">{{$media->nombre}}</p>
+                            <p class="song_artist">{{$media->artistaCancion}}</p>
                         </div>
                     </div>
                 </a>
+                @else
+                <a class="list_item" href={{ route('episodio.obtener', ['idEpisodio'=>$media->id]) }}>
+                    <div style="display:flex;">
+                        <img src="https://storage.googleapis.com/spt-project-bucket/{{$media->portada}}" alt="" class="song_cover">
+                        <div class="song_text_container" style="margin-left: 5px;">
+                            <p class="song_title">{{$media->nombre}}</p>
+                            <p class="song_artist">{{$media->artistaCancion}}</p>
+                        </div>
+                    </div>
+                </a>
+                @endif
+                
                 @endforeach
             </div>
             <!--<div class="bottom-button" >

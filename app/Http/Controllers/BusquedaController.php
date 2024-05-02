@@ -7,8 +7,12 @@ use Illuminate\Http\Request;
 
 class BusquedaController extends Controller
 {
-    public function buscandoView(){
-        return view('searching');
+    public function buscandoView($idUsuario){
+        return view('searching', compact('idUsuario'));
+    }
+
+    public function busquedaView($idUsuario){
+        return view('search', compact('idUsuario'));
     }
 
     public function buscar($query){

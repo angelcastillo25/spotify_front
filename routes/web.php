@@ -71,9 +71,12 @@ Route::get('/historial', function(){
 
 Route::get('/historial/{idUsuario}', [HistorialController::class, 'getHistory'])->name('historial.obtener');
 
-Route::get('/buscando', [BusquedaController::class, 'buscandoView'])->name('busqueda.buscando');
+Route::get('/buscando/{idUsuario}', [BusquedaController::class, 'buscandoView'])->name('busqueda.buscandovw');
+
+Route::get('/busqueda/{idUsuario}', [BusquedaController::class, 'busquedaView'])->name('busqueda.buscarvw');
 
 Route::get('/buscar/{query}', [BusquedaController::class, 'buscar'])->name('busqueda.buscar');
+
 
 Route::get('/buscar', function(){
     return view('search');
