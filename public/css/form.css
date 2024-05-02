@@ -37,7 +37,7 @@ input{
     border-radius: 5px;
     border: 1px solid #727272;
     box-sizing: border-box;
-    color: #acacac;
+    color: #c5c5c5;
     font-size: 0.9rem;
 }
 
@@ -48,7 +48,7 @@ select{
     border-radius: 5px;
     border: 1px solid #727272;
     box-sizing: border-box;
-    color: #727272;
+    color: #c5c5c5;
 }
 
 .form_button{

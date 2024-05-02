@@ -7,6 +7,7 @@ use App\Http\Controllers\BusquedaController;
 use App\Http\Controllers\CancionController;
 use App\Http\Controllers\HistorialController;
 use App\Http\Controllers\homeController;
+use App\Http\Controllers\PagosController;
 use App\Http\Controllers\PerfilController;
 use App\Http\Controllers\PodcastController;
 use App\Http\Controllers\RegisterController;
@@ -59,7 +60,11 @@ Route::get('/podcast/follow/{idUsuario}/{idPodcast}/{state}', [PodcastController
 
 //Rutas de perfil
 
-Route::get('/perfil/{idUsuario}', [PerfilController::class, 'getProfile'])->name('historial.obtener');
+Route::get('/perfil/{idUsuario}', [PerfilController::class, 'getProfile'])->name('perfil.obtener');
+
+Route::get('/planes/{idUsuario}', [PagosController::class, 'getPlanes'])->name('planes.obtener');
+
+Route::post('/pagos/pagar', [PagosController::class, 'pagar'])->name('pagos.pagar');
 
 Route::get('/biblioteca', function(){
     return view('biblioteca');

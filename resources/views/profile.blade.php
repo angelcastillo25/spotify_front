@@ -23,17 +23,25 @@
                 <div class="cover-params">
                     <img src="https://storage.googleapis.com/spt-project-bucket/{{$perfil->url_foto_perfil}}" class="cover_img" alt="portada list" id="list_cover">
                     <div class="song_text_container">
-                        <p class="user-name">{{$perfil->nombre}}</p>
+                        <div class="name_container"><p class="user-name">{{$perfil->nombre}}</p>
+                            @if ($perfil->idTipoPlan !=4)
+                            <img class="premium_icon" src="{{asset('img/premium.png')}}" alt="">
+                            @endif
+                        </div>
                         <p class="song_artist">{{$perfil->cantidadSeguidores}} seguidores • {{$perfil->cantidadSeguidos}} siguiendo</p>
                     </div>
                 </div>
             </div>
 
             <div class="options-menu">
-                <button class="button_header">Editar</button>
+                <a class="button_header" href={{ route('historial.obtener', ['idUsuario'=>$idUsuario]) }}>Historial de reproduccion</a>
                 <img class="options_icon options_btn" src="{{asset('img/option_points.svg')}}" alt="Opciones">
             </div>
-            
+            @if ($perfil->idTipoPlan ==4)
+            <a class="options-menu" href={{route('planes.obtener',['idUsuario'=>$idUsuario])}}>
+                <div class="button_header" style="color:#ffb414; border-color:#ffb414;">Mejorar Plan</div>
+            </a>
+            @endif
             <div style="padding: 10px 20px;">
                 <h1 class="user-name" style="font-size: 20px;">Playlists</h1>
             </div>

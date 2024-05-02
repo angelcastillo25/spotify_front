@@ -40,6 +40,17 @@
     margin-bottom: 30px;
 }
 
+.name_container{
+    display: flex;
+    justify-content: center;
+}
+
+.premium_icon{
+    width: 25px;
+    height: 25px;
+    margin-left: 10px;
+}
+
 .button_header {
     background: transparent;
     border-color: #d9d9d9;
