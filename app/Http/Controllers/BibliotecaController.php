@@ -14,6 +14,6 @@ class BibliotecaController extends Controller
 
         $library = json_decode($response->getBody());
 
-        return view('biblioteca', compact('library'));
+        return view('biblioteca', compact('library', 'idUser'));
     }
 }

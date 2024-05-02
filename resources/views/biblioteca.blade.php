@@ -46,13 +46,14 @@
     <main>
            
         @foreach ($library->playlists as $playlist)
-        <a href="{{ route('playlist.obtener', ['idPlaylist' => $playlist->id_Playlist]) }}" class="playList">
-                <img src="https://storage.googleapis.com/spt-project-bucket/{{ $playlist->portadaPlaylist }}" alt="" class="song_cover">
-                <div class="song_text_container">
-                    <p class="song_title">{{$playlist->nombrePlaylist}}</p>
-                    <p class="song_artist">{{$playlist->cantidadCanciones}} canciones</p>
-                </div>
+        <a href="{{ route('playlist.obtener', ['idPlaylist' => $playlist->id_Playlist, 'idUsuario' => $idUser]) }}" class="playList">
+            <img src="https://storage.googleapis.com/spt-project-bucket/{{ $playlist->portadaPlaylist }}" alt="" class="song_cover">
+            <div class="song_text_container">
+                <p class="song_title">{{$playlist->nombrePlaylist}}</p>
+                <p class="song_artist">{{$playlist->cantidadCanciones}} canciones</p>
+            </div>
         </a>
+        
         @endforeach
         @foreach ($library->podcasts as $podcast)
         <div class="playList">

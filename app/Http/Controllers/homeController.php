@@ -14,6 +14,6 @@ class homeController extends Controller
 
         $home = json_decode($response->getBody());
 
-        return view('home', compact('home'));
+        return view('home', compact('home', 'idUser'));
     }
 }

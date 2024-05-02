@@ -36,7 +36,7 @@
             <h1 class="tittle-list">Tus mixs favoritos</h1>
             <div class="list-albums">
                 @foreach ($home->mixSeguidos as $playlist)
-                    <a href="{{ route('playlist.obtener', ['idPlaylist' => $playlist->id_Playlist]) }}" class="album">
+                    <a href="{{ route('playlist.obtener', ['idPlaylist' => $playlist->id_Playlist, 'idUsuario' => $idUser]) }}" class="album">
                         <img src="https://storage.googleapis.com/spt-project-bucket/{{$playlist->portadaPlaylist}}" alt="" class="portada_album">
                         <p style="color: #afafaf; font-weight: 300;">Becky G, Ozuna, Shakira, Bad Bunny, Wallows</p>
                     </a>
@@ -45,7 +45,7 @@
             <h1 class="tittle-list">Tal vez te interese</h1>
             <div class="list-albums">
                 @foreach ($home->tops as $playlist)
-                    <a href="{{ route('playlist.obtener', ['idPlaylist' => $playlist->id_Playlist]) }}" class="album">
+                    <a href="{{ route('playlist.obtener', ['idPlaylist' => $playlist->id_Playlist, 'idUsuario' => $idUser]) }}" class="album">
                         <img src="https://storage.googleapis.com/spt-project-bucket/{{$playlist->portadaPlaylist}}" alt="" class="portada_album">
                         <p style="color: white; font: inherit;">{{$playlist->nombrePlaylist}}</p>
                     </a>
