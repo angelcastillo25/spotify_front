@@ -26,7 +26,7 @@ class PlaylistController extends Controller
         $client = new Client();
 
         $response = $client->post('localhost:8080/usuarioEstandar/crearLista?nombre='
-        .$request->input('nombre').'&portada=Playlist/playlistdefault.jpeg&idUsuario='
+        .$request->input('nombre').'&portada=Playlists/playlistdefault.jpg&idUsuario='
         .$request->input('usuario').'&idTipoLista=4&descripcion=');
 
         $idPlaylist = json_decode($response->getBody());
