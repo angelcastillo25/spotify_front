@@ -64,14 +64,13 @@
         
     </main>
     <footer>
-        
         <div class="footerMenu">
-            <div class="songReproducer">
+            <div class="songReproducer" id="songReproducer">
                 <div class="artistPart">
-                    <img src="{{ asset('img/cardellino.jpeg') }}" alt="" class="imgArtistRpr">
+                    <img id="songPlayCover" src="" alt="" class="imgArtistRpr">
                     <div class="titleSong">
-                        <p class="songName">Bambu</p>
-                        <p class="artistName">cardellino</p>
+                        <p class="songName" id="songPlayName"></p>
+                        <p class="artistName" id="songPlayArtist"></p>
                     </div>
                 </div>
                 
@@ -84,7 +83,7 @@
                 
             </div>
             <div id="bottom-bar">
-                <button class="buttons-bar" onclick="selectButton(this)" id="home">
+                <a class="buttons-bar" onclick="selectButton(this)" id="home" href={{route('home.obtener', ['idUser'=>$idUser])}}>
                     <svg id="homeViewButton" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" 
                         viewBox="0,0,256,256" width="40px" height="40px">
                         <g fill="#ffffff" fill-rule="nonzero" 
@@ -102,20 +101,17 @@
                         </g>
                     </svg>
                     <p>Inicio</p>
-                </button>
-                <button class="buttons-bar" onclick="selectButton(this)" id="search">
+                </a>
+                <a class="buttons-bar" onclick="selectButton(this)" id="search" href={{route('busqueda.buscarvw', ['idUsuario'=>$idUser])}}>
                     <img src="{{ asset('img/search.png') }}" alt="" class="img-bar">
                     <p>Buscar</p>
-                </button>
-                <button class="buttons-bar" onclick="selectButton(this)" id="library">
+                </a>
+                <a class="buttons-bar" onclick="selectButton(this)" id="library" href={{route('library.obtener', ['idUser'=>$idUser])}}>
                     <img src="{{ asset('img/library.png') }}" alt="" class="img-bar">
                     <p>Bibloteca</p>
-                </button>
+                </a>
             </div>
-
         </div>
-        
-
     </footer>
     <script src="{{ asset('js/biblioteca.js') }}"></script>
     <script src="{{ asset('js/reproducer.js') }}"></script>

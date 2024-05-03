@@ -11,6 +11,7 @@
 }
 
 let button_home = document.querySelector('#home');
+let button_search = document.querySelector('#search');
 let button_library = document.querySelector('#library');
 button_home.innerHTML = `
         <svg xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 48 48" width="40px" height="40px">
@@ -27,7 +28,7 @@ button_home.innerHTML = `
         </svg>
         <p>Inicio</p>
     `;
-    button_library.innerHTML = `
-    <img src="http://127.0.0.1:8000/img/librarySelected.png" alt="" class="img-bar">
-    <p>Bibloteca</p>
+    button_search.innerHTML = `
+    <img src="http://127.0.0.1:8000/img/searchSelected.png" alt="" class="img-bar">
+    <p>Buscar</p>
     `;

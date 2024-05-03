@@ -30,10 +30,6 @@ Route::get('/landingPage', function(){
     return view('landingPage');
 });
 
-Route::get('/home', function(){
-    return view('home');
-});
-
 Route::get('/playlist', function(){
     return view('playlist');
 });
@@ -66,14 +62,6 @@ Route::get('/planes/{idUsuario}', [PagosController::class, 'getPlanes'])->name('
 
 Route::post('/pagos/pagar', [PagosController::class, 'pagar'])->name('pagos.pagar');
 
-Route::get('/biblioteca', function(){
-    return view('biblioteca');
-});
-
-Route::get('/historial', function(){
-    return view('historial');
-});
-
 Route::get('/historial/{idUsuario}', [HistorialController::class, 'getHistory'])->name('historial.obtener');
 
 Route::get('/buscando/{idUsuario}', [BusquedaController::class, 'buscandoView'])->name('busqueda.buscandovw');
@@ -83,18 +71,6 @@ Route::get('/busqueda/{idUsuario}', [BusquedaController::class, 'busquedaView'])
 Route::get('/buscar/{query}', [BusquedaController::class, 'buscar'])->name('busqueda.buscar');
 
 
-Route::get('/buscar', function(){
-    return view('search');
-});
-
-Route::get('/artist', function(){
-    return view('artist');
-});
-
-Route::get('/addSong', function(){
-    return view('addSong');
-});
-
 Route::get('/playlist/addSongs/{idPlaylist}', [PlaylistController::class, 'addSongsView'])->name('playlist.addSongs');
 
 Route::post('/playlist/add', [PlaylistController::class, 'createPlaylist'])->name('playlist.add');
@@ -102,9 +78,12 @@ Route::post('/playlist/add', [PlaylistController::class, 'createPlaylist'])->nam
 Route::get('/playlist/create/{idUsuario}', [PlaylistController::class, 'createPlaylistView'])->name('playlist.create');
 
 Route::get('/playlist/{idPlaylist}/{idUsuario}', [PlaylistController::class, 'getPlaylist'])->name('playlist.obtener');
+
  
 Route::get('/biblioteca/{idUser}', [BibliotecaController::class, 'getLibrary'])->name('library.obtener');
 
+
 Route::get('/home/{idUser}', [homeController::class, 'getHome'])->name('home.obtener');
+
 
 Route::get('/cancion/play/{idUsuario}/{idMedia}', [CancionController::class, 'playSong'])->name('cancion.play');

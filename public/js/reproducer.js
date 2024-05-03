@@ -60,12 +60,12 @@ function selectButton(button) {
         <p>Inicio</p>
     `;
     button_search.innerHTML = `
-        <img src="http://localhost/spotify_front/public/img/search.png" alt="" class="img-bar">
+        <img src="http://127.0.0.1:8000/img/search.png" alt="" class="img-bar">
         <p>Buscar</p>
     `;
 
     button_library.innerHTML = `
-        <img src="http://localhost/spotify_front/public/img/library.png" alt="" class="img-bar">
+        <img src="http://127.0.0.1:8000/img/library.png" alt="" class="img-bar">
         <p>Bibloteca</p>
     `;
 
@@ -99,13 +99,13 @@ function selectButton(button) {
             break;
         case 'search':
             button.innerHTML = `
-                <img src="http://localhost/spotify_front/public/img/searchSelected.png" alt="" class="img-bar">
+                <img src="http://127.0.0.1:8000/img/searchSelected.png" alt="" class="img-bar">
                 <p>Buscar</p>
             `;
             break;
         case 'library':
             button.innerHTML = `
-                <img src="http://localhost/spotify_front/public/img/librarySelected.png" alt="" class="img-bar">
+                <img src="http://127.0.0.1:8000/img/librarySelected.png" alt="" class="img-bar">
                 <p>Bibloteca</p>
             `;
             break;
