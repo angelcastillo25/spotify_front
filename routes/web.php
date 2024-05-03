@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\PlaylistController;
 use App\Http\Controllers\AlbumesController;
+use App\Http\Controllers\ArtistaController;
 use App\Http\Controllers\BibliotecaController;
 use App\Http\Controllers\BusquedaController;
 use App\Http\Controllers\CancionController;
@@ -87,3 +88,5 @@ Route::get('/home/{idUser}', [homeController::class, 'getHome'])->name('home.obt
 
 
 Route::get('/cancion/play/{idUsuario}/{idMedia}', [CancionController::class, 'playSong'])->name('cancion.play');
+
+Route::get('/artist/{idUsuario}/{idArtist}', [ArtistaController::class, 'getArtist'])->name('get.artist');
