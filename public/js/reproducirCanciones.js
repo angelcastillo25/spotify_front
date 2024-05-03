@@ -24,6 +24,9 @@ function changeColor(container, songid, songName, artistName, coverSong, colorSo
     let songPlayCover = document.querySelector('#songPlayCover');
     let songReproducer = document.querySelector('#songReproducer');
 
+    let artistPart = document.querySelector('.artistPart');
+
+    artistPart.dataset.idmedia = songid;
     songPlayName.innerHTML = songName;
     songPlayArtist.innerHTML = artistName;
     songPlayCover.src = 'https://storage.googleapis.com/spt-project-bucket/' + coverSong;
@@ -52,7 +55,7 @@ function changeEpisodeColor(element, songid, songName, artistName, coverSong, co
     localStorage.setItem('nombreCancion', songName);
     localStorage.setItem('nombreArtista', artistName);
     localStorage.setItem('portadaCancion', coverSong);
-    localStorage.setItem('colorCancion', coverSong);
+    localStorage.setItem('colorCancion', colorSong);
 
     let songPlayName = document.querySelector('#songPlayName');
     let songPlayArtist = document.querySelector('#songPlayArtist');
@@ -68,4 +71,11 @@ function changeEpisodeColor(element, songid, songName, artistName, coverSong, co
     .then(data => console.log(data)) // Manejar la respuesta
     .catch(error => console.error('Error en la petición: ', error));
 
+}
+
+function goToSong(idUsuario){
+    let artistPart = document.querySelector('.artistPart');
+    let idMedia = artistPart.dataset.idmedia;
+
+    window.location.href= `/cancion/${idMedia}/${idUsuario}`;
 }
