@@ -17,7 +17,7 @@ function changeColor(container, songid, songName, artistName, coverSong, colorSo
     localStorage.setItem('nombreCancion', songName);
     localStorage.setItem('nombreArtista', artistName);
     localStorage.setItem('portadaCancion', coverSong);
-    localStorage.setItem('colorCancion', coverSong);
+    localStorage.setItem('colorCancion', colorSong);
 
     let songPlayName = document.querySelector('#songPlayName');
     let songPlayArtist = document.querySelector('#songPlayArtist');
