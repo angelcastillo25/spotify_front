@@ -23,9 +23,9 @@
         <h2>Millones de canciones. Gratis en spotify.</h2>
     </div>
     <div class="containerButton">
-            <a class="button" href="" style="background-color: #1ed760;">SING UP FREE</a>
-            <a class="button" href="" style="background-color: #1e6ed7;">CONTINUE WITH FACEBOOK</a>
-            <a class="button" href="" style="background-color: #ffffff; color: #000000">LOG IN</a>
+            <a class="button" href={{route('register.index')}} style="background-color: #1ed760;">SING UP FREE</a>
+            <a class="button" href={{route('login.index')}}  style="background-color: #ffffff; color: #000000">LOG IN</a>
+            <a class="button" style="background-color: #1e6ed7;">CONTINUE WITH FACEBOOK</a>
     </div>
 
     </main>
