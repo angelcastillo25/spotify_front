@@ -32,7 +32,7 @@ class PlaylistController extends Controller
         $idPlaylist = json_decode($response->getBody());
 
         if ($idPlaylist != 0) {
-            return redirect()->route('playlist.obtener', ['idPlaylist' => $idPlaylist]);
+            return redirect()->route('playlist.obtener', ['idPlaylist' => $idPlaylist, 'idUsuario' => $request->input('usuario')]);
         }
         return "Ocurrio un error, vuelva atras e intentelo de nuevo";
     }

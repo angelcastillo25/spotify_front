@@ -13,7 +13,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap" rel="stylesheet">
     <title>Iniciar Sesion - Spotify</title>
 </head>
-<body>
+<body> 
     <header>
             <div class="profilHeader">
 
@@ -24,7 +24,7 @@
                     <h1>Tu Biblioteca</h1>
                 </div>
                 <div class="thingsHeader">
-                    <div class="img_container">
+                    <a href={{ route('playlist.create', ['idUsuario'=>$idUser])}} class="img_container">
                         <img src="{{ asset('img/plus.png') }}" alt="foto de perfil" id="profil">
                     </div>
                 </div>
