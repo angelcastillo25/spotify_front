@@ -6,12 +6,17 @@ document.addEventListener("DOMContentLoaded", function() {
     let artistName = localStorage.getItem('nombreArtista');
     let coverSong = localStorage.getItem('portadaCancion');
     let colorSong = localStorage.getItem('colorCancion');
+    let songid = localStorage.getItem('idCancion');
 
     // Seleccionar los elementos del footer
     let songPlayName = document.querySelector('#songPlayName');
     let songPlayArtist = document.querySelector('#songPlayArtist');
     let songPlayCover = document.querySelector('#songPlayCover');
     let songReproducer = document.querySelector('#songReproducer');
+
+    let artistPart = document.querySelector('.artistPart');
+
+    artistPart.dataset.idmedia = songid;
 
     // Asignar la información a los elementos del footer
     songPlayName.textContent = songName;

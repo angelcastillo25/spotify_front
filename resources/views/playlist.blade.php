@@ -89,7 +89,7 @@
     <footer>
         <div class="footerMenu">
             <div class="songReproducer" id="songReproducer">
-                <div class="artistPart">
+                <div class="artistPart" data-idmedia="" onclick="goToSong('{{$idUsuario}}')">
                     <img id="songPlayCover" src="" alt="" class="imgArtistRpr">
                     <div class="titleSong">
                         <p class="songName" id="songPlayName"></p>
