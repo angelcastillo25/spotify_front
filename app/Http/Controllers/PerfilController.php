@@ -15,6 +15,7 @@ class PerfilController extends Controller
 
         $perfil = json_decode($response->getBody());
 
-        return view('profile', compact('perfil'));
+        return view('profile', compact('perfil', 'idUsuario'));
     }
+
 }

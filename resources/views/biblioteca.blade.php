@@ -18,9 +18,9 @@
             <div class="profilHeader">
 
                 <div class="TitleHeader">
-                    <div class="img_container">
+                    <a class="img_container" href={{ route('perfil.obtener', ['idUsuario'=>$idUser]) }}>
                         <img src="https://storage.googleapis.com/spt-project-bucket/{{ $library->fotoUsuario }}" alt="foto de perfil" id="profil">
-                    </div>
+                    </a>
                     <h1>Tu Biblioteca</h1>
                 </div>
                 <div class="thingsHeader">
@@ -36,12 +36,7 @@
             <button onclick="seleccionarButton(this)" class="button_header" id="btn_podcasts">Albumes</button>
             <button onclick="seleccionarButton(this)" class="button_header" id="btn_podcasts">Artistas</button>
             <button onclick="seleccionarButton(this)" class="button_header" id="btn_podcasts">Descargados</button>
-
-
-
         </div>
-        
-        
     </header>
     <main>
            
