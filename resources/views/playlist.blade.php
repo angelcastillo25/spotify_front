@@ -34,6 +34,7 @@
                 <div class="buttons_container">
                     <img class="list_button" src="{{asset('img/descargar.svg')}}" data-state="0" alt="" id="download_btn">
                     <img class="list_button" src="{{asset('img/agregar.svg')}}" data-state="0" alt="" id="add_btn">
+                    <a href={{route('playlist.addSongs', ['idPlaylist'=>$idPlaylist,'idUsuario'=>$idUsuario])}}><img class="list_button" src="{{asset('img/agregarPlaylist.png')}}" alt=""></a>
                     <img class="options_icon" src="{{asset('img/option_points.svg')}}" alt="" id="options_btn">
                 </div>
             </div>

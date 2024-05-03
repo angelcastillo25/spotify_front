@@ -37,14 +37,26 @@ class PlaylistController extends Controller
         return "Ocurrio un error, vuelva atras e intentelo de nuevo";
     }
 
-    public function addSongsView($idPlaylist){
+    public function addSongsView($idPlaylist, $idUsuario){
         $client = new Client();
 
         $response = $client->get('localhost:8080/listas/getSongsAddToPlaylist?idPlaylist='.$idPlaylist);
 
         $canciones = json_decode($response->getBody());
 
-        return view('addSong', compact('canciones'));
+        return view('addSong', compact('canciones', 'idPlaylist', 'idUsuario'));
+    }
+
+    public function addSong($idPlaylist, $idCancion, $idUsuario){
+        $client = new Client();
+
+        $response = $client->post('localhost:8080/listas/addSongToPlaylist?idCancion='.$idCancion.'&idPlaylist='.$idPlaylist);
+
+        $success = json_decode($response->getBody());
+        if ($success) {
+            return redirect()->route('playlist.obtener', ['idPlaylist' => $idPlaylist, 'idUsuario' => $idUsuario]);
+        }
+        return "Ocurrio un error, vuelva atras e intentelo de nuevo";
     }
     
 }

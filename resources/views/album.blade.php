@@ -21,10 +21,10 @@
             <div class="list_header_panel">
                 <p id="list_name" class="list_name">{{$album->nombreAlbum}}</p>
                 <div class="play_button"><img class="play_icon" src="{{asset('img/play.png')}}" alt="boton pausa"  id="play_btn" data-state="0"></div>
-                <div class="creator_container">
+                <a class="creator_container" href={{route('get.artist',['idUsuario'=>$idUsuario,'idArtist'=>$album->idArtista])}}>
                     <img src="https://storage.googleapis.com/spt-project-bucket/{{$album->fotoArtista}}" alt="usuario" class="profile_image">
                     <p id="author_name">{{$album->nombreArtista}}</p>
-                </div>
+                </a>
                 <div class="description_container">
                     <p>{{$album->tipoLanzamiento." • ".substr($album->fechaLanzamiento,-4)}}</p>
                 </div>
@@ -53,7 +53,7 @@
             <p>{{$album->cantidadCanciones." canciones • 23 min 41s"}}</p>
         </div>
 
-        <div class="artist_seal">
+        <div class="artist_seal" href={{route('get.artist',['idUsuario'=>$idUsuario,'idArtist'=>$album->idArtista])}}>
             <img src="https://storage.googleapis.com/spt-project-bucket/{{$album->fotoArtista}}" alt="portada list">
             <p>{{$album->nombreArtista}}</p>
         </div>

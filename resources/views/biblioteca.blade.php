@@ -48,7 +48,6 @@
                 <p class="song_artist">{{$playlist->cantidadCanciones}} canciones</p>
             </div>
         </a>
-        
         @endforeach
         @foreach ($library->podcasts as $podcast)
         <div class="playList">
