@@ -72,7 +72,9 @@ Route::get('/busqueda/{idUsuario}', [BusquedaController::class, 'busquedaView'])
 Route::get('/buscar/{query}', [BusquedaController::class, 'buscar'])->name('busqueda.buscar');
 
 
-Route::get('/playlist/addSongs/{idPlaylist}', [PlaylistController::class, 'addSongsView'])->name('playlist.addSongs');
+Route::get('/playlist/addSongs/{idPlaylist}/{idUsuario}', [PlaylistController::class, 'addSongsView'])->name('playlist.addSongs');
+
+Route::get('/playlist/addSong/{idPlaylist}/{idCancion}/{idUsuario}', [PlaylistController::class, 'addSong'])->name('playlist.addSong');
 
 Route::post('/playlist/add', [PlaylistController::class, 'createPlaylist'])->name('playlist.add');
 

@@ -17,7 +17,7 @@
         <input type="text" name="nombre" class="create_input" placeholder="Mi Playlist #xx" value="Mi Playlist">
         <input type="text" name="usuario"  value="{{$idUsuario}}" hidden>
         <div class="buttons_container">
-            <a href="" class="btn_cancel">Cancelar</a>
+            <a href={{route('library.obtener', ['idUser'=>$idUsuario])}} class="btn_cancel">Cancelar</a>
             <button type="submit" class="btn_create">Crear</button>
         </div>
     </form>

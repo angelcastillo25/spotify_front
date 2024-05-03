@@ -20,20 +20,21 @@
             <p class="description">Recomendadas según las canciones que agregaste.</p>
             <div class="song_list">
                 @foreach ($canciones as $cancion)
-                <div class="list_item" data-idSong="">
+                <div class="list_item">
                     <div style="display:flex;">
                         <img src="https://storage.googleapis.com/spt-project-bucket/{{$cancion->portada}}" alt="" class="song_cover">
                         <div class="song_text_container">
-                            <p class="song_title">{{$cancion->nombreCancion}}</p>
+                            <p class="song_title">{{$cancion->nombre}}</p>
                             <p class="song_artist">{{$cancion->artistaCancion}}</p>
                         </div>
                     </div>
-                    <img class="addbtn" src="{{asset('img/agregar.svg')}}" alt="Add">
+                    <img class="addbtn" src="{{asset('img/agregar.svg')}}" alt="Add" data-state="0" onclick="agregarCancion(this,'{{$idPlaylist}}', '{{$cancion->id}}', '{{$idUsuario}}')">
                 </div>
             @endforeach
             </div>
         </div>
     </main>
     <script src="{{asset('js/backButton.js')}}"></script>
+    <script src="{{asset('js/addSongs.js')}}"></script>
 </body>
 </html>
